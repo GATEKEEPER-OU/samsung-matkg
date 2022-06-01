@@ -1,0 +1,3329 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.samsung.com/helifit/ontology#"
+     xml:base="http://purl.samsung.com/helifit/ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sh="http://www.samsung.com/health/ontology#"
+     xmlns:hlf="http://www.samsung.com/helifit/ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://opensource.samsung.com/projects/helifit/">
+        <owl:versionIRI rdf:resource="https://opensource.samsung.com/projects/helifit/1.5.0/helifit.owl"/>
+        <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+        <owl:imports rdf:resource="http://tdwg.napier.ac.uk/ontology/resources/dublincore/terms.owl"/>
+        <dc:contributor>1. Carlo Allocca, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK
+2. Samia Jilali, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK
+3. Rohit Ail, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK
+4. Jaehun Lee,  Samsung Research, 56 Seongchon-gil, Seoul 06765, Korea
+5. Byungho Kim, Samsung Research, 56 Seongchon-gil, Seoul 06765, Korea 
+6. ,Alessio Antonini, Knowledge Media Institute, The Open University, Milton Keynes MK7 6AA, UK,  
+7. Enrico Motta, Knowledge Media Institute, The Open University, Milton Keynes MK7 6AA, UK
+8. Julia Schellong,  Department of Psychotherapy and Psychosomatic Medicine, Faculty of Medicine, Technische Universität Dresden, 01307 Dresden, Germany
+9. Lisa Stieler, Department of Psychotherapy and Psychosomatic Medicine, Faculty of Medicine, Technische Universität Dresden, 01307 Dresden, Germany 
+10. Muhammad Salman Haleem, School of Engineering, University of Warwick, Library Rd, Coventry CV4 7AL, UK
+11. Eleni Georga, Department of Materials Science and Engineering, University of Ioannina, 45110 Ioannina, Greece
+12. Leandro Pecchia, School of Engineering, University of Warwick, Library Rd, Coventry CV4 7AL, UK 
+13. Eugenio Gaeta, Life Supporting Technologies (LifeSTech), ETSI Telecomunicaciones, Universidad Politécnica de Madrid, Av. Complutense, 30, 28040 Madrid, Spain
+14. Giuseppe Fico, Life Supporting Technologies (LifeSTech), ETSI Telecomunicaciones, Universidad Politécnica de Madrid, Av. Complutense, 30, 28040 Madrid, Spain</dc:contributor>
+        <dc:creator>Carlo Allocca, Health Innovation Group, Samsung Research, UK</dc:creator>
+        <dc:description>HeLiFit (Health, Lifestyle and Fitness), a domain ontology that provides unified and event-based models that characterizes the different perspectives involved in the definiton of physical activity as per WHO guidance. Please refer to the paper https://www.mdpi.com/2076-3417/12/4/1776</dc:description>
+        <dc:publisher>Health Innovation Group, Samsung Research, UK</dc:publisher>
+        <dc:rights>Copyright © Health Innovation Group, Samsung Research, UK</dc:rights>
+        <dc:title>HeLiFit (Health, Lifestyle and Fitness) Ontology</dc:title>
+        <terms:issued>2022-05-31</terms:issued>
+        <terms:license>http://creativecommons.org/licenses/by/3.0/</terms:license>
+        <owl:versionInfo></owl:versionInfo>
+        <owl:versionInfo>1.5.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP1isSubjectTo -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP1isSubjectTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP2initiates -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP2initiates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://opensource.samsung.com/projects/helifit#EP4isInitiatedBy"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E5Event"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP3maintains -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP3maintains">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#HLF1State"/>
+        <rdfs:comment>as per [1]. [1] States, Processes and Events, and the Ontology of Causal Relations Antony GALTON. College of Engineering, Mathematics and Physical Sciences, Harrison Building, University of Exeter, Exeter EX4 4QF, UK</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP4isInitiatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP4isInitiatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#HLF1State"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E5Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP5hasPrevious -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP5hasPrevious">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30ClinicalAssessment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP6realizes -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP6realizes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50DiseaseCourse"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#HLF52Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P117includes -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P117includes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://opensource.samsung.com/projects/helifit#P117occursDuring"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:comment>This property allows the entire E52 Time-Span of an E2 Temporal Entity to be situated within the Time-Span of another temporal entity that starts before and ends after the included temporal entity. From cidoc-crm definition.</rdfs:comment>
+        <rdfs:label>P117includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P117occursDuring -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P117occursDuring">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P140assignedAttributeTo -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P140assignedAttributeTo">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P141assigned -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P141assigned">
+        <owl:inverseOf rdf:resource="https://opensource.samsung.com/projects/helifit#P141wasAssignedBy"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P141wasAssignedBy -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P141wasAssignedBy"/>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P14carriedOutBy -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P14carriedOutBy">
+        <owl:inverseOf rdf:resource="https://opensource.samsung.com/projects/helifit#P14performed"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E39Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P14performed -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P14performed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P1isIdentifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P1isIdentifiedBy">
+        <owl:inverseOf rdf:resource="https://opensource.samsung.com/projects/helifit#P1isIdentifiedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P2hasType -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P2hasType">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E55Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P40observedDimension -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P40observedDimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P4hasTimeSpan -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P4hasTimeSpan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:range rdf:resource="https://opensource.samsung.com/projects/helifit#E52TimeSpan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P70documents -->
+
+    <owl:ObjectProperty rdf:about="https://opensource.samsung.com/projects/helifit#P70documents">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E31Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>P70documents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP10assignedPresence -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP10assignedPresence">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#HLF600DiseaseAss"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>EP10assignedPresence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP7starts -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP7starts">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E52TimeSpan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP8ends -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP8ends">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E52TimeSpan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#EP9effectiveDatatime -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#EP9effectiveDatatime">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E52TimeSpan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>EP9effectiveDatatime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P3hasNote -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#P3hasNote">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P90hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#P90hasValue">
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#P91hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://opensource.samsung.com/projects/helifit#P91hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4">
+        <owl:equivalentClass rdf:resource="https://opensource.samsung.com/projects/helifit#HLF52Disease"/>
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51Disposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment>This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E13AttributeAssignment -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>This class comprises the actions of making assertions about properties of an object or any relation between two items or concepts.</rdfs:comment>
+        <rdfs:label>E13AttributeAssignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E16Measurement -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E16Measurement">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>We need these measurement because in our PHR data we have observations</rdfs:comment>
+        <rdfs:label>E16Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E21Person -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E21Person">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E39Actor"/>
+        <rdfs:comment>This class comprises real persons who live or are assumed to have lived.</rdfs:comment>
+        <rdfs:label>E21Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E28ConceptualObject -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E28ConceptualObject">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E71ManMadeThing"/>
+        <rdfs:comment>This class comprises non-material products of our minds and other human produced data that  have become objects of a discourse about their identity, circumstances of creation or historical implication. The production of such information may have been supported by the use of technical devices such as cameras or computers.</rdfs:comment>
+        <rdfs:label>E28ConceptualObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E2TemporalEntity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E2TemporalEntity">
+        <rdfs:comment>This class comprises all phenomena such as Physical Activities, which happen over a limited extent in time. Also known as occurrents - happen, unfold and develop through time. Paper: Ontologies for Representation of Electronic Medical
+Records: the Obstetric and Neonatal Ontology</rdfs:comment>
+        <rdfs:label>E2TemporalEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E31Document -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E31Document">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E73InformationObject"/>
+        <rdfs:comment>This class comprises encyclopaedia, thesauri, authority lists and other documents that define terminology or conceptual systems for consistent use.</rdfs:comment>
+        <rdfs:label>E31Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E39Actor -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E39Actor">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E77PersistenItem"/>
+        <rdfs:comment>This class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible.</rdfs:comment>
+        <rdfs:label>E39Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E41Appellation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E41Appellation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E90SymbolicObject"/>
+        <rdfs:comment>This class comprises all sequences of signs of any nature, either meaningful or not, that are used or can be used to refer to and identify a specific instance of some class within a certain context.</rdfs:comment>
+        <rdfs:label>E41Appellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E42Identifier -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E42Identifier">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+        <rdfs:comment>This class comprises strings or codes assigned to the instances in order to identify them uniquely and permanently within the context of one or more organisations. Such codes are often known as inventory numbers, registration codes, etc. and are typically composed of alphanumeric sequences. The class E42 Identifier is not normally used for machine-generated identifiers used for automated processing unless these are also used by human agents.</rdfs:comment>
+        <rdfs:label>E42Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E52TimeSpan -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E52TimeSpan">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:comment>This class comprises abstract temporal extents having a beginning, an end and a duration.</rdfs:comment>
+        <rdfs:label>E52TimeSpan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E54Dimension -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E54Dimension">
+        <rdfs:comment>This class comprises quantifiable properties that can be measured by some calibrated means and can be approximated by values, i.e. points or regions in a mathematical or conceptual space, such as natural or real numbers, RGB values etc.</rdfs:comment>
+        <rdfs:label>E54Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E55Type -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E55Type">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E28ConceptualObject"/>
+        <rdfs:comment>This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify the instances.</rdfs:comment>
+        <rdfs:label>E55Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E5Event -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E5Event">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:comment>As per CIDOC-CRM https://cidoc-crm.org/entity/e5-event/version-7.1.1</rdfs:comment>
+        <rdfs:label>E5Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E70Thing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E70Thing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E77PersistenItem"/>
+        <rdfs:comment>This general class comprises usable discrete, identifiable, instances of E77 Persistent Item that are documented as single units.</rdfs:comment>
+        <rdfs:label>E70Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E71ManMadeThing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E71ManMadeThing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E70Thing"/>
+        <rdfs:comment>This class comprises discrete, identifiable man-made items that are documented as single units.</rdfs:comment>
+        <rdfs:label>E71ManMadeThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E73InformationObject -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E73InformationObject">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E90SymbolicObject"/>
+        <rdfs:comment>This class comprises identifiable immaterial items, such as a poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units.</rdfs:comment>
+        <rdfs:label>E73InformationObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E77PersistenItem -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E77PersistenItem">
+        <rdfs:comment>This class comprises items that have a persistent identity, sometimes known as “endurants” in philosophy. Also knows as Continuants - endure over time while maintaining their identity and do not exhibit temporal parts. Example of continuants are: a person, a fruit, etc. See paper: Ontologies for Representation of Electronic Medical Records: the Obstetric and Neonatal Ontology</rdfs:comment>
+        <rdfs:label>E77PersistenItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E7Activity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E7Activity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E5Event"/>
+        <rdfs:comment>This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.
+
+
+1. From States, Processes and Events, and the
+Ontology of Causal Relations
+
+&quot;Other examples, not involving human participants, are the ongoing process
+of photosynthesis in which a leaf participates so long as there is sunlight (or a suitable
+substitute) available, the falling of the rain, and the flowing of a river. In the well-known
+classification of Vendler [30], these are called ‘activities’.&quot;
+
+[30] Zeno Vendler. Verbs and times. In Linguistics and Philosophy, chapter 4. Cornell University Press,
+Ithaca, 1967. Reprinted in Mani et al., 2005.</rdfs:comment>
+        <rdfs:label>E7Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#E90SymbolicObject -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#E90SymbolicObject">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E28ConceptualObject"/>
+        <rdfs:comment>This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code or mathematical formulae that have an objectively recognizable structure and that are documented as single units.</rdfs:comment>
+        <rdfs:label>E90SymbolicObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF100Voleyball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF100Voleyball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team&apos;s court under organized rules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF101Walking -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF101Walking">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>move at a regular pace by lifting and setting down each foot in turn, never having both feet off the ground at once</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF102Sailing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF102Sailing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination"/>
+        <rdfs:comment>Sailing employs the wind—acting on sails, wingsails or kites—to propel a craft on the surface of the water, on ice or on land over a chosen course, which is often part of a larger plan of navigation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF103Squash -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF103Squash">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination"/>
+        <rdfs:comment>Squash is a racquet sport played by two players (or four players for doubles) in a four-walled court with a small, hollow rubber ball. Once the ball is served, players take turns hitting the ball against the front wall, above the tin and below the out line.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF104WaterSkiing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF104WaterSkiing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination"/>
+        <rdfs:comment>Water skiing is a surface water sport in which an individual is pulled behind a boat or a cable ski installation over a body of water, skimming the surface on two skis or one ski.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF105Windsurfing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF105Windsurfing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination"/>
+        <rdfs:comment>Windsurfing is a surface water sport that is a combination of surfing and sailing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF106Archery -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF106Archery">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Archery is the sport, practice, or skill of using a bow to shoot arrows.</rdfs:comment>
+        <rdfs:comment>ref:http://frostvalley.org/wp-content/uploads/2015/05/Physical-Activity-Archery-REV-1.12.2017.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF107ArmCurls -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF107ArmCurls">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>It is an essential strength training exercise you can do with dumbbells, a barbell, resistance bands or a cable machine to build strength in the upper arms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF108ArmExtensions -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF108ArmExtensions">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>ARm extension physical activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF109BackExtensions -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF109BackExtensions">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>BAck extension physical activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF10GenderDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF10GenderDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Refers to the gender of the user: Female or Male</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF10SleepStage -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF10SleepStage">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF1State"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF110Ballet -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF110Ballet">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>It is an artistic dance form performed to music, using precise and highly formalized set steps and gestures</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF111BenchPress -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF111BenchPress">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Bench presses are an exercise that can be used to tone the muscles of the upper body, including the pectorals, arms, and shoulders.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF112Bowling -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF112Bowling">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Bowling, also called tenpins, game in which a heavy ball is rolled down a long, narrow lane toward a group of objects known as pins, the aim being to knock down more pins than an opponent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF113BurpeeTest -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF113BurpeeTest">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>This burpee test is a simple test of strength endurance, agility, balance and coordination, in which the participant attempts the maximum number of burpees in a set time period.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF114CircuitTraining -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF114CircuitTraining">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Circuit training is a combination of six or more exercises performed with short rest periods between them for either a set number of repetitions or a prescribed amount of time. One circuit is when all of the chosen exercises have been completed. Multiple circuits can be performed in one training session.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF115Deadlifts -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF115Deadlifts">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>The deadlift is a weight training exercise in which a loaded barbell or bar is lifted off the ground to the level of the hips, torso perpendicular to the floor, before being placed back on the ground.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF116FrontRaises -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF116FrontRaises">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>The front raise, also known as the dumbbell front raise, is a weight training exercise that targets your shoulder muscles. Perform front raises by standing and using an overhand grip to lift a pair of dumbbells from the front of your thighs to shoulder level in front of your body. With proper form, front raises are an effective shoulder workout with many benefits.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF117InlineSkating -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF117InlineSkating">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>a roller skate whose wheels are set in-line for greater speed and maneuverability</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF118LateralRaises -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF118LateralRaises">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>A shoulder exercise in which the arm is raised and lowered against resistance, such as through use of a dumbbell, cable, or resistance band.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF119LegCurls -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF119LegCurls">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>It is an exercise that strengthens the hamstrings. It involves bending your knees and moving your heels toward your butt while the rest of your body stays still.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF11ChestSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF11ChestSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Chest or pectoral skinfold: For men, get a diagonal fold half way between the armpit and the nipple. In women, a diagonal fold 1/3 of the way from the arm pit to the nipple. Mid-Axillary: A vertical fold on the mid-axillary line which runs directly down from the center of the armpit. It is usually measured in milimeters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF120LegExtensions -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF120LegExtensions">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>An exercise performed on a machine while seated. The quadriceps (thigh muscles) are exerted to straighten the knee while acting against resistance applied to the lower shin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF121LegPresses -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF121LegPresses">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>The leg press is a compound weight training exercise in which the individual pushes a weight or resistance away from them using their legs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF122Lunges -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF122Lunges">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>A lunge is a lower body exercise that involves stepping and bending your front and back leg.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF123MartialArts -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF123MartialArts">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>The term martial arts refers to all of the various systems of training for combat that have been arranged or systematized.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF125PullUps -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF125PullUps">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>A pull-up is an upper-body strength exercise. The pull-up is a closed-chain movement where the body is suspended by the hands and pulls up.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF126PushUps -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF126PushUps">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>A push-up is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of the deltoids, serratus anterior, coracobrachialis and the midsection as a whole.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF127Racquetball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF127Racquetball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Racquetball is a racquet sport played with a hollow rubber ball on an indoor or outdoor court.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF128ShoulderPresses -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF128ShoulderPresses">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>It is typically performed while either standing or sitting sometimes also when squatting, in which a weight is pressed straight upwards from racking position until the arms are locked out overhead, while the legs, lower back and abs maintain balance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF129SitUps -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF129SitUps">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Situps are classic abdominal exercises done by lying on your back and lifting your torso. They use your body weight to strengthen and tone the core-stabilizing abdominal muscles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF12DiastolicPressureDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF12DiastolicPressureDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is the lowest number, it refers to the pressure inside the artery when the heart is at rest and is filling with blood.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF130Snowboarding -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF130Snowboarding">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Snowboarding is a recreational and competitive activity that involves descending a snow-covered slope while standing on a snowboard that is almost always attached to a rider&apos;s feet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF131Softball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF131Softball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Softball is a game similar to baseball played with a larger ball (11 to 16 inches or 28 to 40 cm circumference) on a field that has base lengths of 60 feet, a pitcher&apos;s mound that ranges from 35 to 43 (professional is 43) feet away from home plate, and a home run fence that is 220–300 feet away from home plate, depending on the type of softball being played.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF132Squats -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF132Squats">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up. During the descent of a squat, the hip and knee joints flex while the ankle joint dorsiflexes; conversely the hip and knee joints extend and the ankle joint plantarflexes when standing up.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF133WeighLifting -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF133WeighLifting">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Weight training is a common type of strength training for developing the strength and size of skeletal muscles. It utilizes the force of gravity in the form of weighted bars, dumbbells or weight stacks in order to oppose the force generated by muscle through concentric or eccentric contraction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF134Pilates -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF134Pilates">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF48Flexibility"/>
+        <rdfs:comment>It is an exercise regimen that is typically performed on a floor mat or with the use of specialized apparatus and aims to improve flexibility and stability by strengthening the muscles and especially the torso-stabilizing muscles of the abdomen and lower back</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF135Stretching -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF135Stretching">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF48Flexibility"/>
+        <rdfs:comment>Stretching, as it relates to physical health and fitness, is the process of placing particular parts of the body into a position that will lengthen, or elongate, the muscles and associated soft tissues.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF136Yoga -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF136Yoga">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF48Flexibility"/>
+        <rdfs:comment>Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF137UpperLegAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF137UpperLegAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Upper Leg assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF138ChestAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF138ChestAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Chest assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF139KneeAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF139KneeAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Knee assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF13DistancePerformedDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF13DistancePerformedDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The diatance traversed during a physical activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF140WristAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF140WristAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Wrist assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF141METAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF141METAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss"/>
+        <rdfs:comment>MET assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF142CalfAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF142CalfAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Calf assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF143HipAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF143HipAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Hip assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF144AbdomenAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF144AbdomenAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Abdomen assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF145UpperArmAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF145UpperArmAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Upper arm assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF146BiacromialAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF146BiacromialAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Biacromial assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF147EnergyAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF147EnergyAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Energy assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF148SubscapularAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF148SubscapularAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Subscapular assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF149BicepsAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF149BicepsAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Biceps assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF14ElbowBreadthDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF14ElbowBreadthDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Elbow breadth is measured by first raising the right arm to the horizontal position and flexing the elbow to form a right angle. Locate the bony protuberances on either side of the elbow and measure the distance between them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF150GenderAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF150GenderAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Gender assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF151ThighAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF151ThighAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Thigh assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF152AgeAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF152AgeAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Age assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF153HeightAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF153HeightAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Height assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF154BMIAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF154BMIAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>BMI assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF156WeightAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF156WeightAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Weight assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF157BloodPressureAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF157BloodPressureAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss"/>
+        <rdfs:comment>Blood pressure assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF15EnergyExpenditureDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF15EnergyExpenditureDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Energy expenditure is the sum of the basal metabolic rate (the amount of energy expended while at complete rest), the thermic effect of food (TEF, the energy required to digest and absorb food) and the energy expended in physical activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF160CardiovascularAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF160CardiovascularAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss"/>
+        <rdfs:comment>Cardio vascular assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF162SuprailiacAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF162SuprailiacAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment"/>
+        <rdfs:comment>Suprailiac assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF166RespirationAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF166RespirationAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss"/>
+        <rdfs:comment>Respiration assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF167DurationAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF167DurationAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Duration assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF168CardiovascularMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF168CardiovascularMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF237VitalSignsMeas"/>
+        <rdfs:comment>Cardiovascular Measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF169ChestMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF169ChestMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Thickness of the chest</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF16HeadCircumferencesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF16HeadCircumferencesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance from above the eyebrows and ears and around the back of the head.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF171EnergyMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF171EnergyMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Energy measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF173HeightMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF173HeightMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Height measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF176StepsCountMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF176StepsCountMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Number of steps Measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF178GenderMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF178GenderMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Gernder measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF179RespirationMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF179RespirationMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF237VitalSignsMeas"/>
+        <rdfs:comment>Respiration measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF17HeartRateMaxDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF17HeartRateMaxDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>it&apos;s the highest number of beats per minute your heart can pump under maximum stress.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF181SubscapularMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF181SubscapularMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The thickness of the subscapular (under the lowest point of the shoulder blade)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF182SuprailiacMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF182SuprailiacMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The thickness of suprailiac (front side middle upperarm)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF183ThighMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF183ThighMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Midway between the proximal border of the patella (upper knee) and the inguinal crease (hip).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF184TricepsMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF184TricepsMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The thickness of the Triceps (back side middle upperarm)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF185UpperArmMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF185UpperArmMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Upper Arm measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF186UpperLegMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF186UpperLegMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Upper leg measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF188DurationMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF188DurationMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Duration measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF18HeartRateReservesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF18HeartRateReservesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>The heart rate can be determined by the interval between two successive QRS complexes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF191WeightMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF191WeightMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Weight measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF193FrequencyMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF193FrequencyMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Frequency measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF194AbdomenMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF194AbdomenMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The thickness of the abdomen in a vertical way (2 cm or 1&quot; to the right side of the umbilicus)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF195BiacromialMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF195BiacromialMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>Biacromial Measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF196BicepsMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF196BicepsMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The thickness of the suprailiac (front side middle upperarm)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF197BloodPressureMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF197BloodPressureMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF237VitalSignsMeas"/>
+        <rdfs:comment>Blood pressure is the force of the blood pushing against the artery walls during contraction and relaxation of the heart. Two numbers are recorded when measuring blood pressure: diastolic pressure and systolic pressure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF198BMIMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF198BMIMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement"/>
+        <rdfs:comment>The BMI calculation is the weight in kilograms, divided by the height in meters squared</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF19HeightDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF19HeightDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance from the bottom of the feet to the top of the head</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF1PhysicalActivityIntensityDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF1PhysicalActivityIntensityDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>This class comprises actions intentionally carried out by instances of E39 Actor such us the different physical activities performed by E39 Actor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF1State -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF1State">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:comment>At a given level of granularity (both temporal and spatial) we are confronted with states. The whole or various parts of my persistent iteam are all in
+particular physical and physiological occurrance (including states of motion or change) that are characteristic of a particular phase 
+1. http://empslocal.ex.ac.uk/people/staff/apgalton/Preprints/interontology12.pdf
+2. States, Processes and Events, and the Ontology of Causal Relations
+3. The Ontology of States, Processes, and Events
+4. J. F. Allen. Towards a general theory of action and time. Artificial Intelligence, 23:123–54, 1984. 5. A. P. Galton. Experience and history: Processes and their relation to events. Journal of Logic and Computation, 18(3):323–340, 2007. A. P. Galton and R. Mizoguchi. The water falls but the waterfall does not fall: New perspectives on objects, processes and events. Applied Ontology, 4(2):71–107, 2009.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF200AgeMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF200AgeMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Age measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E73InformationObject"/>
+        <rdfs:comment>Health recommendation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF202WHORecommendationCode -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF202WHORecommendationCode">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+        <rdfs:comment>WHO recommendation code</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation"/>
+        <rdfs:comment>WHO Physical Activity Recommendation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF206ObesityType -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF206ObesityType">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E55Type"/>
+        <rdfs:comment>This class classifies the person&apos;s obesity into 5 classes based on the BMI index</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF207ESSIQuestionnaireActivity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF207ESSIQuestionnaireActivity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>The activity of filling ESSI questionnaire</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E55Type"/>
+        <rdfs:comment>This class classifies the user&apos;s behavior into 5 classes based on the activity performed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF208AppellationType -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF208AppellationType">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E55Type"/>
+        <rdfs:comment>This class comprises types of Appellation that are used or can be used to identify a specific instance of some class within a certain context. See MarineTLO ontology http://users.ics.forth.gr/~fafalios/files/pubs/tzitzi2013mtsr.pdf</rdfs:comment>
+        <rdfs:label></rdfs:label>
+        <rdfs:label>HLF208AppellationType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF208ESSIScoreMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF208ESSIScoreMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>ESSI score measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF209ESSIScoreDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF209ESSIScoreDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The final score of the ESSI questionnaire</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF209IdentifierType -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF209IdentifierType">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF208AppellationType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF20HipCircumferencesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF20HipCircumferencesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance around the largest part of the hips ( the widest part of the buttocks).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF20SleepCycle -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF20SleepCycle">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF210ESSIRecommendation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF210ESSIRecommendation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation"/>
+        <rdfs:comment>ESSI recommendation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF211ESSIRecommendationCode -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF211ESSIRecommendationCode">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+        <rdfs:comment>ESSI recommendation code</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF212PSQIRecommendationCode -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF212PSQIRecommendationCode">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+        <rdfs:comment>PSQI recommendation code</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF213PSQIQuestionnaireActivity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF213PSQIQuestionnaireActivity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>The activity of filling PSQI questionnaire</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF213PSQIRecommendation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF213PSQIRecommendation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation"/>
+        <rdfs:comment>PSQI recommendation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF214PSQIScoreDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF214PSQIScoreDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>THe final score of the PSQI questionnaire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF215PSQIScoreMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF215PSQIScoreMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>PSQI score measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF216PHQQuestionnaireActivity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF216PHQQuestionnaireActivity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>The activity of filling PHQ questionnaire</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF217PHQScoreDIm -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF217PHQScoreDIm">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The final score of the PHQ questionnaire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF218PHQScoreMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF218PHQScoreMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>PHQ score measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF219PHQFrequencyRate1Meas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF219PHQFrequencyRate1Meas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>PHQ frequency rate 1 measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF21IntakeEnergyDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF21IntakeEnergyDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Energy intake is defined as the caloric or energy content of food as provided by the major sources of dietary energy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF220PHQFrequencyRate2Meas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF220PHQFrequencyRate2Meas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>PHQ Frequency Rate 2 measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF221PHQFrequencyRate3Meas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF221PHQFrequencyRate3Meas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Fequency Rate 3 Measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF222PHQRateItem9Meas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF222PHQRateItem9Meas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>PHQ Rate item 9 measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF223PHQFrequencyRate1Dim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF223PHQFrequencyRate1Dim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>How many questions were rated 1 in the PHQ questionnaire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF224PHQFrequencyRate2Dim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF224PHQFrequencyRate2Dim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>How many questions were rated 2 in the PHQ questionnaire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF225PHQFrequencyRate3Dim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF225PHQFrequencyRate3Dim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>How many questions were rated 3 in the PHQ questionnaire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF226PHQRateItem9Dim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF226PHQRateItem9Dim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The rate given to the item 9. It can be 0, 1, 2 or 3.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF227PHQRecommendation -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF227PHQRecommendation">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF201HealthRecommendation"/>
+        <rdfs:comment>PHQ recommendation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF228PHQRecommendationCode -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF228PHQRecommendationCode">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E41Appellation"/>
+        <rdfs:comment>PHQ recommendation code</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF229PregnancyAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF229PregnancyAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Pregnancy assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF22WaistToHeightRatioDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF22WaistToHeightRatioDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is calculated as waist circumference divided by their height, both measured in the same units.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF230PregnancyMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF230PregnancyMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Pregnancy measurement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF231PregnancyDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF231PregnancyDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Pregnancy status</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Anthropometric Measurements Dimension</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Vital sign dimensions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF234VitalSignsAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>VItal signs assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF235AnthropometricAssignment">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:comment>Anthropometric Measurements Assignment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF236AnthropometricMeasurement">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Anthropometric Measurements</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF237VitalSignsMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF237VitalSignsMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+        <rdfs:comment>Vital signs measutrements</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF23KneeHeightDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF23KneeHeightDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is defined as the distance from the sole of the foot to the most anterior surface of the femoral condyles of the thigh (medial being more anterior), with the ankle and knee each flexed to a 90 angle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF24METDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF24METDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>Metabolic equivalent of task</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF25MidUpperArmCircumferencesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF25MidUpperArmCircumferencesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Circumference of the left upper arm, measured at the mid-point between the tip of the shoulder and the tip of the elbow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF26RespirationRateDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF26RespirationRateDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>The respiration rate is the number of breaths a person takes per minute.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF27SpO2Dim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF27SpO2Dim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>Also known as oxygen saturation, is a measure of the amount of oxygen-carrying hemoglobin in the blood relative to the amount of hemoglobin not carrying oxygen.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF28StepsCountDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF28StepsCountDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Number of steps while exercising a physical activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF29StressLevelDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF29StressLevelDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The stress level, from low to high.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF2FrequencyDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF2FrequencyDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>the rate at which something occurs over a particular period of time or in a given sample.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF2Process -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF2Process">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E2TemporalEntity"/>
+        <rdfs:comment>natural cycles of activity where the cycles are relevant to register, in contrast to the Event which only register the begins and ends. See also BFO: process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF300GlycosilatedEmoglobinMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF300GlycosilatedEmoglobinMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF301TotalCholesterolMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF301TotalCholesterolMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF302HighDensityLipoproteinMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF302HighDensityLipoproteinMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF303LowDensityLipoproteinMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF303LowDensityLipoproteinMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF304TriglyceridesMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF304TriglyceridesMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF305SerumCreatinineMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF305SerumCreatinineMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF306AlbuminuriaCreatininuriaRatioMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF306AlbuminuriaCreatininuriaRatioMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF307AlkalinePhosphataseALPMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF307AlkalinePhosphataseALPMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF308UricAcidMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF308UricAcidMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF309EstimatedGlomerularFiltrationRateMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF309EstimatedGlomerularFiltrationRateMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF30ClinicalAssessment -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF30ClinicalAssessment">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+        <rdfs:comment>Inspired by HL7 and it is in line with the ontological category of OGMS: laboratory test is the parent concept of all sub-tree hierarchies representing related laboratory. Paper: DDO: a diabetes mellitus diagnosis ontology. Link: https://applied-informatics-j.springeropen.com/articles/10.1186/s40535-016-0021-2</rdfs:comment>
+        <rdfs:label>HLF30ClinicalAssessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF30SleepStageType -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E55Type"/>
+        <rdfs:comment>This class comprises sleep stages as denoted by the controlled vocabularies used to characterize those stages by [1] 
+
+[1].the AASM Manual for the Scoring of Sleep and Associated Event https://www.sleep.pitt.edu/wp-content/uploads/2020/03/The-AASM-Manual-for-Scoring-of-Sleep-and-Associated-Events-2007-.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF30SubscapularSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF30SubscapularSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The thickness of a skinfold picked up just below the inferior angle of the right scapula and parallel to the tension lines of the skin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF310NitritesMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF310NitritesMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF311HepaticSteatosisMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF311HepaticSteatosisMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF313AlanineAminotransferaseALTMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF313AlanineAminotransferaseALTMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF314AspartateAminotransferaseASTMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF314AspartateAminotransferaseASTMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF315YGlutamyltransferaseGGTMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF315YGlutamyltransferaseGGTMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF316AlbuminMeas -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF316AlbuminMeas">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E16Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF31SuprailiacSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF31SuprailiacSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The thickness of a skinfold picked up in the midaxillary line at the level of the crest of the ilium.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF32SystolicPressureDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF32SystolicPressureDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is the highest number, it refers to the pressure inside the artery when the heart contracts and pumps blood through the body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF33ThighSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF33ThighSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Thickness of the thigh.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF34TricepsSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF34TricepsSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Thickness of the triceps.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF35UpperArmLengthDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF35UpperArmLengthDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance between shoulder and the elbow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF36UpperLegLengthDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF36UpperLegLengthDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance between the knee and the hip.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF37AgeDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF37AgeDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The age of the user in years.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF38VO2MaxDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF38VO2MaxDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF233VitalSignDim"/>
+        <rdfs:comment>It refers to how much oxygen your body can absorb and use during exercise</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF39WaistCircumferencesDIm -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF39WaistCircumferencesDIm">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The horizontal circumference of the waist at the level of its natural indentation. measured with a tape passing over right and left waist (natural indentation) landmarks. The subject stands erect looking straight ahead.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF3AbdomenSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF3AbdomenSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Thickness of the abdomen</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF3AverageSpeedDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF3AverageSpeedDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>The average speed during a physical activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF400GlycosilatedEmoglobinDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF400GlycosilatedEmoglobinDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF401TotalCholesterolDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF401TotalCholesterolDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF402HighDensityLipoproteinDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF402HighDensityLipoproteinDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF403LowDensityLipoproteinDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF403LowDensityLipoproteinDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF404TriglyceridesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF404TriglyceridesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF405SerumCreatinineDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF405SerumCreatinineDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF406AlbuminuriaCreatininuriaRatioDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF406AlbuminuriaCreatininuriaRatioDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF407AlkalinePhosphataseDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF407AlkalinePhosphataseDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF408UricAcidDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF408UricAcidDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF409EstimatedGlomerularFiltrationRateDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF409EstimatedGlomerularFiltrationRateDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF40Symptom -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF40Symptom">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+        <rdfs:comment>A process experienced by the patient, which can only be experienced by the patient, that is hypothesized to be clinically relevant. It is from OGML ontology. Definition pper: http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</rdfs:comment>
+        <rdfs:label>HLF40Symptom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF40TimeWindowDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF40TimeWindowDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF410NitritesDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF410NitritesDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF411HepaticSteatosisDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF411HepaticSteatosisDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF413AlanineAminotransferaseALTDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF413AlanineAminotransferaseALTDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF414AspartateAminotransferaseASTDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF414AspartateAminotransferaseASTDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF415YGlutamyltransferaseGGTDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF415YGlutamyltransferaseGGTDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF416AlbuminDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF416AlbuminDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF41WeightDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF41WeightDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Weight of the person in KG</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF42WristBreadthDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF42WristBreadthDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The distance between the radial and ulnar styloid prominence of the wrist measured with the flesh compressed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF43SleepingActivity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF43SleepingActivity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>The sleeping activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF44PhysicalActivity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF44PhysicalActivity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E7Activity"/>
+        <rdfs:comment>WHO defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF45Exercice -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF45Exercice">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF44PhysicalActivity"/>
+        <rdfs:comment>Exercise is a subset of physical activity that is planned, structured, and repetitive and has as a final or an intermediate objective the improvement or maintenance of physical fitness.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF46MountainClimbing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF46MountainClimbing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF44PhysicalActivity"/>
+        <rdfs:comment>Mountain climbing, also called mountaineering, the sport of attaining, or attempting to attain, high points in mountainous regions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF47RockClimbing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF47RockClimbing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF44PhysicalActivity"/>
+        <rdfs:comment>Rock climbing is an activity where participants climb up, down or across natural rocks or artificial rock walls. The goal is to reach the summit or the endpoint of a route without falling. It is acyclic and hence not considered as an exercice.ref: https://www.climbstrong.com/education-center/third-gear-the-aerobic-energy-system/#:~:text=Climbing%20is%20an%20acyclic%20anaerobic%2Daerobic%20activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF48Flexibility -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF48Flexibility">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF45Exercice"/>
+        <rdfs:comment>Flexibility exercises are activities that improve the ability of a joint to maintain the movement necessary for carrying out daily tasks and physical activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF45Exercice"/>
+        <rdfs:comment>A strength exercise is any activity that makes your muscles work harder than usual. This increases your muscles&apos; strength, size, power and endurance. The activities involve using your body weight or working against a resistance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF4DurationDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF4DurationDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E54Dimension"/>
+        <rdfs:comment>Total duration of a physical activity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF500GlycosilatedEmoglobinAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF500GlycosilatedEmoglobinAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF501TotalCholesterolAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF501TotalCholesterolAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF502HighDensityLipoproteinAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF502HighDensityLipoproteinAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF503LowDensityLipoproteinAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF503LowDensityLipoproteinAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF504TriglyceridesAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF504TriglyceridesAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF505SerumCreatinineAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF505SerumCreatinineAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF506AlbuminuriaCreatininuriaRatioAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF506AlbuminuriaCreatininuriaRatioAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF507AlkalinePhosphataseAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF507AlkalinePhosphataseAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF508UricAcidAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF508UricAcidAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF509EstimatedGlomerularFiltrationRateAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF509EstimatedGlomerularFiltrationRateAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF50BalanceAndCoordination">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF45Exercice"/>
+        <rdfs:comment>Balance is the ability to stay upright or stay in control of body movement, and coordination is the ability to move two or more body parts under control, smoothly and efficiently.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF50DiseaseCourse -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF50DiseaseCourse">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF2Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF50RealizableEntity -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF50RealizableEntity">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E77PersistenItem"/>
+        <rdfs:comment>To say that b is a realizable entity is to say that b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type instances of which are realized in processes of a correlated type. (axiom label in BFO2 Reference: [058-002])</rdfs:comment>
+        <rdfs:label>HLF50RealizableEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF510NitritesAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF510NitritesAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF511HepaticSteatosisAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF511HepaticSteatosisAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF513AlanineAminotransferaseALTAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF513AlanineAminotransferaseALTAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF514AspartateAminotransferaseASTAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF514AspartateAminotransferaseASTAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF515YGlutamyltransferaseGGTAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF515YGlutamyltransferaseGGTAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+        <rdfs:label>HLF515YGlutamyltransferaseGGTAss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF516AlbuminAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF516AlbuminAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF45Exercice"/>
+        <rdfs:comment>Aerobic exercise is an exercice with a duration exceeding 1 min  (Endurance Intensive Efforts)ref: https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-015-0012-1.pdf https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5329739/</rdfs:comment>
+        <rdfs:comment>Aerobic exercise provides cardiovascular conditioning. The term aerobic actually means &quot;with oxygen,&quot; which means that breathing controls the amount of oxygen that can make it to the muscles to help them burn fuel and move.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF51Disposition -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF51Disposition">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF50RealizableEntity"/>
+        <rdfs:comment>b is a disposition means: b is a realizable entity &amp; b’s bearer is some material entity &amp; b is such that if it ceases to exist, then its bearer is physically changed, &amp; b’s realization occurs when and because this bearer is in some special physical circumstances, &amp; this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002]). Paper: Toward an Ontological Treatment of Disease and Diagnosis</rdfs:comment>
+        <rdfs:label>HLF51Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF52Disease -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF52Disease">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51Disposition"/>
+        <rdfs:comment>x is a prolonged distortion of standard cellular network processes, wherein the activities of the network (i) fall outside an acceptable normal range for the organism’s comparison class, (ii) are not capable of remedy by the network itself without thereby distorting the processes of some other network (where that second network is likewise incapable of self-remedy without distorting the processes of yet another network, and so on), and (iii) tend to reduce the organism’s ability to cope with environmental pressures. the core idea is that of a disease instance as a deviation from standard processes. Paper: The Factory Model of Disease. Neil Williams. 2007</rdfs:comment>
+        <rdfs:label>HLF52Disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF52LegRaises -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF52LegRaises">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF49MuscleStrengtheningAnaerobics"/>
+        <rdfs:comment>Any of various exercises in which one or both legs are slowly raised and lowered; frequently with modifying word specifying the position of the body, as lying, side, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF53MountainBiking -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF53MountainBiking">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Mountain biking is a sport of riding bicycles off-road, often over rough terrain, usually using specially designed mountain bikes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF54Orienteering -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF54Orienteering">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A competitive sport in which runners have to find their way across rough country with the aid of a map and compass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF55Plank -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF55Plank">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The plank is an isometric core strength exercise that involves maintaining a position similar to a push-up for the maximum possible time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF56Rafting -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF56Rafting">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Rafting is recreational outdoor activity which use an inflatable raft to navigate a river or other body of water. This is often done on whitewater or different degrees of rough water. Dealing with risk is often a part of the experience</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF57RollerSkating -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF57RollerSkating">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The activity or sport of gliding across a hard surface on roller skates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF58Rowing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF58Rowing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Rowing is the sport of racing boats using oars.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF59Rugby -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF59Rugby">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A team game played with an oval ball that may be kicked, carried, and passed from hand to hand. Points are scored by grounding the ball behind the opponents&apos; goal line (thereby scoring a try) or by kicking it between the two posts and over the crossbar of the opponents&apos; goal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF5BiacromialBreadthDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF5BiacromialBreadthDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is the shoulder width. It is measured between the outermost bony points on the top of each shoulder.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF600DiseaseAss -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF600DiseaseAss">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#E13AttributeAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF60Running -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF60Running">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Running is the activity of moving fast on foot</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF61ScubaDIving -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF61ScubaDIving">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Scuba diving is a mode of underwater diving where the diver uses an apparatus which is completely independent of surface supply to breathe underwater.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF62Skiing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF62Skiing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Skiing is a means of transport using skis to glide on snow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF63Snorkeling -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF63Snorkeling">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Snorkeling is the practice of swimming on or through a body of water while equipped with a diving mask, a shaped breathing tube called a snorkel, and usually swimfins.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF64Snowshoeing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF64Snowshoeing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Walking using snowshoes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF65StepsMachine -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF65StepsMachine">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A type of exercise equipment consisting of a frame with two pedals that you stand on and push down with your feet so that you move in a way similar to climbing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF66Swimming -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF66Swimming">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Swimming is an individual or team racing sport that requires the use of one&apos;s entire body to move through water. The sport takes place in pools or open water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF67TableTennis -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF67TableTennis">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Table tennis, also known as ping-pong and whiff-whaff, is a sport in which two or four players hit a lightweight ball, also known as the ping-pong ball, back and forth across a table using small rackets. The game takes place on a hard table divided by a net.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF68Tennis -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF68Tennis">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Tennis is a racket sport that can be played individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent&apos;s court.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF69AlpineSkiing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF69AlpineSkiing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>It is the pastime of sliding down snow-covered slopes on skis with fixed-heel bindings, unlike other types of skiing, which use skis with free-heel bindings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF6BicepsSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF6BicepsSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Thickness of the biceps.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF70AquaAerobics -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF70AquaAerobics">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>It is the performance of aerobic exercise in water such as in a swimming pool. Done mostly vertically and without swimming typically in waist deep or deeper water, it is a type of resistance training. Water aerobics is a form of aerobic exercise that requires water-immersed participants.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF71Backpacking -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF71Backpacking">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Backpacking is the outdoor recreation of carrying gear on one&apos;s back, while hiking for more than a day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF72Badminton -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF72Badminton">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are &quot;singles&quot; and &quot;doubles&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF73BallroomDancing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF73BallroomDancing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Ballroom dance is a set of partner dances, which are enjoyed both socially and competitively around the world, mostly because of its performance and entertainment aspects. Ballroom dancing is also widely enjoyed on stage, film, and television.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF74Baseball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF74Baseball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Baseball is a bat-and-ball game played between two opposing teams that take turns batting and fielding. The game proceeds when a player on the fielding team, called the pitcher, throws a ball which a player on the batting team tries to hit with a bat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF75Basketball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF75Basketball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball through the defender&apos;s hoop while preventing the opposing team from shooting through their own hoop.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF76BeachVoleyball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF76BeachVoleyball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A form of volleyball played on sand by teams of two players.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF77Boxing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF77Boxing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Boxing is a combat sport in which two people, usually wearing protective gloves and other protective equipment such as hand wraps and mouthguards, throw punches at each other for a predetermined amount of time in a boxing ring.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF78Canoeing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF78Canoeing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The sport or activity of paddling a light, narrow boat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF79Cricket -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF79Cricket">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard pitch with a wicket at each end, each comprising two bails balanced on three stumps.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF7BMIIndexDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF7BMIIndexDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>The BMI is defined as the body mass divided by the square of the body height</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF80CrossCountrySkiing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF80CrossCountrySkiing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The sport of skiing across the countryside, often through woods and usually on relatively flat terrain, using narrow skis with boots that can be raised off the ski at the heel when striding.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF81Crunches -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF81Crunches">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A physical exercise in which the body is brought into a sitting position from one lying on the back.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF82Cycling -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF82Cycling">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF83Dancing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF83Dancing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Dance is a performing art form consisting of sequences of movement, either improvised or purposefully selected. This movement has aesthetic and often symbolic value. Dance can be categorized and described by its choreography, by its repertoire of movements, or by its historical period or place of origin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF84EllipticalTrainer -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF84EllipticalTrainer">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A stationary exercise device on which the user stands on two small rimmed platforms and moves them forward and back in an approximately elliptical path.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF85Treadmill -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF85Treadmill">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A treadmill is an exercise machine for walking or running in place.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF86Football -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF86Football">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A game in which two opposing teams of 11 players each defend goals at opposite ends of a field having goal posts at each end, with points being scored chiefly by carrying the ball across the opponent&apos;s goal line and by place-kicking or drop-kicking the ball over the crossbar between the opponent&apos;s goal posts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF87Golf -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF87Golf">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Golf is a club-and-ball sport in which players use various clubs to hit balls into a series of holes on a course in as few strokes as possible.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF88Handball -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF88Handball">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Handball is a team sport in which two teams of seven players each pass a ball using their hands with the aim of throwing it into the goal of the other team. A standard match consists of two periods of 30 minutes, and the team that scores more goals wins.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF89Hiking -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF89Hiking">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The activity of going for long walks, especially across country.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF8BodyTemperatureDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF8BodyTemperatureDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>It is the temperature of the human body, It depends on gender, recent activity, food and fluid consumption, time of day ...</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF90Hockey -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF90Hockey">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Hockey is a sport in which two teams play against each other by trying to manoeuvre a ball or a puck into the opponent&apos;s goal using a hockey stick.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF91HorsebackRiding -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF91HorsebackRiding">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>The sport or activity of riding horses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF92HulaHooping -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF92HulaHooping">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Spining a hula hoop round the body by gyrating the hips.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF93IceDancing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF93IceDancing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A form of choreographed figure skating influenced by ballroom dancing, typically performed by a man and a woman competing as a team.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF94IceHockey -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF94IceHockey">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Ice hockey is a contact winter team sport played on ice skates, usually on an rink. Two opposing teams, typically fielding six skaters each, use sticks to shoot a vulcanized rubber puck into the other team&apos;s goal; the winner is the team to score most goals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF95IceSkating -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF95IceSkating">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Skating on ice as a sport or pastime</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF96JumpingJacks -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF96JumpingJacks">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>It is a physical jumping exercise performed by jumping to a position with the legs spread wide and the hands going overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF97JumpRope -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF97JumpRope">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>A skipping rope or jump rope is a tool used in the sport of skipping/jump rope where one or more participants jump over a rope swung so that it passes under their feet and over their heads.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF98Kayaking -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF98Kayaking">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Kayaking is the use of a kayak for moving over water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF99Kitesurfing -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF99Kitesurfing">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF51CardioAerobics"/>
+        <rdfs:comment>Kiteboarding or kitesurfing is an extreme sport where the kiter uses the wind power with a large power kite to be pulled on a water, land or snow surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#HLF9CalfSkinfoldDim -->
+
+    <owl:Class rdf:about="https://opensource.samsung.com/projects/helifit#HLF9CalfSkinfoldDim">
+        <rdfs:subClassOf rdf:resource="https://opensource.samsung.com/projects/helifit#HLF232AnthropometricDimension"/>
+        <rdfs:comment>Thickness of the calf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code001 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code001">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code002 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code002">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code003 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code003">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code004 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code004">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code005 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code005">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code006 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code006">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code007 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code007">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code008 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code008">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code009 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code009">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code010 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code010">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code011 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code011">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code012 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code012">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#code013 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#code013">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF205WHOPhysicalActivityRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#extremelyobese -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#extremelyobese">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF206ObesityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#highbehavior -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#highbehavior">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#lightbehavior -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#lightbehavior">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#moderatebehavior -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#moderatebehavior">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#normal -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#normal">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF206ObesityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#nrem -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#nrem">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#nrem1 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#nrem1">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#nrem2 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#nrem2">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#nrem3 -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#nrem3">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#obese -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#obese">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF206ObesityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#overweight -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#overweight">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF206ObesityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#rem -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#rem">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#sedentarybehavior -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#sedentarybehavior">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#underweight -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#underweight">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF206ObesityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#vigorousbehavior -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#vigorousbehavior">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF207PhysicalBehaviorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://opensource.samsung.com/projects/helifit#wakefulness -->
+
+    <owl:NamedIndividual rdf:about="https://opensource.samsung.com/projects/helifit#wakefulness">
+        <rdf:type rdf:resource="https://opensource.samsung.com/projects/helifit#HLF30SleepStageType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
