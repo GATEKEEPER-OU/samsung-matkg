@@ -170,6 +170,9 @@ Temporary Items
 
 # Custom
 target
-datasets/*/*.json
+datasets/*
+!datasets/.keep
+lib/*
+!lib/.keep
 output/*
-*.dylib
+!output/.keep
