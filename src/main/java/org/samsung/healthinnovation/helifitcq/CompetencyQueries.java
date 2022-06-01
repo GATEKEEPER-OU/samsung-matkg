@@ -8,13 +8,10 @@ import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
 import tech.oxfordsemantic.commons.RDFoxUtils;
-import tech.oxfordsemantic.jrdfox.client.ConnectionFactory;
-import tech.oxfordsemantic.jrdfox.client.DataStoreConnection;
-import tech.oxfordsemantic.jrdfox.client.ServerConnection;
+import tech.oxfordsemantic.jrdfox.client.*;
 import tech.oxfordsemantic.jrdfox.exceptions.JRDFoxException;
 
 import java.io.File;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,10 +21,12 @@ import java.util.List;
 public class CompetencyQueries {
 
   static final String DATASETS_DIR = "datasets/export-20220221";
-  static final String OUTPUT_DIR = "output/emr";
+  static final String OUTPUT_MAPPING_DIR = "output/emr";
+  static final String QUERY_RESULT_DIR = "output/results";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-  static final String ONTOLOGY_NAME = "HeLiFit-RDF_v1.5.0.owl";
+//  static final String ONTOLOGY_NAME = "HeLiFit-RDF_v1.5.0.owl";
+  static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
   static final String QUERIES_PATH = "queries";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
@@ -35,7 +34,9 @@ public class CompetencyQueries {
     // check if rdfox.jar exists in lib
 
     File datasetFile = new File(DATASETS_DIR + "/356.json");
-    File rdfOutputFile = new File(OUTPUT_DIR + "/output-356.nt");
+    File rdfOutputFile = new File(OUTPUT_MAPPING_DIR + "/output-356.nt");
+    File queryOutputFile = new File(QUERY_RESULT_DIR + "/output-query-356.nt");
+
 
     // generate RDF graph
     FHIRAdapter converter = EMRAdapter.create();
@@ -47,7 +48,6 @@ public class CompetencyQueries {
       serverConnection.setNumberOfThreads(2);
       serverConnection.createDataStore(DATASTORE_NAME, Collections.emptyMap());
       try (DataStoreConnection dataStoreConnection = serverConnection.newDataStoreConnection(DATASTORE_NAME)) {
-
         // upload RDF graph into rdfox
         RDFoxUtils.importData(dataStoreConnection, rdfOutputFile);
         RDFoxUtils.importOntology(dataStoreConnection, ONTOLOGY_NAME);
@@ -55,10 +55,15 @@ public class CompetencyQueries {
         // run competency queries
         List<File> queries = RDFoxUtils.listOfQueries(QUERIES_PATH, QUERY_FILE_EXTS);
         for (File queryFile : queries) {
-          String query = ResourceUtils.readFileToString(queryFile);
+//          String userId = "<https://opensource.samsung.com/projects/helifit/id/user1%40saxony.gatekeeper.com>"; // @todo take it from file content
+          String queryTemplate = ResourceUtils.readFileToString(queryFile);
+//          System.out.println("queryTemplate >>>>> " + queryTemplate); // DEBUG
+//          String query = queryTemplate.replace("__ID__", userId);
+          String query = queryTemplate;
+//          System.out.println("query >>>>> " + query); // DEBUG
 
-//          System.out.println(">>>>> " + query); // DEBUG
-
+//          RDFoxUtils.printQueryResults(dataStoreConnection, query); // DEBUG
+          RDFoxUtils.saveQueryResults(dataStoreConnection, query, queryOutputFile);
         }
       }
 
