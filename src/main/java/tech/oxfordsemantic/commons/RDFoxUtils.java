@@ -75,9 +75,12 @@ public class RDFoxUtils {
       for (long multiplicity = cursor.open(); multiplicity != 0; multiplicity = cursor.advance()) {
         StringBuilder row = new StringBuilder();
         for (int termIndex = 0; termIndex < arity; ++termIndex) {
-          row.insert(0, " ");
+//          row.insert(0, " ");
+//          ResourceValue resource = cursor.getResourceValue(termIndex);
+//          row.insert(0, resource.toString(prefixes));
+          row.append(" ");
           ResourceValue resource = cursor.getResourceValue(termIndex);
-          row.insert(0, resource.toString(prefixes));
+          row.append(resource.toString(prefixes));
         }
         row.append(".\n");
 //        System.out.print("DEBUG >>>> " + row); // DEBUG
