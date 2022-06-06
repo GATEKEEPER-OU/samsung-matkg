@@ -57,16 +57,15 @@ public class CompetencyQueries {
         for (File queryFile : queries) {
 //          String userId = "<https://opensource.samsung.com/projects/helifit/id/user1%40saxony.gatekeeper.com>"; // @todo take it from file content
           String queryTemplate = ResourceUtils.readFileToString(queryFile);
-//          System.out.println("queryTemplate >>>>> " + queryTemplate); // DEBUG
+          System.out.println("queryTemplate >>>>> " + queryTemplate); // DEBUG
 //          String query = queryTemplate.replace("__ID__", userId);
           String query = queryTemplate;
 //          System.out.println("query >>>>> " + query); // DEBUG
-
+//
 //          RDFoxUtils.printQueryResults(dataStoreConnection, query); // DEBUG
           RDFoxUtils.saveQueryResults(dataStoreConnection, query, queryOutputFile);
         }
       }
-
     } catch (JRDFoxException e) {
       // @todo Message
       e.printStackTrace(); // DEBUG

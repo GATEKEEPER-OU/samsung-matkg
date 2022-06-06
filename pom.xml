@@ -13,11 +13,45 @@
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.13</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.11.0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/be.ugent.rml/rmlmapper -->
+    <dependency>
+      <groupId>be.ugent.rml</groupId>
+      <artifactId>rmlmapper</artifactId>
+      <version>5.0.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20220320</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.ibm.fhir/fhir-model -->
+    <dependency>
+      <groupId>com.ibm.fhir</groupId>
+      <artifactId>fhir-model</artifactId>
+      <version>4.11.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.8.2</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
 </project>
