@@ -1,11 +1,13 @@
 package org.samsung.healthinnovation.helifitcq;
 
+import org.apache.commons.io.FileUtils;
 import org.commons.ResourceUtils;
 import tech.oxfordsemantic.commons.RDFoxUtils;
 import tech.oxfordsemantic.jrdfox.client.*;
 import tech.oxfordsemantic.jrdfox.exceptions.JRDFoxException;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
@@ -14,28 +16,26 @@ import java.util.List;
  * */
 public class EMRCompetencyQueries {
 
-//  static final String DATASETS_DIR = "output/kg-emr";
   static final String OUTPUT_MAPPING_DIR = "output/kg-emr";
-  static final String QUERY_RESULT_DIR = "output/results";
+  static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-//  static final String ONTOLOGY_NAME = "HeLiFit-RDF_v1.5.0.owl";
-  static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
+  static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.2.owl";
   static final String QUERIES_PATH = "queries";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
   public static void main(String[] args) {
-    // check if rdfox.jar exists in lib
 
-//    File datasetFile = new File(DATASETS_DIR + "/356.json");
+    // @todo to refactory
+    File queryOutputDir = new File(RESULT_DIR);
+    try {
+      FileUtils.cleanDirectory(queryOutputDir);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    // ------------------------------------------
+
     File rdfOutputFile = new File(OUTPUT_MAPPING_DIR + "/output-356.nt");
-//    File queryOutputFile = new File(QUERY_RESULT_DIR + "/output-query-356.nt");
-
-
-    // generate RDF graph
-//    FHIRAdapter converter = EMRAdapter.create();
-//    RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
-//    RDFizer.trasform(datasetFile, converter, mapping, rdfOutputFile);
 
     // connect to rdfox
     try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", "", "")) {
@@ -52,7 +52,7 @@ public class EMRCompetencyQueries {
           String queryName = queryFile.getName().substring(0, queryFile.getName().toString().length()-3);
 //          System.out.println(queryName); //DEBUG
 
-          File queryOutputFile = new File(QUERY_RESULT_DIR + "/"+queryName+"nt");
+          File queryOutputFile = new File(RESULT_DIR + "/" + queryName + "nt");
 //          String userId = "<https://opensource.samsung.com/projects/helifit/id/user1%40saxony.gatekeeper.com>"; // @todo take it from file content
           String queryTemplate = ResourceUtils.readFileToString(queryFile);
 //          System.out.println("queryTemplate >>>>> " + queryTemplate); // DEBUG
