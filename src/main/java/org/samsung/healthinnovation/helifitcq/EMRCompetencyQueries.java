@@ -1,6 +1,6 @@
 package org.samsung.healthinnovation.helifitcq;
 
-import org.apache.commons.io.FileUtils;
+import org.commons.OutputUtils;
 import org.commons.ResourceUtils;
 import tech.oxfordsemantic.commons.RDFoxUtils;
 import tech.oxfordsemantic.jrdfox.client.*;
@@ -25,17 +25,11 @@ public class EMRCompetencyQueries {
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
   public static void main(String[] args) {
-
-    // @todo to refactory
-    File queryOutputDir = new File(RESULT_DIR);
-    try {
-      FileUtils.cleanDirectory(queryOutputDir);
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
-    // ------------------------------------------
-
     File rdfOutputFile = new File(OUTPUT_MAPPING_DIR + "/output-356.nt");
+
+    File queryOutputDir = new File(RESULT_DIR);
+    queryOutputDir.mkdir();
+    OutputUtils.clean(queryOutputDir);
 
     // connect to rdfox
     try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", "", "")) {
