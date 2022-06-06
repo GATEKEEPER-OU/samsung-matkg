@@ -4,12 +4,11 @@ import org.apache.commons.io.FileUtils;
 import org.ou.gatekeeper.RDFizer;
 import org.ou.gatekeeper.fhir.adapters.EMRAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
+import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
-
 import java.io.File;
-import java.nio.file.Files;
 import java.util.Iterator;
 
 /**
@@ -17,6 +16,7 @@ import java.util.Iterator;
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
 public class EMRKGConstruction {
+
 
   static final String DATASETS_DIR = "datasets/data-emr";
   static final String RESULT_DIR = "output/kg-emr";
