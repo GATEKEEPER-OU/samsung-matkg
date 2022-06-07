@@ -17,7 +17,6 @@ import java.util.Iterator;
  * */
 public class EMRKGConstruction {
 
-
   static final String DATASETS_DIR = "datasets/data-emr";
   static final String OUTPUT_DIR = "output/kg-emr";
 
