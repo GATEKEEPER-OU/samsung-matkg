@@ -1,0 +1,18 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+SELECT DISTINCT ?value  ?datetime  WHERE {
+
+?eventAss rdf:type helifit:HLF510NitritesAssignment .
+?eventAss helifit:P140assignedAttributeTo <https://opensource.samsung.com/projects/helifit/id/user100%40puglia.gatekeeper.com> .
+?eventAss helifit:P4hasTimeSpan  ?timespan .
+?timespan rdf:type helifit:E52TimeSpan .
+?timespan helifit:EP9effectiveDatatime ?datetime .
+?eventAss helifit:P141assigned ?eventMeas .
+?eventMeas rdf:type helifit:HLF310NitritesMeasurement .
+?eventMeas helifit:P40ObservedDimension ?dim .
+?dim rdf:type helifit:HLF410NitritesDimension .
+?dim helifit:P90hasValue ?value .
+
+}
+ORDER BY  DESC(?datetime)
+Limit 1
