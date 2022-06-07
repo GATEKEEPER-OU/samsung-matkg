@@ -12,8 +12,10 @@ import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author Riccardo Pala (riccardo.pala@open.ac.uk)
+ * */
 public class PHRCompetencyQueries {
-
 
     static final String OUTPUT_MAPPING_DIR = "output/kg-phr";
     static final String RESULT_DIR = "output/queries";
