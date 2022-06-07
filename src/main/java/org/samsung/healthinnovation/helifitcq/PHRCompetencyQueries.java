@@ -19,7 +19,7 @@ public class PHRCompetencyQueries {
     static final String RESULT_DIR = "output/queries";
 
     static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-    static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.2.owl";
+    static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
     static final String QUERIES_PATH = "queries";
     static final String[] QUERY_FILE_EXTS = { "txt" };
 
