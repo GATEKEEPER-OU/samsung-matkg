@@ -7,7 +7,6 @@ import tech.oxfordsemantic.jrdfox.client.*;
 import tech.oxfordsemantic.jrdfox.exceptions.JRDFoxException;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class EMRCompetencyQueries {
   static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-  static final String ONTOLOGY_NAME = "HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
+  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
   static final String QUERIES_PATH = "queries";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
