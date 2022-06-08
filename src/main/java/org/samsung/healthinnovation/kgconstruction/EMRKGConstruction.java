@@ -22,12 +22,13 @@ public class EMRKGConstruction {
 
   public static void main(String[] args) {
     File datasetsDir = new File(DATASETS_DIR);
-    String[] exts = {"json"};
-    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
     File outputDir = new File(OUTPUT_DIR);
     outputDir.mkdir();
     OutputUtils.clean(outputDir);
     String outputExt = "nt";
+
+    String[] exts = {"json"};
+    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
 
     FHIRAdapter converter = EMRAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
