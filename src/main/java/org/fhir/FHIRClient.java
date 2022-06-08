@@ -99,6 +99,16 @@ public class FHIRClient implements AutoCloseable {
   /**
    * @todo description
    * */
+  protected String getSessionId() {
+    // @todo check session ?
+    return session
+      .getJSONObject("user")
+      .getString("_id");
+  }
+
+  /**
+   * @todo description
+   * */
   protected String httpGetObservation(String from, String to) {
     List<NameValuePair> params = new ArrayList<>(2);
     if (from != null )
@@ -135,16 +145,6 @@ public class FHIRClient implements AutoCloseable {
         System.out.println(" status >>> " + httpResponse.getStatusLine()); // DEBUG
       }
     }
-  }
-
-  /**
-   * @todo description
-   * */
-  protected String getSessionId() {
-    // @todo check session ?
-    return session
-      .getJSONObject("user")
-      .getString("_id");
   }
 
 }
