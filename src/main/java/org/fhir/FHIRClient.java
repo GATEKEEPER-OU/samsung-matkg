@@ -28,6 +28,7 @@ public class FHIRClient implements AutoCloseable {
   /**
    * @todo description
    * */
+  @SuppressWarnings("java:S2095")
   public static FHIRClient connect(Properties config) throws IOException {
     String host = config.getProperty("fhir_host");
     FHIRClient instance = new FHIRClient(host);
