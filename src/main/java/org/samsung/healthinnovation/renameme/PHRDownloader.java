@@ -1,6 +1,5 @@
 package org.samsung.healthinnovation.renameme;
 
-import org.apache.commons.io.FileUtils;
 import org.commons.EmailUtils;
 import org.commons.OutputUtils;
 import org.commons.ResourceUtils;
@@ -11,7 +10,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
@@ -29,16 +27,20 @@ public class PHRDownloader {
 
     Properties fhirConfig = loadConfiguration(FHIR_ENDPOINT_CONFIG);
     try (FHIRClient fhirClient = FHIRClient.connect(fhirConfig)) {
+
+      // Empty results
 //      JSONArray results = fhirClient.getObservations("1984-01-01", "1984-01-07");
+
+      // With results
       JSONArray results = fhirClient.getObservations("2022-01-02", "2022-02-02");
 
       for (int i=0; i < results.length(); ++i) {
         JSONObject result = results.getJSONObject(i);
 
         String userId = result.getString("user_id");
-        String filename = EmailUtils.getUsername(userId);
-        File outputFile = new File(OUTPUT_DIR,  filename + ".fhir.json" );
-        FileUtils.writeStringToFile(outputFile, result.getString("value"), StandardCharsets.UTF_8); // @todo move to OutputUtils
+        String outputFilename = EmailUtils.getUsername(userId);
+        File outputFile = new File(OUTPUT_DIR,  outputFilename + ".fhir.json" );
+        OutputUtils.save(outputFile, result.getString("value"));
       }
 
     } catch (IOException e) {
