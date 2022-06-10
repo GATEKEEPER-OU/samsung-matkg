@@ -168,6 +168,9 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,macos
 
+# protege tmp file
+src/main/resources/ontologies/catalog-v*.xml
+
 # Custom
 target
 datasets/*
