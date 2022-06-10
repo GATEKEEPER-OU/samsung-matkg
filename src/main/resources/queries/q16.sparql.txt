@@ -1,17 +1,20 @@
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix helifit: <https://opensource.samsung.com/projects/helifit/>
-SELECT DISTINCT ?value  ?unit ?datetime  WHERE {
 
-?eventAss rdf:type helifit:HLF500GlycosilatedEmoglobinAssignment .
-?eventAss helifit:P140assignedAttributeTo <https://opensource.samsung.com/projects/helifit/id/user100%40puglia.gatekeeper.com> .
-?eventAss helifit:P4hasTimeSpan  ?timespan .
-?timespan rdf:type helifit:E52TimeSpan .
-?timespan helifit:EP9effectiveDatatime ?datetime .
-?eventAss helifit:P141assigned ?eventMeas .
-?eventMeas rdf:type helifit:HLF300GlycosilatedEmoglobinMeasurement .
-?eventMeas helifit:P40ObservedDimension ?dim .
-?dim rdf:type helifit:HLF400GlycosilatedEmoglobinDimension .
-?dim helifit:P90hasValue ?value .
-?dim helifit:P91hasUnit ?unit .
+SELECT DISTINCT ?value ?unit ?datetime  WHERE {
 
+  ?eventAss     rdf:type                    helifit:HLF500GlycosilatedEmoglobinAssignment .
+  ?eventAss helifit:P140assignedAttributeTo <https://opensource.samsung.com/projects/helifit/id/user100%40puglia.gatekeeper.com> .
+
+  ?timespan     rdf:type                 helifit:E52TimeSpan .
+  ?eventAss helifit:P4hasTimeSpan        ?timespan .
+  ?timespan helifit:EP9effectiveDatatime ?datetime .
+
+  ?eventMeas     rdf:type                 helifit:HLF300GlycosilatedEmoglobinMeasurement .
+  ?eventAss  helifit:P141assigned         ?eventMeas .
+  ?eventMeas helifit:P40ObservedDimension ?dim .
+
+  ?dim           rdf:type                 helifit:HLF400GlycosilatedEmoglobinDimension .
+  ?dim       helifit:P90hasValue          ?value .
+  ?dim       helifit:P91hasUnit           ?unit .
 }
