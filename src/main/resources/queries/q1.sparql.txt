@@ -1,0 +1,14 @@
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT DISTINCT ?phyActivity WHERE {
+
+ ?phyActivity rdf:type helifit:HLF44PhysicalActivity .
+ ?phyActivity helifit:P140assignedAttributeTo <https://opensource.samsung.com/projects/helifit/id/user73%40puglia.gatekeeper.com> .
+
+
+
+
+ # @todo ? fix the relationship P140assignedAttributeTo -> P14carriedOutBy
+ # ?physicalAC helifit:P14carriedOutBy <https://opensource.samsung.com/projects/helifit/id/user73%40puglia.gatekeeper.com> .
+}
