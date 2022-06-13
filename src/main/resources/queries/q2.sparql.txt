@@ -1,11 +1,15 @@
+
 prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix helifit: <https://opensource.samsung.com/projects/helifit/>
 
-SELECT DISTINCT ?userID ?phyActivity WHERE {
+SELECT DISTINCT ?userID ?phyActivity ?time WHERE {
 
  ?phyActivity rdf:type helifit:HLF44PhysicalActivity .
  ?phyActivity helifit:P14carriedOutBy ?ind .
+ ?phyActivity helifit:P4hasTimeSpan  ?timeSpan .
  ?ind rdf:type helifit:E21Person .
- ?ind helifit:P1isIdentifiedBy ?userID
+ ?ind helifit:P1isIdentifiedBy ?userID .
+ ?timeSpan helifit:EP9effectiveDatatime ?time .
+ FILTER (?time <= "2022-01-31T17:17:48Z"^^xsd:dateTime)
 
 }

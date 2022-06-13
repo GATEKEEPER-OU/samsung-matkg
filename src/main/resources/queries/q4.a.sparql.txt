@@ -1,0 +1,27 @@
+
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT DISTINCT ?userID ?phyActivity ?durationValue  ?durationUnit ?energyExpenditureValue ?energyExpenditureUnit  WHERE {
+
+ ?phyActivity rdf:type helifit:HLF44PhysicalActivity .
+ ?phyActivity helifit:P14carriedOutBy ?ind .
+ ?phyActivity helifit:P4hasTimeSpan  ?timeSpan .
+ ?ind rdf:type helifit:E21Person .
+ ?ind helifit:P1isIdentifiedBy ?userID .
+
+ ?phyActivity helifit:P117includes ?measDuration .
+ ?measDuration rdf:type helifit:HLF188DurationMeasurement .
+ ?measDuration helifit:P40observedDimension ?dimension .
+ ?dimension rdf:type helifit:HLF4DurationDimension .
+ ?dimension helifit:P90hasValue ?durationValue .
+ ?dimension helifit:P91hasUnit ?durationUnit .
+
+ ?phyActivity helifit:P117includes ?measEnergy .
+ ?measEnergy rdf:type helifit:HLF171EnergyMeasurement .
+ ?measEnergy helifit:P40observedDimension ?energyExpenditureDimension .
+ ?energyExpenditureDimension rdf:type helifit:HLF15EnergyExpenditureDimension .
+ ?energyExpenditureDimension helifit:P90hasValue ?energyExpenditureValue .
+ ?energyExpenditureDimension helifit:P91hasUnit ?energyExpenditureUnit .
+
+ }

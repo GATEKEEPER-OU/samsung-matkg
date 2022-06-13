@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.renameme;
+package org.samsung.healthinnovation.dataaggregator;
 
 import org.commons.EmailUtils;
 import org.commons.OutputUtils;

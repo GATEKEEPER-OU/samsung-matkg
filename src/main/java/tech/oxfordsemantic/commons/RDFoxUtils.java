@@ -34,6 +34,7 @@ public class RDFoxUtils {
     Prefixes prefixes = new Prefixes();
     prefixes.declareStandardPrefixes();
     importData(dataStoreConnection, onotologyFile, prefixes);
+
   }
 
   /**
@@ -80,6 +81,7 @@ public class RDFoxUtils {
     prefixes.declareStandardPrefixes();
     try (Cursor cursor = dataStoreConnection.createCursor(null, prefixes, query, Collections.emptyMap())) {
       int arity = cursor.getArity();
+
       for (long multiplicity = cursor.open(); multiplicity != 0; multiplicity = cursor.advance()) {
         StringBuilder row = new StringBuilder();
         for (int termIndex = 0; termIndex < arity; ++termIndex) {
