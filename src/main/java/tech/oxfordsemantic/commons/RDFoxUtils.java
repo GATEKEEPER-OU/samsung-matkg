@@ -40,7 +40,15 @@ public class RDFoxUtils {
    * @todo
    * */
   public static void importData(DataStoreConnection dataStoreConnection, File data) {
-    importData(dataStoreConnection, data, Prefixes.s_emptyPrefixes);
+    // @todo think about a refactory ?
+    if (data.isDirectory()) {
+      File[] files = data.listFiles();
+      for (File file: files) {
+        importData(dataStoreConnection, file, Prefixes.s_emptyPrefixes);
+      }
+    } else {
+      importData(dataStoreConnection, data, Prefixes.s_emptyPrefixes);
+    }
   }
 
   /**
