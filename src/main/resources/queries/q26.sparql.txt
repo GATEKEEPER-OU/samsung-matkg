@@ -9,7 +9,7 @@ SELECT DISTINCT ?value  ?unit ?datetime  WHERE {
 ?timespan helifit:EP9effectiveDatatime ?datetime .
 ?eventAss helifit:P141assigned ?eventMeas .
 ?eventMeas rdf:type helifit:HLF309EstimatedGlomerularFiltrationRateMeasurement .
-?eventMeas helifit:P40ObservedDimension ?dim .
+?eventMeas helifit:P40observedDimension ?dim .
 ?dim rdf:type helifit:HLF409EstimatedGlomerularFiltrationRateDimension .
 ?dim helifit:P90hasValue ?value .
 ?dim helifit:P91hasUnit ?unit .
