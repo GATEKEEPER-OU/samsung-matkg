@@ -19,8 +19,8 @@ The current version V1.0 of MatKG is based on:
 2. with SSH, git clone git@github.ecodesamsung.com:Health-Innovation/matkg.git
 3. Open the project in your IDE. We used IDEAJ which is higly recommendate for compatibility issues and the instruction as follow.
 4. Configure IDEAJ to make the project running: 
-       4.1. Add the JAR libraries: File --> Project Structure --> Libraries --> New Project Library (+ button) --> add RDFox, RDFizer jar in libs
-       4.2. Set Java: File --> Setting --> Build, Execution, Deployment --> Build Tool --> Maven --> Runner --> JRE
+- Add the JAR libraries: File --> Project Structure --> Libraries --> New Project Library (+ button) --> add RDFox, RDFizer jar in libs
+- Set Java: File --> Setting --> Build, Execution, Deployment --> Build Tool --> Maven --> Runner --> JRE
 5. Add data-emr and data-phr under the folder dataset of MatKG
 6. Build the KG by running PHRKGConstruction.java and EMRKGConstruction.java. See the result in output/kg-phr and output/kg-emr 
 7. Run all the competency queries with ALLCompetencyQueries.java over kg-phr + kg-emr
