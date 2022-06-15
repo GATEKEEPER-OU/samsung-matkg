@@ -1,0 +1,26 @@
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT DISTINCT ?userID ?phyActivity ?time1 ?value  ?unit ?datetime WHERE {
+
+ ?phyActivity rdf:type helifit:HLF44PhysicalActivity .
+ ?phyActivity helifit:P14carriedOutBy ?ind .
+ ?phyActivity helifit:P4hasTimeSpan  ?timeSpan1 .
+ ?ind rdf:type helifit:E21Person .
+ ?ind helifit:P1isIdentifiedBy ?userID .
+ ?timeSpan1 helifit:EP9effectiveDatatime ?time1 .
+
+ ?eventAss rdf:type helifit:HLF501TotalCholesterolAssignment .
+ ?eventAss helifit:P140assignedAttributeTo  ?ind .
+ ?eventAss helifit:P4hasTimeSpan  ?timespan2 .
+ ?timespan2 rdf:type helifit:E52TimeSpan .
+ ?timespan2 helifit:EP9effectiveDatatime ?datetime .
+ ?eventAss helifit:P141assigned ?eventMeas .
+ ?eventMeas rdf:type helifit:HLF301TotalCholesterolMeasurement .
+ ?eventMeas helifit:P40observedDimension ?dim .
+ ?dim rdf:type helifit:HLF401TotalCholesterolDimension .
+ ?dim helifit:P90hasValue ?value .
+ ?dim helifit:P91hasUnit ?unit .
+
+
+}

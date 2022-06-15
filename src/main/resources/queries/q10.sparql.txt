@@ -1,0 +1,14 @@
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?phyActivity ?activityClass WHERE {
+
+ ?phyActivity rdf:type ?activityClass .
+ ?phyActivity helifit:P14carriedOutBy ?ind .
+ ?ind rdf:type helifit:E21Person .
+ ?ind helifit:P1isIdentifiedBy ?userID .
+
+
+}
+

@@ -1,0 +1,16 @@
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT ?user ?value ?unit WHERE {
+  ?eventAss rdf:type helifit:HLF235AnthropometricAssignment .
+  ?eventAss helifit:P140assignedAttributeTo ?user .
+  ?user rdf:type helifit:E21Person .
+  ?eventAss helifit:P117includes ?eventMeas .
+  ?eventMeas rdf:type helifit:HLF236AnthropometricMeasurement .
+  ?eventMeas helifit:P40observedDimension ?dim .
+  ?dim rdf:type helifit:HLF232AnthropometricDimension .
+  ?dim helifit:P90hasValue ?value .
+  ?dim helifit:P91hasUnit ?unit .
+
+
+}

@@ -1,0 +1,17 @@
+
+prefix     rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT ?userID ?activityCode (max(?time) AS ?lastTime)
+WHERE {
+
+  ?phyActivity rdf:type helifit:HLF44PhysicalActivity .
+  ?phyActivity helifit:P1isIdentifiedBy     ?activityID .
+  ?activityID  helifit:P3hasNote            ?activityCode.
+  ?phyActivity helifit:P14carriedOutBy      ?userID .
+  ?phyActivity helifit:P4hasTimeSpan        ?timeSpan .
+  ?timeSpan    helifit:EP9effectiveDatatime ?time .
+
+}
+Group by ?userID ?activityCode
+#ORDER BY ASC(?userID) DESC(?time)

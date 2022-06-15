@@ -1,0 +1,15 @@
+
+prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix helifit: <https://opensource.samsung.com/projects/helifit/>
+
+SELECT DISTINCT  ?userID ?sleepActivity ?startTime  ?endTime ((?endTime - ?startTime) AS ?duration) WHERE {
+
+ ?sleepActivity rdf:type helifit:HLF43SleepingActivity .
+ ?sleepActivity helifit:P14carriedOutBy ?ind .
+ ?sleepActivity helifit:P4hasTimeSpan  ?timeSpan .
+ ?ind rdf:type helifit:E21Person .
+ ?ind helifit:P1isIdentifiedBy ?userID .
+ ?timeSpan helifit:EP7starts ?startTime .
+ ?timeSpan helifit:EP8ends ?endTime .
+
+ }
