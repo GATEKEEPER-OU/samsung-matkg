@@ -10,7 +10,7 @@ The current version V1.0 of MatKG is based on:
 
 # Pre-requisites
 1. JAVA - Install from [java link](https://www.java.com/en/download/). MatKG is developed using using JDK-17.0.2.
-2. RDFox - dowload from [rdfox link] https://www.oxfordsemantic.tech/downloads, make sure you have the license is installed.
+2. RDFox - dowload from [rdfox link](https://www.oxfordsemantic.tech/downloads), make sure you have the license is installed.
 3. RDFizer - dowload the V1.0.0 from [rdfizer]()
 4. Data - download the health data from [data-emr]() & [data-phr]()   
 
