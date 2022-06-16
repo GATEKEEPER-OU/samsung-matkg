@@ -12,7 +12,7 @@ The current version V1.0 of MatKG is based on:
 1. JAVA - Install from [java link](https://www.java.com/en/download/). MatKG is developed using using JDK-17.0.2.
 2. RDFox - dowload from [rdfox link](https://www.oxfordsemantic.tech/downloads), make sure you have the license is installed.
 3. RDFizer - dowload rdfizer-v1.0.0.jar from [rdfizer](https://github.ecodesamsung.com/Health-Innovation/rdfizer/releases/tag/v1.0.0)
-4. Data - download the health data from [data-emr]() & [data-phr]()   
+4. Data - download the health data from [data-emr]() & [data-phr](). Please contact us for the data.    
 
 # Steps to set-up
 1. with HTTPS, git clone https://github.ecodesamsung.com/Health-Innovation/matkg.git
