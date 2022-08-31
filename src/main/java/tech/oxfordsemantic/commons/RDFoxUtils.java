@@ -10,13 +10,33 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.util.*;
 
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
 public class RDFoxUtils {
+
+  static final String LICENSE_FILE = "lib/RDFox.lic";
+
+  /**
+   * @todo
+   * */
+  public static void startLocalServer(String firstRoleName, String password) {
+    Map<String, String> serverParams = new HashMap<>();
+    serverParams.put("license-file", LICENSE_FILE);
+    serverParams.put("num-threads", "2");
+    try {
+//      String[] warnings =
+      ConnectionFactory.startLocalServer(serverParams);
+      if (ConnectionFactory.getNumberOfLocalServerRoles() == 0) {
+        ConnectionFactory.createFirstLocalServerRole(firstRoleName, password);
+      }
+
+    } catch (JRDFoxException e) {
+      throw new RuntimeException(e);
+    }
+  }
 
   /**
    * @todo
@@ -34,7 +54,6 @@ public class RDFoxUtils {
     Prefixes prefixes = new Prefixes();
     prefixes.declareStandardPrefixes();
     importData(dataStoreConnection, onotologyFile, prefixes);
-
   }
 
   /**
@@ -119,9 +138,9 @@ public class RDFoxUtils {
       System.out.println();
       System.out.println("=======================================================================================");
       int arity = cursor.getArity();
-      // We iterate trough the result tuples.
+      // We iterate through the result tuples.
       for (long multiplicity = cursor.open(); multiplicity != 0; multiplicity = cursor.advance()) {
-        // We iterate trough the terms of each tuple.
+        // We iterate through the terms of each tuple.
         for (int termIndex = 0; termIndex < arity; ++termIndex) {
           if (termIndex != 0)
             System.out.print(" ");

@@ -32,8 +32,12 @@ public class PHRCompetencyQueries {
     queryOutputDir.mkdir();
     OutputUtils.clean(queryOutputDir);
 
+    String role = "temp";
+    String password = "EMPTY";
+    RDFoxUtils.startLocalServer(role, password);
+
     // connect to rdfox
-    try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", "", "")) {
+    try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", role, password)) {
       serverConnection.setNumberOfThreads(2);
       serverConnection.createDataStore(DATASTORE_NAME, Collections.emptyMap());
       try (DataStoreConnection dataStoreConnection = serverConnection.newDataStoreConnection(DATASTORE_NAME)) {

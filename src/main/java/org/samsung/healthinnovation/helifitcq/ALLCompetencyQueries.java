@@ -10,7 +10,9 @@ import tech.oxfordsemantic.jrdfox.exceptions.JRDFoxException;
 
 import java.io.File;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
@@ -34,14 +36,18 @@ public class ALLCompetencyQueries {
     queryOutputDir.mkdir();
     OutputUtils.clean(queryOutputDir);
 
+    String role = "temp";
+    String password = "EMPTY";
+    RDFoxUtils.startLocalServer(role, password);
+
     // connect to rdfox
-    try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", "", "")) {
-      serverConnection.setNumberOfThreads(2);
+    try (ServerConnection serverConnection = ConnectionFactory.newServerConnection("rdfox:local", role, password)) {
+//      serverConnection.setNumberOfThreads(2);
       serverConnection.createDataStore(DATASTORE_NAME, Collections.emptyMap());
       try (DataStoreConnection dataStoreConnection = serverConnection.newDataStoreConnection(DATASTORE_NAME)) {
         // upload RDF graph into rdfox
-        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile1);
-        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile2);
+        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile1); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run PHRKGConstruction.main first
+        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile2); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run PHRKGConstruction.main first
         RDFoxUtils.importOntology(dataStoreConnection, ONTOLOGY_NAME);
 
         // run competency queries
