@@ -179,4 +179,4 @@ lib/*
 !lib/.keep
 output/*
 !output/.keep
-fhir-endpoint.properties
+*.properties
