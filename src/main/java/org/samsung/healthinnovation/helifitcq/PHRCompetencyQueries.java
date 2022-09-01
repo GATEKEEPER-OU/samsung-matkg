@@ -49,9 +49,9 @@ public class PHRCompetencyQueries {
         List<File> queries = RDFoxUtils.listOfQueries(QUERIES_PATH, QUERY_FILE_EXTS);
         for (File queryFile : queries) {
           // @todo refactory this
-          String queryName = queryFile.getName().substring(0, queryFile.getName().toString().length()-3);
+          String queryName = queryFile.getName().substring(0, queryFile.getName().length()-3);
           // --------------------
-          System.out.println(" queryName >>>>" + queryName); //DEBUG
+//          System.out.println(" queryName >>>>" + queryName); //DEBUG
 
           File queryOutputFile = new File(RESULT_DIR, queryName + "nt");
 //          String userId = "<https://opensource.samsung.com/projects/helifit/id/user1%40saxony.gatekeeper.com>"; // @todo take it from file content

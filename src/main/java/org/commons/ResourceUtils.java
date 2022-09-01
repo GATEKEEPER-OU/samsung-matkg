@@ -53,7 +53,7 @@ public class ResourceUtils {
   public static Collection<File> getResourceFiles(String path, String[] exts) {
 //  public static Collection<File> getResourceFiles(Path path, String[] exts) {
 //    System.out.println("path >>>> " + path.toString());
-    URL resourceUrl = classLoader.getResource(path.toString());
+    URL resourceUrl = classLoader.getResource(path);
 //    System.out.println("resourceUrl >>>> " + resourceUrl);
     File resourceDir = new File(resourceUrl.getFile());
     return FileUtils.listFiles(resourceDir, exts, false);
