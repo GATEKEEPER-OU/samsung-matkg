@@ -172,4 +172,10 @@ public class RDFoxUtils {
     return list;
   }
 
+  /**
+   * @todo description
+   */
+  private RDFoxUtils() {
+  }
+
 }

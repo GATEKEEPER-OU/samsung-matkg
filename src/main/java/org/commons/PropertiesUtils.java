@@ -27,4 +27,10 @@ public class PropertiesUtils {
     return config;
   }
 
+  /**
+   * @todo description
+   */
+  private PropertiesUtils() {
+  }
+
 }

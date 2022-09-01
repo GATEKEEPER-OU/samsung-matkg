@@ -43,4 +43,10 @@ public class RestUtils {
     response.close();
   }
 
+  /**
+   * @todo description
+   */
+  private RestUtils() {
+  }
+
 }
