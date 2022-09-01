@@ -3,14 +3,12 @@ package org.samsung.healthinnovation.datamanager;
 import org.commons.EmailUtils;
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
-import org.commons.ResourceUtils;
 import org.fhir.FHIRClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
