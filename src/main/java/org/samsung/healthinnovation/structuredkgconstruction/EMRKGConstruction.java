@@ -8,6 +8,9 @@ import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.util.Iterator;
 
@@ -19,6 +22,8 @@ public class EMRKGConstruction {
 
   static final String DATASETS_DIR = "datasets/data-emr";
   static final String OUTPUT_DIR = "output/kg-emr";
+
+  static final Logger LOGGER = LoggerFactory.getLogger(EMRKGConstruction.class);
 
   public static void main(String[] args) {
     // @todo NoSuchFileException: datasets/data-emr dataset missing
