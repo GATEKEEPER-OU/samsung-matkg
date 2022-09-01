@@ -39,10 +39,10 @@ public class FHIRClient implements AutoCloseable {
   /**
    * @todo description
    * */
-  public JSONArray getPatients() throws IOException {
-    // @todo
-    return new JSONArray();
-  }
+//  public JSONArray getPatients() throws IOException {
+//    // @todo
+//    return new JSONArray();
+//  }
 
   /**
    * @todo description
@@ -143,7 +143,7 @@ public class FHIRClient implements AutoCloseable {
 
       if (!session.has("token")) {
         // @todo handle auth error
-        System.out.println(" status >>> " + httpResponse.getStatusLine()); // DEBUG
+//        System.out.println(" status >>> " + httpResponse.getStatusLine()); // DEBUG
       }
     }
   }
