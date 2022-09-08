@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.datamanager;
+package org.samsung.healthinnovation.fetcher;
 
 import org.commons.EmailUtils;
 import org.commons.OutputUtils;

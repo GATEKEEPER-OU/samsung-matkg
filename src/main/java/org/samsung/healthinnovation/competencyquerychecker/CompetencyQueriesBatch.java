@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.helifitcq;
+package org.samsung.healthinnovation.competencyquerychecker;
 
 /**
  * @todo

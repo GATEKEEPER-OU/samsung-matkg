@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.helifitcq;
+package org.samsung.healthinnovation.competencyquerychecker;
 
 import org.commons.OutputUtils;
 import org.commons.ResourceUtils;

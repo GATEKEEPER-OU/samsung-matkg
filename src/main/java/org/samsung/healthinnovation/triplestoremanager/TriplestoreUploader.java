@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.datamanager;
+package org.samsung.healthinnovation.triplestoremanager;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.http.impl.client.CloseableHttpClient;
