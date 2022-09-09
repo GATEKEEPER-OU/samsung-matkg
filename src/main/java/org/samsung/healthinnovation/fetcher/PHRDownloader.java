@@ -18,7 +18,7 @@ import java.util.Properties;
  * */
 public class PHRDownloader {
 
-  static final String FHIR_ENDPOINT_CONFIG = "fhir-endpoint.properties";
+  static final String FHIR_ENDPOINT_CONFIG = "phr-endpoint.properties";
   static final String OUTPUT_DIR = "datasets/data-phr";
 
   public static void main(String[] args) {
@@ -34,8 +34,8 @@ public class PHRDownloader {
 
       // With results
 //      JSONArray results = fhirClient.getObservations("2022-01-02", "2022-02-02");
-      String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-      JSONArray results = fhirClient.getObservations("2020-03-01", today);
+//      String today = new SimpleDateFormat("yyyyMMdd").format(new Date());
+      JSONArray results = fhirClient.getObservations("20200301", "20220901");
 
       for (int i=0; i < results.length(); ++i) {
         JSONObject result = results.getJSONObject(i);
