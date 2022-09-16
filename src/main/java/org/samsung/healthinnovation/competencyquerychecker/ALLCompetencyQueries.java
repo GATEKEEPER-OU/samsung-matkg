@@ -22,7 +22,7 @@ public class ALLCompetencyQueries {
   static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
+  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax.owl";
   static final String QUERIES_PATH = "queries";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
