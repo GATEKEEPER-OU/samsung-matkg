@@ -1,5 +1,7 @@
 package org.commons;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -26,9 +28,27 @@ public class PropertiesUtils {
     }
     return config;
   }
+  public static Properties getSubset(Properties props, String subsetPath) {
+    Properties subset = new Properties();
+    props.forEach((k, v) -> {
+      String completeKey = k.toString();
+      if (completeKey.startsWith(subsetPath)) {
+        String key = StringUtils.difference(subsetPath, completeKey);
+        subset.setProperty(
+          StringUtils.stripStart(key, "."),
+          v.toString()
+        );
+      }
+    });
+    return subset;
+  }
+
+  //--------------------------------------------------------------------------//
+  // Class definition
+  //--------------------------------------------------------------------------//
 
   /**
-   * @todo description
+   * This class is not instantiable
    */
   private PropertiesUtils() {
   }

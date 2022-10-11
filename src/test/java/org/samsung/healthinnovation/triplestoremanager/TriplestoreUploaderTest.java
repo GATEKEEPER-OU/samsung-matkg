@@ -17,7 +17,7 @@ import java.util.Properties;
  * @todo
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class TriplestoreUploader {
+public class TriplestoreUploaderTest {
 
   static final String TRIPLESTORE_ENDPOINT_CONFIG = "triplestore-endpoint.properties";
 
@@ -25,7 +25,7 @@ public class TriplestoreUploader {
 
   static final String TRIPLESTORE_DIR = "output/kg-phr";
 
-  static final Logger LOGGER = LoggerFactory.getLogger(TriplestoreUploader.class);
+  static final Logger LOGGER = LoggerFactory.getLogger(TriplestoreUploaderTest.class);
 
   public static void main(String[] args) {
     Properties triplestoreConfig = PropertiesUtils.loadConfiguration(TRIPLESTORE_ENDPOINT_CONFIG);

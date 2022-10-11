@@ -30,7 +30,7 @@ public class FHIRClient implements AutoCloseable {
    * */
   @SuppressWarnings("java:S2095")
   public static FHIRClient connect(Properties config) throws IOException {
-    String host = config.getProperty("fhir_host");
+    String host = config.getProperty("host");
     FHIRClient instance = new FHIRClient(host);
     instance.authenticate(config);
     return instance;
@@ -138,8 +138,8 @@ public class FHIRClient implements AutoCloseable {
    * */
   protected void authenticate(Properties config) throws IOException {
     List<NameValuePair> params = new ArrayList<>(2);
-    params.add(new BasicNameValuePair("email", config.getProperty("fhir_email")));
-    params.add(new BasicNameValuePair("password", config.getProperty("fhir_password")));
+    params.add(new BasicNameValuePair("email", config.getProperty("email")));
+    params.add(new BasicNameValuePair("password", config.getProperty("password")));
 
     HttpPost httpPost = new HttpPost(AUTHURL_TEMPLATE);
     httpPost.setEntity(new UrlEncodedFormEntity(params));

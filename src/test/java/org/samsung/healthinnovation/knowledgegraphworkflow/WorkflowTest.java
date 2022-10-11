@@ -1,9 +1,9 @@
-package org.samsung.healthinnovation.pipeline;
+package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class PipelineTest {
+public class WorkflowTest {
 
   public static void main(String[] args) {
     // TODO:

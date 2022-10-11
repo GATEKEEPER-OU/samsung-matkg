@@ -1,12 +1,15 @@
 package org.samsung.healthinnovation.structuredkgconstruction;
 
+import org.apache.commons.io.FileUtils;
+import org.commons.FilenameUtils;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.EMRAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
@@ -14,29 +17,30 @@ import org.ou.gatekeeper.rdf.mappings.RMLMapping;
 public class KGConstruction {
 
   /**
-   * TODO desk
+   * TODO desc
    * */
-  public static void emr() {
-
-    FHIRAdapter converter = EMRAdapter.create();
+  public static void construct(File sourceDir, File destDir, FHIRAdapter fhirAdapter) {
+    String[] exts = {"json"};
+    String outputExt = "nt";
+    Iterator<File> datasets = FileUtils.iterateFiles(sourceDir, exts, false);
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
-
-//    RDFizer.trasform(datasetFile, converter, mapping, outputFile);
+    while (datasets.hasNext()) {
+      File dataset = datasets.next();
+      String trimmedDatasetName = FilenameUtils.trim2LvlExtension(dataset.getName());
+      String outputFilename = "output-" + FilenameUtils
+        .changeExtension(trimmedDatasetName, outputExt);
+      File output = new File(destDir, outputFilename);
+      RDFizer.trasform(dataset, fhirAdapter, mapping, output);
+    }
   }
 
-  /**
-   * TODO desk
-   * */
-  public static void phr() {
-    FHIRAdapter converter = PHRAdapter.create();
-    RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
-
-//    RDFizer.trasform(datasetFile, converter, mapping, outputFile);
-  }
+  //--------------------------------------------------------------------------//
+  // Class definition
+  //--------------------------------------------------------------------------//
 
   /**
-   * TODO desk
-   * */
+   * This class is not instantiable
+   */
   private KGConstruction() {
   }
 
