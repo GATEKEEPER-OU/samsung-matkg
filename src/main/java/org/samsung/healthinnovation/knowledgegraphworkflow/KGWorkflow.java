@@ -2,6 +2,7 @@ package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
+import org.ou.gatekeeper.fhir.adapters.EMRAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
 import org.samsung.healthinnovation.competencyquerychecker.QueryChecker;
@@ -62,9 +63,9 @@ public class KGWorkflow {
       Properties emrConfig = PropertiesUtils.getSubset(config, "emr");
 //      fetchStage(phrConfig); // TODO wait for the EMR endpoint implementation
       // Temporary implementation reading from local files
-      // TODO
+      emrConfig.setProperty("fetch.destdir", "datasets/data-emr"); // WORKAROUND
       // -------------------------------------------------
-      constructStage(emrConfig, PHRAdapter.create());
+      constructStage(emrConfig, EMRAdapter.create());
 
       if (triplestoreEnabled) {
         String emrKgDirPath = config.getProperty("emr.kg.destdir");
