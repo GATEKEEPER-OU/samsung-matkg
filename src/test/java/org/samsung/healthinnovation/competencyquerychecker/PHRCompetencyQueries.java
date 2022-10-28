@@ -15,18 +15,18 @@ import java.util.List;
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class EMRCompetencyQueries {
+public class PHRCompetencyQueries {
 
-  static final String OUTPUT_MAPPING_DIR = "output/kg-emr";
+  static final String OUTPUT_MAPPING_DIR = "output/kg-phr";
   static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";
-  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax_v1.5.0.owl";
+  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax.owl";
   static final String QUERIES_PATH = "queries";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
   public static void main(String[] args) {
-//    File rdfOutputFile = new File(OUTPUT_MAPPING_DIR, "output-356.nt");
+//    File rdfOutputFile = new File(OUTPUT_MAPPING_DIR, "output-user73.nt");
     File rdfOutputFile = new File(OUTPUT_MAPPING_DIR);
     File queryOutputDir = new File(RESULT_DIR);
     queryOutputDir.mkdir();
