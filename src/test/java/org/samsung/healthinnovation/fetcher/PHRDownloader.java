@@ -6,6 +6,8 @@ import org.commons.PropertiesUtils;
 import org.fhir.FHIRClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,30 +18,20 @@ import java.util.Properties;
  * */
 public class PHRDownloader {
 
-  static final String FHIR_ENDPOINT_CONFIG = "phr-endpoint.properties";
-  static final String OUTPUT_DIR = "datasets/data-phr";
+  static final String KGWORKFLOW_CONFIG = "kgworkflow.properties";
+  static final Logger LOGGER = LoggerFactory.getLogger(PHRDownloader.class); // TODO
 
-  public static void main(String[] args) {
-    File outputDir = new File(OUTPUT_DIR);
+  public static void main(String[] args) throws IOException {
+    Properties config = PropertiesUtils.loadConfiguration(KGWORKFLOW_CONFIG);
+
+    Properties fetchConfig = PropertiesUtils.getSubset(config, "phr.fetch");
+    String destDirPath = fetchConfig.getProperty("destdir");
+    File outputDir = new File(destDirPath);
     outputDir.mkdir();
     OutputUtils.clean(outputDir);
 
-
-//    fhir_host=__CHANGE_ME__
-//    fhir_email=__CHANGE_ME__
-//    fhir_password=__CHANGE_ME__
-    Properties fhirConfig = null;
-    File fhirFile = new File(FHIR_ENDPOINT_CONFIG);
-    if (fhirFile.exists() && fhirFile.isFile()) {
-      fhirConfig = PropertiesUtils.loadConfiguration(FHIR_ENDPOINT_CONFIG);
-    } else {
-      fhirConfig = new Properties();
-      fhirConfig.put("fhir_host", "web.activageshropshire.co.uk");
-      fhirConfig.put("fhir_email", "fhir1@gatekeeper.com");
-      fhirConfig.put("fhir_password", "$GateKeeper921");
-    }
-
-    try (FHIRClient fhirClient = FHIRClient.connect(fhirConfig)) {
+    Properties endpointConfig = PropertiesUtils.getSubset(fetchConfig, "endpoint");
+    try (FHIRClient fhirClient = FHIRClient.connect(endpointConfig)) {
 
       // Empty results
 //      JSONArray results = fhirClient.getObservations("1984-01-01", "1984-01-07");
@@ -54,7 +46,7 @@ public class PHRDownloader {
 
         String userId = result.getString("user_id");
         String outputFilename = EmailUtils.getUsername(userId);
-        File outputFile = new File(OUTPUT_DIR,  outputFilename + ".fhir.json" );
+        File outputFile = new File(outputDir,  outputFilename + ".fhir.json" );
         OutputUtils.save(outputFile, result.getString("value"));
       }
 
