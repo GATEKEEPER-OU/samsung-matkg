@@ -27,7 +27,7 @@ public class TriplestoreUploaderTest {
 
   static final Logger LOGGER = LoggerFactory.getLogger(TriplestoreUploaderTest.class);
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     Properties triplestoreConfig = PropertiesUtils.loadConfiguration(TRIPLESTORE_ENDPOINT_CONFIG);
 
     String endpoint = triplestoreConfig.getProperty("triplestore_host");

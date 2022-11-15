@@ -144,6 +144,7 @@ public class FHIRClient implements AutoCloseable {
     HttpPost httpPost = new HttpPost(AUTHURL_TEMPLATE);
     httpPost.setEntity(new UrlEncodedFormEntity(params));
 
+//    System.out.println(" httpPost >>> " + httpPost); // DEBUG
     try (CloseableHttpResponse httpResponse = HTTP_CLIENT.execute(httpPost)) {
       String response = EntityUtils.toString(httpResponse.getEntity());
       session = new JSONObject(response);

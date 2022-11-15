@@ -9,7 +9,7 @@ import java.io.File;
  * */
 public class EMRDownloader {
 
-  static final String FHIR_ENDPOINT_CONFIG = "phr-endpoint.properties";
+  static final String KGWORKFLOW_CONFIG = "kgworkflow.properties";
   static final String OUTPUT_DIR = "datasets/data-emr";
 
   public static void main(String[] args) {
