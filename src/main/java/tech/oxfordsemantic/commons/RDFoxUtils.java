@@ -56,6 +56,18 @@ public class RDFoxUtils {
     importData(dataStoreConnection, onotologyFile, prefixes);
   }
 
+  public static File getQueryFile(String queryName) {
+    File queryFile  = null;
+    try {
+      URL query = RDFoxUtils.class.getClassLoader().getResource(queryName);
+      queryFile = new File(query.toURI());
+    } catch (URISyntaxException e) {
+      // @todo Message
+      e.printStackTrace(); // DEBUG
+    }
+    return queryFile;
+  }
+
   /**
    * @todo
    * */
@@ -98,23 +110,24 @@ public class RDFoxUtils {
   public static void saveQueryResults(DataStoreConnection dataStoreConnection, String query, File output) {
     Prefixes prefixes = new Prefixes();
     prefixes.declareStandardPrefixes();
+
+    List<String> rows = new ArrayList<String>();
     try (Cursor cursor = dataStoreConnection.createCursor(null, prefixes, query, Collections.emptyMap())) {
       int arity = cursor.getArity();
 
       for (long multiplicity = cursor.open(); multiplicity != 0; multiplicity = cursor.advance()) {
         StringBuilder row = new StringBuilder();
         for (int termIndex = 0; termIndex < arity; ++termIndex) {
-//          row.insert(0, " ");
-//          ResourceValue resource = cursor.getResourceValue(termIndex);
-//          row.insert(0, resource.toString(prefixes));
           row.append(" ");
           ResourceValue resource = cursor.getResourceValue(termIndex);
           row.append(resource.toString(prefixes));
         }
-        row.append(".\n");
-//        System.out.print("DEBUG >>>> " + row); // DEBUG
-        FileUtils.writeStringToFile(output, row.toString(), Charset.defaultCharset(), true);
+        rows.add(row.toString());
       }
+      String content = String.join(".\n", rows);
+      FileUtils.writeStringToFile(output, content
+
+              , Charset.defaultCharset(), false);
 
     } catch (JRDFoxException e) {
       // @todo Message

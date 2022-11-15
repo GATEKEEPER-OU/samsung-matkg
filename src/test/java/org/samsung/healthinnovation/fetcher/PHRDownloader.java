@@ -24,7 +24,21 @@ public class PHRDownloader {
     outputDir.mkdir();
     OutputUtils.clean(outputDir);
 
-    Properties fhirConfig = PropertiesUtils.loadConfiguration(FHIR_ENDPOINT_CONFIG);
+
+//    fhir_host=__CHANGE_ME__
+//    fhir_email=__CHANGE_ME__
+//    fhir_password=__CHANGE_ME__
+    Properties fhirConfig = null;
+    File fhirFile = new File(FHIR_ENDPOINT_CONFIG);
+    if (fhirFile.exists() && fhirFile.isFile()) {
+      fhirConfig = PropertiesUtils.loadConfiguration(FHIR_ENDPOINT_CONFIG);
+    } else {
+      fhirConfig = new Properties();
+      fhirConfig.put("fhir_host", "web.activageshropshire.co.uk");
+      fhirConfig.put("fhir_email", "fhir1@gatekeeper.com");
+      fhirConfig.put("fhir_password", "$GateKeeper921");
+    }
+
     try (FHIRClient fhirClient = FHIRClient.connect(fhirConfig)) {
 
       // Empty results

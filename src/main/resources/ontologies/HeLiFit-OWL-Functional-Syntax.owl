@@ -9,7 +9,7 @@ Prefix(terms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://opensource.samsung.com/projects/helifit/>
-<https://opensource.samsung.com/projects/helifit/1.6.2/helifit.owl>
+<https://opensource.samsung.com/projects/helifit/1.6.4/helifit.owl>
 Import(<http://purl.org/dc/terms/>)
 Import(<http://tdwg.napier.ac.uk/ontology/resources/dublincore/terms.owl>)
 Annotation(dc:contributor "1. Carlo Allocca, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK 2. Samia Jilali, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK 3. Rohit Ail, Health Innovation, Samsung, Communications House, South St., Staines TW18 4QE, UK 4. Jaehun Lee,  Samsung Research, 56 Seongchon-gil, Seoul 06765, Korea 5. Byungho Kim, Samsung Research, 56 Seongchon-gil, Seoul 06765, Korea  6. ,Alessio Antonini, Knowledge Media Institute, The Open University, Milton Keynes MK7 6AA, UK,  7. Enrico Motta, Knowledge Media Institute, The Open University, Milton Keynes MK7 6AA, UK 8. Julia Schellong,  Department of Psychotherapy and Psychosomatic Medicine, Faculty of Medicine, Technische Universität Dresden, 01307 Dresden, Germany 9. Lisa Stieler, Department of Psychotherapy and Psychosomatic Medicine, Faculty of Medicine, Technische Universität Dresden, 01307 Dresden, Germany  10. Muhammad Salman Haleem, School of Engineering, University of Warwick, Library Rd, Coventry CV4 7AL, UK 11. Eleni Georga, Department of Materials Science and Engineering, University of Ioannina, 45110 Ioannina, Greece 12. Leandro Pecchia, School of Engineering, University of Warwick, Library Rd, Coventry CV4 7AL, UK  13. Eugenio Gaeta, Life Supporting Technologies (LifeSTech), ETSI Telecomunicaciones, Universidad Politécnica de Madrid, Av. Complutense, 30, 28040 Madrid, Spain 14. Giuseppe Fico, Life Supporting Technologies (LifeSTech), ETSI Telecomunicaciones, Universidad Politécnica de Madrid, Av. Complutense, 30, 28040 Madrid, Spain")
@@ -95,19 +95,19 @@ Declaration(Class(:HLF138ChestAssignment))
 Declaration(Class(:HLF139KneeAssignment))
 Declaration(Class(:HLF13DistancePerformedDimension))
 Declaration(Class(:HLF140WristAssignment))
-Declaration(Class(:HLF141METAss))
+Declaration(Class(:HLF141METAssignment))
 Declaration(Class(:HLF142CalfAssignment))
 Declaration(Class(:HLF143HipCircumferenceAssignment))
 Declaration(Class(:HLF144AbdomenAssignment))
 Declaration(Class(:HLF145UpperArmAssignment))
 Declaration(Class(:HLF146BiacromialAssignment))
-Declaration(Class(:HLF147EnergyAss))
+Declaration(Class(:HLF147EnergyAssignment))
 Declaration(Class(:HLF148SubscapularAssignment))
 Declaration(Class(:HLF149BicepsAssignment))
 Declaration(Class(:HLF14ElbowBreadthDimension))
-Declaration(Class(:HLF150GenderAss))
+Declaration(Class(:HLF150GenderAssignment))
 Declaration(Class(:HLF151ThighAssignment))
-Declaration(Class(:HLF152AgeAss))
+Declaration(Class(:HLF152AgeAssignment))
 Declaration(Class(:HLF153HeightAssignment))
 Declaration(Class(:HLF154BMIAssignment))
 Declaration(Class(:HLF156WeightAssignment))
@@ -116,14 +116,14 @@ Declaration(Class(:HLF15EnergyExpenditureDimension))
 Declaration(Class(:HLF160HeartRateAssignment))
 Declaration(Class(:HLF162SuprailiacAssignment))
 Declaration(Class(:HLF166RestingRespirationRateAssignment))
-Declaration(Class(:HLF167DurationAss))
+Declaration(Class(:HLF167DurationAssignment))
 Declaration(Class(:HLF168HeartRateMeasurement))
 Declaration(Class(:HLF169ChestMeasurement))
 Declaration(Class(:HLF16HeadCircumferencesDimension))
-Declaration(Class(:HLF171EnergyMeas))
+Declaration(Class(:HLF171EnergyMeasurement))
 Declaration(Class(:HLF173HeightMeasurement))
 Declaration(Class(:HLF176StepDailyTreadMeasurement))
-Declaration(Class(:HLF178GenderMeas))
+Declaration(Class(:HLF178GenderMeasurement))
 Declaration(Class(:HLF179RestingRespirationRateMeasurement))
 Declaration(Class(:HLF17HeartRateMaxDimension))
 Declaration(Class(:HLF181SubscapularMeasurement))
@@ -135,7 +135,7 @@ Declaration(Class(:HLF186UpperLegMeasurement))
 Declaration(Class(:HLF188DurationMeasurement))
 Declaration(Class(:HLF18HeartRateReservesDimension))
 Declaration(Class(:HLF191WeightMeasurement))
-Declaration(Class(:HLF193FrequencyMeas))
+Declaration(Class(:HLF193FrequencyMeasurement))
 Declaration(Class(:HLF194AbdomenMeasurement))
 Declaration(Class(:HLF195BiacromialMeasurement))
 Declaration(Class(:HLF196BicepsMeasurement))
@@ -147,40 +147,43 @@ Declaration(Class(:HLF1State))
 Declaration(Class(:HLF200AgeMeasurement))
 Declaration(Class(:HLF201HealthRecommendation))
 Declaration(Class(:HLF202WHORecommendationCode))
+Declaration(Class(:HLF203Jogging))
+Declaration(Class(:HLF204FloorClimbing))
 Declaration(Class(:HLF205WHOPhysicalActivityRecommendation))
 Declaration(Class(:HLF206ObesityType))
 Declaration(Class(:HLF207ESSIQuestionnaireActivity))
 Declaration(Class(:HLF207PhysicalBehaviorType))
 Declaration(Class(:HLF208AppellationType))
-Declaration(Class(:HLF208ESSIScoreMeas))
+Declaration(Class(:HLF208ESSIScoreMeasurement))
 Declaration(Class(:HLF209ESSIScoreDimension))
 Declaration(Class(:HLF209IdentifierType))
 Declaration(Class(:HLF20HipCircumferenceDimension))
+Declaration(Class(:HLF20Patient))
 Declaration(Class(:HLF20SleepCycle))
 Declaration(Class(:HLF210ESSIRecommendation))
 Declaration(Class(:HLF211ESSIRecommendationCode))
 Declaration(Class(:HLF212PSQIRecommendationCode))
 Declaration(Class(:HLF213PSQIQuestionnaireActivity))
 Declaration(Class(:HLF213PSQIRecommendation))
-Declaration(Class(:HLF214PSQIScoreDim))
-Declaration(Class(:HLF215PSQIScoreMeas))
+Declaration(Class(:HLF214PSQIScoreDimension))
+Declaration(Class(:HLF215PSQIScoreMeasurement))
 Declaration(Class(:HLF216PHQQuestionnaireActivity))
-Declaration(Class(:HLF217PHQScoreDIm))
-Declaration(Class(:HLF218PHQScoreMeas))
-Declaration(Class(:HLF219PHQFrequencyRate1Meas))
-Declaration(Class(:HLF21IntakeEnergyDim))
-Declaration(Class(:HLF220PHQFrequencyRate2Meas))
-Declaration(Class(:HLF221PHQFrequencyRate3Meas))
+Declaration(Class(:HLF217PHQScoreDimension))
+Declaration(Class(:HLF218PHQScoreMeasurement))
+Declaration(Class(:HLF219PHQFrequencyRate1Measurement))
+Declaration(Class(:HLF21IntakeEnergyDimension))
+Declaration(Class(:HLF220PHQFrequencyRate2Measurement))
+Declaration(Class(:HLF221PHQFrequencyRate3Measurement))
 Declaration(Class(:HLF222PHQRateItem9Meas))
-Declaration(Class(:HLF223PHQFrequencyRate1Dim))
-Declaration(Class(:HLF224PHQFrequencyRate2Dim))
-Declaration(Class(:HLF225PHQFrequencyRate3Dim))
-Declaration(Class(:HLF226PHQRateItem9Dim))
+Declaration(Class(:HLF223PHQFrequencyRate1Dimension))
+Declaration(Class(:HLF224PHQFrequencyRate2Dimension))
+Declaration(Class(:HLF225PHQFrequencyRate3Dimension))
+Declaration(Class(:HLF226PHQRateItem9Dimension))
 Declaration(Class(:HLF227PHQRecommendation))
 Declaration(Class(:HLF228PHQRecommendationCode))
-Declaration(Class(:HLF229PregnancyAss))
+Declaration(Class(:HLF229PregnancyAssignment))
 Declaration(Class(:HLF22WaistToHeightRatioDimension))
-Declaration(Class(:HLF230PregnancyMeas))
+Declaration(Class(:HLF230PregnancyMeasurement))
 Declaration(Class(:HLF231PregnancyDimension))
 Declaration(Class(:HLF232AnthropometricDimension))
 Declaration(Class(:HLF233VitalSignDimension))
@@ -189,6 +192,7 @@ Declaration(Class(:HLF235AnthropometricAssignment))
 Declaration(Class(:HLF236AnthropometricMeasurement))
 Declaration(Class(:HLF237VitalSignsMeasurement))
 Declaration(Class(:HLF23KneeHeightDimension))
+Declaration(Class(:HLF240MealActivity))
 Declaration(Class(:HLF24METDimension))
 Declaration(Class(:HLF250StepDailyTrendAssignment))
 Declaration(Class(:HLF25MidUpperArmCircumferencesDimension))
@@ -198,8 +202,9 @@ Declaration(Class(:HLF271BloodVesselType))
 Declaration(Class(:HLF273ActivityHappeningType))
 Declaration(Class(:HLF274SleepStageType))
 Declaration(Class(:HLF274TotalProteinDimension))
-Declaration(Class(:HLF275ExerciceType))
+Declaration(Class(:HLF275ExerciceIdentifier))
 Declaration(Class(:HLF276ExerciseRevolutionType))
+Declaration(Class(:HLF277MealType))
 Declaration(Class(:HLF27OxygenSaturationDimension))
 Declaration(Class(:HLF28DailyStepsCountDimension))
 Declaration(Class(:HLF29AmbientHumidityDimension))
@@ -259,12 +264,31 @@ Declaration(Class(:HLF341UrineSpecificGravityMeasurement))
 Declaration(Class(:HLF342UvExposureMeasurement))
 Declaration(Class(:HLF344WaterIntakeMeasurement))
 Declaration(Class(:HLF345WaistCircumferenceMeasurement))
-Declaration(Class(:HLF346AltitudeLossMeasurement))
 Declaration(Class(:HLF346BurnedCaloriesMeasurement))
 Declaration(Class(:HLF347AltitudeGainMeasurement))
 Declaration(Class(:HLF348ExerciseRevolutionMeasurement))
+Declaration(Class(:HLF349MealMeasurement))
 Declaration(Class(:HLF34TricepsSkinfoldDimension))
+Declaration(Class(:HLF350AltitudeLossMeasurement))
+Declaration(Class(:HLF351MeanSpeedMeasurement))
+Declaration(Class(:HLF352MaxSpeedMeasurement))
+Declaration(Class(:HLF353MaxCadenceMeasurement))
+Declaration(Class(:HLF354MinCadenceMeasurement))
+Declaration(Class(:HLF355MaxHeartRateMeasurement))
+Declaration(Class(:HLF356MeanHeartRateMeasurement))
+Declaration(Class(:HLF357MinHeartRateMeasurement))
+Declaration(Class(:HLF358MinAltitudeMeasurement))
+Declaration(Class(:HLF359MaxAltitudeMeasurement))
 Declaration(Class(:HLF35UpperArmLengthDimension))
+Declaration(Class(:HLF360InclineDistanceMeasurement))
+Declaration(Class(:HLF361MaxPowerMeasurement))
+Declaration(Class(:HLF362MinPowerMeasurement))
+Declaration(Class(:HLF363MeanPowerMeasurement))
+Declaration(Class(:HLF364MeanRPMMeasurement))
+Declaration(Class(:HLF365MaxRPMMeasurement))
+Declaration(Class(:HLF366DeclineDistanceMeasurement))
+Declaration(Class(:HLF367MaxCaloriesBurnRateMeasurement))
+Declaration(Class(:HLF368InstantaneousSpeedMeasurement))
 Declaration(Class(:HLF36UpperLegLengthDimension))
 Declaration(Class(:HLF37AgeDimension))
 Declaration(Class(:HLF38VO2MaxDimension))
@@ -291,9 +315,9 @@ Declaration(Class(:HLF415YGlutamyltransferaseGGTDimension))
 Declaration(Class(:HLF416AlbuminDimension))
 Declaration(Class(:HLF417AmylaseDimension))
 Declaration(Class(:HLF418BodyTemperatureDimension))
-Declaration(Class(:HLF418_BodyFatADimension))
 Declaration(Class(:HLF419BodyMucleDimension))
 Declaration(Class(:HLF41WeightDimension))
+Declaration(Class(:HLF420BodyFatADimension))
 Declaration(Class(:HLF421BloodUreaNitrogenDimension))
 Declaration(Class(:HLF422CaffeineIntakeDimension))
 Declaration(Class(:HLF422CreatinePhosphokinaseDimension))
@@ -329,8 +353,31 @@ Declaration(Class(:HLF450BurnedCaloriesDimension))
 Declaration(Class(:HLF451AltitudeGainDimension))
 Declaration(Class(:HLF452AltitudeLossDimension))
 Declaration(Class(:HLF453ExerciseRevolutionDimension))
+Declaration(Class(:HLF454MaxSpeedDimension))
+Declaration(Class(:HLF455MaxCaloriesBurnRateDimension))
+Declaration(Class(:HLF456MeanSpeedDimension))
+Declaration(Class(:HLF457MaxCadenceDimension))
+Declaration(Class(:HLF458MeanCadenceDimension))
+Declaration(Class(:HLF459MaxHeartRateDimension))
 Declaration(Class(:HLF45Exercice))
+Declaration(Class(:HLF460MeanHeartRateDimension))
+Declaration(Class(:HLF461DeclineDistanceDimension))
+Declaration(Class(:HLF462InclineDistanceDimension))
+Declaration(Class(:HLF463MaxAltitudeDimension))
+Declaration(Class(:HLF464MinHeartRateDimension))
+Declaration(Class(:HLF465MaxPowerDimension))
+Declaration(Class(:HLF465MinPowerDimension))
+Declaration(Class(:HLF466MeanRPMDimension))
+Declaration(Class(:HLF467MaxRPMDimension))
+Declaration(Class(:HLF468MinAltitudeDimension))
+Declaration(Class(:HLF469MeanPowerDimension))
 Declaration(Class(:HLF46MountainClimbing))
+Declaration(Class(:HLF470MinCadenceDimension))
+Declaration(Class(:HLF471InstantaneousSpeedDimension))
+Declaration(Class(:HLF472InstantaneousCadenceDimension))
+Declaration(Class(:HLF473AccumulatedStepCountDimension))
+Declaration(Class(:HLF474InstantaneousPowerDimension))
+Declaration(Class(:HLF475SleepingActivityDimension))
 Declaration(Class(:HLF47RockClimbing))
 Declaration(Class(:HLF48Flexibility))
 Declaration(Class(:HLF49MuscleStrengtheningAnaerobics))
@@ -444,8 +491,6 @@ Declaration(Class(:HLF97JumpRope))
 Declaration(Class(:HLF98Kayaking))
 Declaration(Class(:HLF99Kitesurfing))
 Declaration(Class(:HLF9CalfSkinfoldDimension))
-Declaration(ObjectProperty(:EP15initiates))
-Declaration(ObjectProperty(:EP16maintains))
 Declaration(ObjectProperty(:EP1isSubjectTo))
 Declaration(ObjectProperty(:EP2initiates))
 Declaration(ObjectProperty(:EP3maintains))
@@ -478,6 +523,7 @@ Declaration(DataProperty(:EP14hasSpaceValue))
 Declaration(DataProperty(:EP7starts))
 Declaration(DataProperty(:EP8ends))
 Declaration(DataProperty(:EP9effectiveDatatime))
+Declaration(DataProperty(:EP9timeOffset))
 Declaration(DataProperty(:P168placeIsIdentifiedBy))
 Declaration(DataProperty(:P3hasNote))
 Declaration(DataProperty(:P90hasValue))
@@ -498,6 +544,12 @@ Declaration(NamedIndividual(:MEASUREMENT_TYPE_NOT_DEFINED))
 Declaration(NamedIndividual(:MEASUREMENT_TYPE_PLASMA))
 Declaration(NamedIndividual(:MEASUREMENT_TYPE_SERUM))
 Declaration(NamedIndividual(:MEASUREMENT_TYPE_WHOLE_BLOOD))
+Declaration(NamedIndividual(:Meal_Type_Afternoon_Snack))
+Declaration(NamedIndividual(:Meal_Type_Breakfast))
+Declaration(NamedIndividual(:Meal_Type_Dinner))
+Declaration(NamedIndividual(:Meal_Type_Evening_Snack))
+Declaration(NamedIndividual(:Meal_Type_Lunch))
+Declaration(NamedIndividual(:Meal_Type_Morning_Snack))
 Declaration(NamedIndividual(:SAMPLE_SOURCE_TYPE_CAPILLARY))
 Declaration(NamedIndividual(:SAMPLE_SOURCE_TYPE_NOT_DEFINED))
 Declaration(NamedIndividual(:SAMPLE_SOURCE_TYPE_VENOUS))
@@ -538,6 +590,68 @@ Declaration(NamedIndividual(:sedentarybehavior))
 Declaration(NamedIndividual(:underweight))
 Declaration(NamedIndividual(:vigorousbehavior))
 Declaration(NamedIndividual(:wakefulness))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10004>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10005>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10006>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10007>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10008>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10009>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/1001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10010>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10011>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10012>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10013>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10014>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10015>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10016>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10017>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10018>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10019>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/1002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10020>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10021>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10022>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10023>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10024>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10025>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10026>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/10027>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11004>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11005>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11007>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/11008>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/2001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/2002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/2003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/3001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/3002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/3003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4004>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4005>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/4006>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/5001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/5002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/6001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/6002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/6003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/6004>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/6005>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/7002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/7003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/8001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/8002>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/8003>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/9001>))
+Declaration(NamedIndividual(<https://opensource.samsung.com/projects/helifit/9002>))
 Declaration(AnnotationProperty(dc:contributor))
 Declaration(AnnotationProperty(dc:creator))
 Declaration(AnnotationProperty(dc:description))
@@ -550,17 +664,6 @@ Declaration(AnnotationProperty(terms:license))
 ############################
 #   Object Properties
 ############################
-
-# Object Property: :EP15initiates (:EP15initiates)
-
-ObjectPropertyDomain(:EP15initiates :E5Event)
-ObjectPropertyRange(:EP15initiates :HLF2Process)
-
-# Object Property: :EP16maintains (:EP16maintains)
-
-SubObjectPropertyOf(:EP16maintains owl:topObjectProperty)
-ObjectPropertyDomain(:EP16maintains :HLF2Process)
-ObjectPropertyRange(:EP16maintains :HLF1State)
 
 # Object Property: :EP1isSubjectTo (:EP1isSubjectTo)
 
@@ -727,6 +830,10 @@ AnnotationAssertion(rdfs:label :EP9effectiveDatatime "EP9effectiveDatatime")
 DataPropertyDomain(:EP9effectiveDatatime :E52TimeSpan)
 DataPropertyRange(:EP9effectiveDatatime xsd:dateTimeStamp)
 
+# Data Property: :EP9timeOffset (:EP9timeOffset)
+
+SubDataPropertyOf(:EP9timeOffset owl:topDataProperty)
+
 # Data Property: :P168placeIsIdentifiedBy (:P168placeIsIdentifiedBy)
 
 DataPropertyDomain(:P168placeIsIdentifiedBy :E53Place)
@@ -764,29 +871,34 @@ SubClassOf(<http://purl.obolibrary.org/obo/DOID_4> :HLF51Disposition)
 
 AnnotationAssertion(rdfs:comment owl:Thing "This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.")
 
-# Class: :D11DigitalMeasurementEvent (:D11DigitalMeasurementEvent)
+# Class: :D11DigitalMeasurementEvent (D11DigitalMeasurementEvent)
 
+AnnotationAssertion(rdfs:label :D11DigitalMeasurementEvent "D11DigitalMeasurementEvent")
 SubClassOf(:D11DigitalMeasurementEvent :D7DigitalMachineEvent)
 SubClassOf(:D11DigitalMeasurementEvent :E16Measurement)
 
-# Class: :D14Software (:D14Software)
+# Class: :D14Software (D14Software)
 
+AnnotationAssertion(rdfs:label :D14Software "D14Software")
 SubClassOf(:D14Software :D1DigitalObject)
 
 # Class: :D1DigitalObject (:D1DigitalObject)
 
 SubClassOf(:D1DigitalObject :E73InformationObject)
 
-# Class: :D7DigitalMachineEvent (:D7DigitalMachineEvent)
+# Class: :D7DigitalMachineEvent (D7DigitalMachineEvent)
 
+AnnotationAssertion(rdfs:label :D7DigitalMachineEvent "D7DigitalMachineEvent")
 SubClassOf(:D7DigitalMachineEvent :E5Event)
 
-# Class: :D8DigitalDevice (:D8DigitalDevice)
+# Class: :D8DigitalDevice (D8DigitalDevice)
 
+AnnotationAssertion(rdfs:label :D8DigitalDevice "D8DigitalDevice")
 SubClassOf(:D8DigitalDevice :E71ManMadeThing)
 
-# Class: :D9DataObject (:D9DataObject)
+# Class: :D9DataObject (D9DataObject)
 
+AnnotationAssertion(rdfs:label :D9DataObject "D9DataObject")
 SubClassOf(:D9DataObject :D1DigitalObject)
 
 # Class: :E13AttributeAssignment (E13AttributeAssignment)
@@ -847,6 +959,10 @@ SubClassOf(:E42Identifier :E41Appellation)
 AnnotationAssertion(rdfs:comment :E52TimeSpan "This class comprises abstract temporal extents having a beginning, an end and a duration.")
 AnnotationAssertion(rdfs:label :E52TimeSpan "E52TimeSpan")
 
+# Class: :E53Place (E53Place)
+
+AnnotationAssertion(rdfs:label :E53Place "E53Place")
+
 # Class: :E54Dimension (E54Dimension)
 
 AnnotationAssertion(rdfs:comment :E54Dimension "This class comprises quantifiable properties that can be measured by some calibrated means and can be approximated by values, i.e. points or regions in a mathematical or conceptual space, such as natural or real numbers, RGB values etc.")
@@ -899,55 +1015,65 @@ AnnotationAssertion(rdfs:comment :E90SymbolicObject "This class comprises identi
 AnnotationAssertion(rdfs:label :E90SymbolicObject "E90SymbolicObject")
 SubClassOf(:E90SymbolicObject :E28ConceptualObject)
 
-# Class: :HLF100Voleyball (:HLF100Voleyball)
+# Class: :HLF100Voleyball (HLF100Voleyball)
 
 AnnotationAssertion(rdfs:comment :HLF100Voleyball "Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules.")
+AnnotationAssertion(rdfs:label :HLF100Voleyball "HLF100Voleyball")
 SubClassOf(:HLF100Voleyball :HLF51CardioAerobics)
 
-# Class: :HLF101Walking (:HLF101Walking)
+# Class: :HLF101Walking (HLF101Walking)
 
 AnnotationAssertion(rdfs:comment :HLF101Walking "move at a regular pace by lifting and setting down each foot in turn, never having both feet off the ground at once")
+AnnotationAssertion(rdfs:label :HLF101Walking "HLF101Walking")
 SubClassOf(:HLF101Walking :HLF51CardioAerobics)
 
-# Class: :HLF102Sailing (:HLF102Sailing)
+# Class: :HLF102Sailing (HLF102Sailing)
 
 AnnotationAssertion(rdfs:comment :HLF102Sailing "Sailing employs the wind—acting on sails, wingsails or kites—to propel a craft on the surface of the water, on ice or on land over a chosen course, which is often part of a larger plan of navigation.")
+AnnotationAssertion(rdfs:label :HLF102Sailing "HLF102Sailing")
 SubClassOf(:HLF102Sailing :HLF50BalanceAndCoordination)
 
-# Class: :HLF103Squash (:HLF103Squash)
+# Class: :HLF103Squash (HLF103Squash)
 
 AnnotationAssertion(rdfs:comment :HLF103Squash "Squash is a racquet sport played by two players (or four players for doubles) in a four-walled court with a small, hollow rubber ball. Once the ball is served, players take turns hitting the ball against the front wall, above the tin and below the out line.")
+AnnotationAssertion(rdfs:label :HLF103Squash "HLF103Squash")
 SubClassOf(:HLF103Squash :HLF50BalanceAndCoordination)
 
-# Class: :HLF104WaterSkiing (:HLF104WaterSkiing)
+# Class: :HLF104WaterSkiing (HLF104WaterSkiing)
 
 AnnotationAssertion(rdfs:comment :HLF104WaterSkiing "Water skiing is a surface water sport in which an individual is pulled behind a boat or a cable ski installation over a body of water, skimming the surface on two skis or one ski.")
+AnnotationAssertion(rdfs:label :HLF104WaterSkiing "HLF104WaterSkiing")
 SubClassOf(:HLF104WaterSkiing :HLF50BalanceAndCoordination)
 
-# Class: :HLF105Windsurfing (:HLF105Windsurfing)
+# Class: :HLF105Windsurfing (HLF105Windsurfing)
 
 AnnotationAssertion(rdfs:comment :HLF105Windsurfing "Windsurfing is a surface water sport that is a combination of surfing and sailing.")
+AnnotationAssertion(rdfs:label :HLF105Windsurfing "HLF105Windsurfing")
 SubClassOf(:HLF105Windsurfing :HLF50BalanceAndCoordination)
 
-# Class: :HLF106Archery (:HLF106Archery)
+# Class: :HLF106Archery (HLF106Archery)
 
 AnnotationAssertion(rdfs:comment :HLF106Archery "Archery is the sport, practice, or skill of using a bow to shoot arrows.")
 AnnotationAssertion(rdfs:comment :HLF106Archery "ref:http://frostvalley.org/wp-content/uploads/2015/05/Physical-Activity-Archery-REV-1.12.2017.pdf")
+AnnotationAssertion(rdfs:label :HLF106Archery "HLF106Archery")
 SubClassOf(:HLF106Archery :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF107ArmCurls (:HLF107ArmCurls)
+# Class: :HLF107ArmCurls (HLF107ArmCurls)
 
 AnnotationAssertion(rdfs:comment :HLF107ArmCurls "It is an essential strength training exercise you can do with dumbbells, a barbell, resistance bands or a cable machine to build strength in the upper arms")
+AnnotationAssertion(rdfs:label :HLF107ArmCurls "HLF107ArmCurls")
 SubClassOf(:HLF107ArmCurls :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF108ArmExtensions (:HLF108ArmExtensions)
+# Class: :HLF108ArmExtensions (HLF108ArmExtensions)
 
 AnnotationAssertion(rdfs:comment :HLF108ArmExtensions "ARm extension physical activity")
+AnnotationAssertion(rdfs:label :HLF108ArmExtensions "HLF108ArmExtensions")
 SubClassOf(:HLF108ArmExtensions :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF109BackExtensions (:HLF109BackExtensions)
+# Class: :HLF109BackExtensions (HLF109BackExtensions)
 
 AnnotationAssertion(rdfs:comment :HLF109BackExtensions "BAck extension physical activity")
+AnnotationAssertion(rdfs:label :HLF109BackExtensions "HLF109BackExtensions")
 SubClassOf(:HLF109BackExtensions :HLF49MuscleStrengtheningAnaerobics)
 
 # Class: :HLF10GenderDimension (:HLF10GenderDimension)
@@ -955,58 +1081,69 @@ SubClassOf(:HLF109BackExtensions :HLF49MuscleStrengtheningAnaerobics)
 AnnotationAssertion(rdfs:comment :HLF10GenderDimension "Refers to the gender of the user: Female or Male")
 SubClassOf(:HLF10GenderDimension :E54Dimension)
 
-# Class: :HLF10SleepStage (:HLF10SleepStage)
+# Class: :HLF10SleepStage (HLF10SleepStage)
 
+AnnotationAssertion(rdfs:label :HLF10SleepStage "HLF10SleepStage")
 SubClassOf(:HLF10SleepStage :HLF1State)
 
-# Class: :HLF110Ballet (:HLF110Ballet)
+# Class: :HLF110Ballet (HLF110Ballet)
 
 AnnotationAssertion(rdfs:comment :HLF110Ballet "It is an artistic dance form performed to music, using precise and highly formalized set steps and gestures")
+AnnotationAssertion(rdfs:label :HLF110Ballet "HLF110Ballet")
 SubClassOf(:HLF110Ballet :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF111BenchPress (:HLF111BenchPress)
+# Class: :HLF111BenchPress (HLF111BenchPress)
 
 AnnotationAssertion(rdfs:comment :HLF111BenchPress "Bench presses are an exercise that can be used to tone the muscles of the upper body, including the pectorals, arms, and shoulders.")
+AnnotationAssertion(rdfs:label :HLF111BenchPress "HLF111BenchPress")
 SubClassOf(:HLF111BenchPress :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF112Bowling (:HLF112Bowling)
+# Class: :HLF112Bowling (HLF112Bowling)
 
 AnnotationAssertion(rdfs:comment :HLF112Bowling "Bowling, also called tenpins, game in which a heavy ball is rolled down a long, narrow lane toward a group of objects known as pins, the aim being to knock down more pins than an opponent")
+AnnotationAssertion(rdfs:label :HLF112Bowling "HLF112Bowling")
 SubClassOf(:HLF112Bowling :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF113BurpeeTest (:HLF113BurpeeTest)
+# Class: :HLF113BurpeeTest (HLF113BurpeeTest)
 
 AnnotationAssertion(rdfs:comment :HLF113BurpeeTest "This burpee test is a simple test of strength endurance, agility, balance and coordination, in which the participant attempts the maximum number of burpees in a set time period.")
+AnnotationAssertion(rdfs:label :HLF113BurpeeTest "HLF113BurpeeTest")
 SubClassOf(:HLF113BurpeeTest :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF114CircuitTraining (:HLF114CircuitTraining)
+# Class: :HLF114CircuitTraining (HLF114CircuitTraining)
 
 AnnotationAssertion(rdfs:comment :HLF114CircuitTraining "Circuit training is a combination of six or more exercises performed with short rest periods between them for either a set number of repetitions or a prescribed amount of time. One circuit is when all of the chosen exercises have been completed. Multiple circuits can be performed in one training session.")
+AnnotationAssertion(rdfs:label :HLF114CircuitTraining "HLF114CircuitTraining")
 SubClassOf(:HLF114CircuitTraining :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF115Deadlifts (:HLF115Deadlifts)
+# Class: :HLF115Deadlifts (HLF115Deadlifts)
 
 AnnotationAssertion(rdfs:comment :HLF115Deadlifts "The deadlift is a weight training exercise in which a loaded barbell or bar is lifted off the ground to the level of the hips, torso perpendicular to the floor, before being placed back on the ground.")
+AnnotationAssertion(rdfs:label :HLF115Deadlifts "HLF115Deadlifts")
 SubClassOf(:HLF115Deadlifts :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF116FrontRaises (:HLF116FrontRaises)
+# Class: :HLF116FrontRaises (HLF116FrontRaises)
 
 AnnotationAssertion(rdfs:comment :HLF116FrontRaises "The front raise, also known as the dumbbell front raise, is a weight training exercise that targets your shoulder muscles. Perform front raises by standing and using an overhand grip to lift a pair of dumbbells from the front of your thighs to shoulder level in front of your body. With proper form, front raises are an effective shoulder workout with many benefits.")
+AnnotationAssertion(rdfs:label :HLF116FrontRaises "HLF116FrontRaises")
 SubClassOf(:HLF116FrontRaises :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF117InlineSkating (:HLF117InlineSkating)
+# Class: :HLF117InlineSkating (HLF117InlineSkating)
 
 AnnotationAssertion(rdfs:comment :HLF117InlineSkating "a roller skate whose wheels are set in-line for greater speed and maneuverability")
+AnnotationAssertion(rdfs:label :HLF117InlineSkating "HLF117InlineSkating")
 SubClassOf(:HLF117InlineSkating :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF118LateralRaises (:HLF118LateralRaises)
+# Class: :HLF118LateralRaises (HLF118LateralRaises)
 
 AnnotationAssertion(rdfs:comment :HLF118LateralRaises "A shoulder exercise in which the arm is raised and lowered against resistance, such as through use of a dumbbell, cable, or resistance band.")
+AnnotationAssertion(rdfs:label :HLF118LateralRaises "HLF118LateralRaises")
 SubClassOf(:HLF118LateralRaises :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF119LegCurls (:HLF119LegCurls)
+# Class: :HLF119LegCurls (HLF119LegCurls)
 
 AnnotationAssertion(rdfs:comment :HLF119LegCurls "It is an exercise that strengthens the hamstrings. It involves bending your knees and moving your heels toward your butt while the rest of your body stays still.")
+AnnotationAssertion(rdfs:label :HLF119LegCurls "HLF119LegCurls")
 SubClassOf(:HLF119LegCurls :HLF49MuscleStrengtheningAnaerobics)
 
 # Class: :HLF11ChestSkinfoldDimension (:HLF11ChestSkinfoldDimension)
@@ -1014,49 +1151,58 @@ SubClassOf(:HLF119LegCurls :HLF49MuscleStrengtheningAnaerobics)
 AnnotationAssertion(rdfs:comment :HLF11ChestSkinfoldDimension "Chest or pectoral skinfold: For men, get a diagonal fold half way between the armpit and the nipple. In women, a diagonal fold 1/3 of the way from the arm pit to the nipple. Mid-Axillary: A vertical fold on the mid-axillary line which runs directly down from the center of the armpit. It is usually measured in milimeters.")
 SubClassOf(:HLF11ChestSkinfoldDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF120LegExtensions (:HLF120LegExtensions)
+# Class: :HLF120LegExtensions (HLF120LegExtensions)
 
 AnnotationAssertion(rdfs:comment :HLF120LegExtensions "An exercise performed on a machine while seated. The quadriceps (thigh muscles) are exerted to straighten the knee while acting against resistance applied to the lower shin.")
+AnnotationAssertion(rdfs:label :HLF120LegExtensions "HLF120LegExtensions")
 SubClassOf(:HLF120LegExtensions :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF121LegPresses (:HLF121LegPresses)
+# Class: :HLF121LegPresses (HLF121LegPresses)
 
 AnnotationAssertion(rdfs:comment :HLF121LegPresses "The leg press is a compound weight training exercise in which the individual pushes a weight or resistance away from them using their legs.")
+AnnotationAssertion(rdfs:label :HLF121LegPresses "HLF121LegPresses")
 SubClassOf(:HLF121LegPresses :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF122Lunges (:HLF122Lunges)
+# Class: :HLF122Lunges (HLF122Lunges)
 
 AnnotationAssertion(rdfs:comment :HLF122Lunges "A lunge is a lower body exercise that involves stepping and bending your front and back leg.")
+AnnotationAssertion(rdfs:label :HLF122Lunges "HLF122Lunges")
 SubClassOf(:HLF122Lunges :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF123MartialArts (:HLF123MartialArts)
+# Class: :HLF123MartialArts (HLF123MartialArts)
 
 AnnotationAssertion(rdfs:comment :HLF123MartialArts "The term martial arts refers to all of the various systems of training for combat that have been arranged or systematized.")
+AnnotationAssertion(rdfs:label :HLF123MartialArts "HLF123MartialArts")
 SubClassOf(:HLF123MartialArts :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF125PullUps (:HLF125PullUps)
+# Class: :HLF125PullUps (HLF125PullUps)
 
 AnnotationAssertion(rdfs:comment :HLF125PullUps "A pull-up is an upper-body strength exercise. The pull-up is a closed-chain movement where the body is suspended by the hands and pulls up.")
+AnnotationAssertion(rdfs:label :HLF125PullUps "HLF125PullUps")
 SubClassOf(:HLF125PullUps :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF126PushUps (:HLF126PushUps)
+# Class: :HLF126PushUps (HLF126PushUps)
 
 AnnotationAssertion(rdfs:comment :HLF126PushUps "A push-up is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of the deltoids, serratus anterior, coracobrachialis and the midsection as a whole.")
+AnnotationAssertion(rdfs:label :HLF126PushUps "HLF126PushUps")
 SubClassOf(:HLF126PushUps :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF127Racquetball (:HLF127Racquetball)
+# Class: :HLF127Racquetball (HLF127Racquetball)
 
 AnnotationAssertion(rdfs:comment :HLF127Racquetball "Racquetball is a racquet sport played with a hollow rubber ball on an indoor or outdoor court.")
+AnnotationAssertion(rdfs:label :HLF127Racquetball "HLF127Racquetball")
 SubClassOf(:HLF127Racquetball :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF128ShoulderPresses (:HLF128ShoulderPresses)
+# Class: :HLF128ShoulderPresses (HLF128ShoulderPresses)
 
 AnnotationAssertion(rdfs:comment :HLF128ShoulderPresses "It is typically performed while either standing or sitting sometimes also when squatting, in which a weight is pressed straight upwards from racking position until the arms are locked out overhead, while the legs, lower back and abs maintain balance.")
+AnnotationAssertion(rdfs:label :HLF128ShoulderPresses "HLF128ShoulderPresses")
 SubClassOf(:HLF128ShoulderPresses :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF129SitUps (:HLF129SitUps)
+# Class: :HLF129SitUps (HLF129SitUps)
 
 AnnotationAssertion(rdfs:comment :HLF129SitUps "Situps are classic abdominal exercises done by lying on your back and lifting your torso. They use your body weight to strengthen and tone the core-stabilizing abdominal muscles.")
+AnnotationAssertion(rdfs:label :HLF129SitUps "HLF129SitUps")
 SubClassOf(:HLF129SitUps :HLF49MuscleStrengtheningAnaerobics)
 
 # Class: :HLF12DiastolicPressureDimension (:HLF12DiastolicPressureDimension)
@@ -1064,39 +1210,46 @@ SubClassOf(:HLF129SitUps :HLF49MuscleStrengtheningAnaerobics)
 AnnotationAssertion(rdfs:comment :HLF12DiastolicPressureDimension "It is the lowest number, it refers to the pressure inside the artery when the heart is at rest and is filling with blood.")
 SubClassOf(:HLF12DiastolicPressureDimension :HLF233VitalSignDimension)
 
-# Class: :HLF130Snowboarding (:HLF130Snowboarding)
+# Class: :HLF130Snowboarding (HLF130Snowboarding)
 
 AnnotationAssertion(rdfs:comment :HLF130Snowboarding "Snowboarding is a recreational and competitive activity that involves descending a snow-covered slope while standing on a snowboard that is almost always attached to a rider's feet.")
+AnnotationAssertion(rdfs:label :HLF130Snowboarding "HLF130Snowboarding")
 SubClassOf(:HLF130Snowboarding :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF131Softball (:HLF131Softball)
+# Class: :HLF131Softball (HLF131Softball)
 
 AnnotationAssertion(rdfs:comment :HLF131Softball "Softball is a game similar to baseball played with a larger ball (11 to 16 inches or 28 to 40 cm circumference) on a field that has base lengths of 60 feet, a pitcher's mound that ranges from 35 to 43 (professional is 43) feet away from home plate, and a home run fence that is 220–300 feet away from home plate, depending on the type of softball being played.")
+AnnotationAssertion(rdfs:label :HLF131Softball "HLF131Softball")
 SubClassOf(:HLF131Softball :HLF51CardioAerobics)
 
-# Class: :HLF132Squats (:HLF132Squats)
+# Class: :HLF132Squats (HLF132Squats)
 
 AnnotationAssertion(rdfs:comment :HLF132Squats "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up. During the descent of a squat, the hip and knee joints flex while the ankle joint dorsiflexes; conversely the hip and knee joints extend and the ankle joint plantarflexes when standing up.")
+AnnotationAssertion(rdfs:label :HLF132Squats "HLF132Squats")
 SubClassOf(:HLF132Squats :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF133WeighLifting (:HLF133WeighLifting)
+# Class: :HLF133WeighLifting (HLF133WeighLifting)
 
 AnnotationAssertion(rdfs:comment :HLF133WeighLifting "Weight training is a common type of strength training for developing the strength and size of skeletal muscles. It utilizes the force of gravity in the form of weighted bars, dumbbells or weight stacks in order to oppose the force generated by muscle through concentric or eccentric contraction")
+AnnotationAssertion(rdfs:label :HLF133WeighLifting "HLF133WeighLifting")
 SubClassOf(:HLF133WeighLifting :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF134Pilates (:HLF134Pilates)
+# Class: :HLF134Pilates (HLF134Pilates)
 
 AnnotationAssertion(rdfs:comment :HLF134Pilates "It is an exercise regimen that is typically performed on a floor mat or with the use of specialized apparatus and aims to improve flexibility and stability by strengthening the muscles and especially the torso-stabilizing muscles of the abdomen and lower back")
+AnnotationAssertion(rdfs:label :HLF134Pilates "HLF134Pilates")
 SubClassOf(:HLF134Pilates :HLF48Flexibility)
 
-# Class: :HLF135Stretching (:HLF135Stretching)
+# Class: :HLF135Stretching (HLF135Stretching)
 
 AnnotationAssertion(rdfs:comment :HLF135Stretching "Stretching, as it relates to physical health and fitness, is the process of placing particular parts of the body into a position that will lengthen, or elongate, the muscles and associated soft tissues.")
+AnnotationAssertion(rdfs:label :HLF135Stretching "HLF135Stretching")
 SubClassOf(:HLF135Stretching :HLF48Flexibility)
 
-# Class: :HLF136Yoga (:HLF136Yoga)
+# Class: :HLF136Yoga (HLF136Yoga)
 
 AnnotationAssertion(rdfs:comment :HLF136Yoga "Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body.")
+AnnotationAssertion(rdfs:label :HLF136Yoga "HLF136Yoga")
 SubClassOf(:HLF136Yoga :HLF48Flexibility)
 
 # Class: :HLF137UpperLegAssignment (:HLF137UpperLegAssignment)
@@ -1124,10 +1277,10 @@ SubClassOf(:HLF13DistancePerformedDimension :E54Dimension)
 AnnotationAssertion(rdfs:comment :HLF140WristAssignment "Wrist assignment")
 SubClassOf(:HLF140WristAssignment :HLF235AnthropometricAssignment)
 
-# Class: :HLF141METAss (:HLF141METAss)
+# Class: :HLF141METAssignment (:HLF141METAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF141METAss "MET assignment")
-SubClassOf(:HLF141METAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF141METAssignment "MET assignment")
+SubClassOf(:HLF141METAssignment :E13AttributeAssignment)
 
 # Class: :HLF142CalfAssignment (:HLF142CalfAssignment)
 
@@ -1154,10 +1307,10 @@ SubClassOf(:HLF145UpperArmAssignment :HLF235AnthropometricAssignment)
 AnnotationAssertion(rdfs:comment :HLF146BiacromialAssignment "Biacromial assignment")
 SubClassOf(:HLF146BiacromialAssignment :HLF235AnthropometricAssignment)
 
-# Class: :HLF147EnergyAss (:HLF147EnergyAss)
+# Class: :HLF147EnergyAssignment (:HLF147EnergyAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF147EnergyAss "Energy assignment")
-SubClassOf(:HLF147EnergyAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF147EnergyAssignment "Energy assignment")
+SubClassOf(:HLF147EnergyAssignment :E13AttributeAssignment)
 
 # Class: :HLF148SubscapularAssignment (:HLF148SubscapularAssignment)
 
@@ -1174,20 +1327,20 @@ SubClassOf(:HLF149BicepsAssignment :HLF235AnthropometricAssignment)
 AnnotationAssertion(rdfs:comment :HLF14ElbowBreadthDimension "Elbow breadth is measured by first raising the right arm to the horizontal position and flexing the elbow to form a right angle. Locate the bony protuberances on either side of the elbow and measure the distance between them.")
 SubClassOf(:HLF14ElbowBreadthDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF150GenderAss (:HLF150GenderAss)
+# Class: :HLF150GenderAssignment (:HLF150GenderAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF150GenderAss "Gender assignment")
-SubClassOf(:HLF150GenderAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF150GenderAssignment "Gender assignment")
+SubClassOf(:HLF150GenderAssignment :E13AttributeAssignment)
 
 # Class: :HLF151ThighAssignment (:HLF151ThighAssignment)
 
 AnnotationAssertion(rdfs:comment :HLF151ThighAssignment "Thigh assignment")
 SubClassOf(:HLF151ThighAssignment :HLF235AnthropometricAssignment)
 
-# Class: :HLF152AgeAss (:HLF152AgeAss)
+# Class: :HLF152AgeAssignment (:HLF152AgeAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF152AgeAss "Age assignment")
-SubClassOf(:HLF152AgeAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF152AgeAssignment "Age assignment")
+SubClassOf(:HLF152AgeAssignment :E13AttributeAssignment)
 
 # Class: :HLF153HeightAssignment (:HLF153HeightAssignment)
 
@@ -1229,14 +1382,15 @@ SubClassOf(:HLF162SuprailiacAssignment :HLF235AnthropometricAssignment)
 AnnotationAssertion(rdfs:comment :HLF166RestingRespirationRateAssignment "The respiration rate is the number of breaths a person takes per minute. The rate is usually measured when a person is at rest and simply involves counting the number of breaths for one minute by counting how many times the chest rises. Respiration rates may increase with fever, illness, and other medical conditions. When checking respiration, it is important to also note whether a person has any difficulty breathing.")
 SubClassOf(:HLF166RestingRespirationRateAssignment :HLF234VitalSignsAssignment)
 
-# Class: :HLF167DurationAss (:HLF167DurationAss)
+# Class: :HLF167DurationAssignment (:HLF167DurationAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF167DurationAss "Duration assignment")
-SubClassOf(:HLF167DurationAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF167DurationAssignment "Duration assignment")
+SubClassOf(:HLF167DurationAssignment :E13AttributeAssignment)
 
-# Class: :HLF168HeartRateMeasurement (:HLF168HeartRateMeasurement)
+# Class: :HLF168HeartRateMeasurement (HLF168HeartRateMeasurement)
 
 AnnotationAssertion(rdfs:comment :HLF168HeartRateMeasurement "Cardiovascular Measurement")
+AnnotationAssertion(rdfs:label :HLF168HeartRateMeasurement "HLF168HeartRateMeasurement")
 SubClassOf(:HLF168HeartRateMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF168HeartRateMeasurement :HLF237VitalSignsMeasurement)
 
@@ -1250,27 +1404,29 @@ SubClassOf(:HLF169ChestMeasurement :HLF236AnthropometricMeasurement)
 AnnotationAssertion(rdfs:comment :HLF16HeadCircumferencesDimension "The distance from above the eyebrows and ears and around the back of the head.")
 SubClassOf(:HLF16HeadCircumferencesDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF171EnergyMeas (:HLF171EnergyMeas)
+# Class: :HLF171EnergyMeasurement (:HLF171EnergyMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF171EnergyMeas "Energy measurement")
-SubClassOf(:HLF171EnergyMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF171EnergyMeasurement "Energy measurement")
+SubClassOf(:HLF171EnergyMeasurement :E16Measurement)
 
-# Class: :HLF173HeightMeasurement (:HLF173HeightMeasurement)
+# Class: :HLF173HeightMeasurement (HLF173HeightMeasurement)
 
 AnnotationAssertion(rdfs:comment :HLF173HeightMeasurement "Height measurement")
+AnnotationAssertion(rdfs:label :HLF173HeightMeasurement "HLF173HeightMeasurement")
 SubClassOf(:HLF173HeightMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF173HeightMeasurement :HLF236AnthropometricMeasurement)
 
-# Class: :HLF176StepDailyTreadMeasurement (:HLF176StepDailyTreadMeasurement)
+# Class: :HLF176StepDailyTreadMeasurement (HLF176StepDailyTreadMeasurement)
 
 AnnotationAssertion(rdfs:comment :HLF176StepDailyTreadMeasurement "Number of steps Measurement")
+AnnotationAssertion(rdfs:label :HLF176StepDailyTreadMeasurement "HLF176StepDailyTreadMeasurement")
 SubClassOf(:HLF176StepDailyTreadMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF176StepDailyTreadMeasurement :E16Measurement)
 
-# Class: :HLF178GenderMeas (:HLF178GenderMeas)
+# Class: :HLF178GenderMeasurement (:HLF178GenderMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF178GenderMeas "Gernder measurement")
-SubClassOf(:HLF178GenderMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF178GenderMeasurement "Gernder measurement")
+SubClassOf(:HLF178GenderMeasurement :E16Measurement)
 
 # Class: :HLF179RestingRespirationRateMeasurement (:HLF179RestingRespirationRateMeasurement)
 
@@ -1327,10 +1483,10 @@ SubClassOf(:HLF18HeartRateReservesDimension :E54Dimension)
 AnnotationAssertion(rdfs:comment :HLF191WeightMeasurement "Weight measurement")
 SubClassOf(:HLF191WeightMeasurement :HLF236AnthropometricMeasurement)
 
-# Class: :HLF193FrequencyMeas (:HLF193FrequencyMeas)
+# Class: :HLF193FrequencyMeasurement (:HLF193FrequencyMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF193FrequencyMeas "Frequency measurement")
-SubClassOf(:HLF193FrequencyMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF193FrequencyMeasurement "Frequency measurement")
+SubClassOf(:HLF193FrequencyMeasurement :E16Measurement)
 
 # Class: :HLF194AbdomenMeasurement (:HLF194AbdomenMeasurement)
 
@@ -1367,9 +1523,10 @@ SubClassOf(:HLF19HeightDimension :HLF232AnthropometricDimension)
 AnnotationAssertion(rdfs:comment :HLF1PhysicalActivityIntensityDimension "This class comprises actions intentionally carried out by instances of E39 Actor such us the different physical activities performed by E39 Actor")
 SubClassOf(:HLF1PhysicalActivityIntensityDimension :E54Dimension)
 
-# Class: :HLF1State (:HLF1State)
+# Class: :HLF1State (HLF1State)
 
 AnnotationAssertion(rdfs:comment :HLF1State "At a given level of granularity (both temporal and spatial) we are confronted with states. The whole or various parts of my persistent iteam are all in particular physical and physiological occurrance (including states of motion or change) that are characteristic of a particular phase  1. http://empslocal.ex.ac.uk/people/staff/apgalton/Preprints/interontology12.pdf 2. States, Processes and Events, and the Ontology of Causal Relations 3. The Ontology of States, Processes, and Events 4. J. F. Allen. Towards a general theory of action and time. Artificial Intelligence, 23:123–54, 1984. 5. A. P. Galton. Experience and history: Processes and their relation to events. Journal of Logic and Computation, 18(3):323–340, 2007. A. P. Galton and R. Mizoguchi. The water falls but the waterfall does not fall: New perspectives on objects, processes and events. Applied Ontology, 4(2):71–107, 2009.")
+AnnotationAssertion(rdfs:label :HLF1State "HLF1State")
 SubClassOf(:HLF1State :E2TemporalEntity)
 
 # Class: :HLF200AgeMeasurement (:HLF200AgeMeasurement)
@@ -1386,6 +1543,16 @@ SubClassOf(:HLF201HealthRecommendation :E73InformationObject)
 
 AnnotationAssertion(rdfs:comment :HLF202WHORecommendationCode "WHO recommendation code")
 SubClassOf(:HLF202WHORecommendationCode :E41Appellation)
+
+# Class: :HLF203Jogging (HLF203Jogging)
+
+AnnotationAssertion(rdfs:label :HLF203Jogging "HLF203Jogging")
+SubClassOf(:HLF203Jogging :HLF51CardioAerobics)
+
+# Class: :HLF204FloorClimbing (HLF204FloorClimbing)
+
+AnnotationAssertion(rdfs:label :HLF204FloorClimbing "HLF204FloorClimbing")
+SubClassOf(:HLF204FloorClimbing :HLF51CardioAerobics)
 
 # Class: :HLF205WHOPhysicalActivityRecommendation (:HLF205WHOPhysicalActivityRecommendation)
 
@@ -1413,10 +1580,10 @@ AnnotationAssertion(rdfs:comment :HLF208AppellationType "This class comprises ty
 AnnotationAssertion(rdfs:label :HLF208AppellationType "HLF208AppellationType")
 SubClassOf(:HLF208AppellationType :E55Type)
 
-# Class: :HLF208ESSIScoreMeas (:HLF208ESSIScoreMeas)
+# Class: :HLF208ESSIScoreMeasurement (:HLF208ESSIScoreMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF208ESSIScoreMeas "ESSI score measurement")
-SubClassOf(:HLF208ESSIScoreMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF208ESSIScoreMeasurement "ESSI score measurement")
+SubClassOf(:HLF208ESSIScoreMeasurement :E16Measurement)
 
 # Class: :HLF209ESSIScoreDimension (:HLF209ESSIScoreDimension)
 
@@ -1432,8 +1599,13 @@ SubClassOf(:HLF209IdentifierType :E55Type)
 AnnotationAssertion(rdfs:comment :HLF20HipCircumferenceDimension "The distance around the largest part of the hips ( the widest part of the buttocks).")
 SubClassOf(:HLF20HipCircumferenceDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF20SleepCycle (:HLF20SleepCycle)
+# Class: :HLF20Patient (:HLF20Patient)
 
+SubClassOf(:HLF20Patient :E21Person)
+
+# Class: :HLF20SleepCycle (HLF20SleepCycle)
+
+AnnotationAssertion(rdfs:label :HLF20SleepCycle "HLF20SleepCycle")
 SubClassOf(:HLF20SleepCycle :HLF2Process)
 
 # Class: :HLF210ESSIRecommendation (:HLF210ESSIRecommendation)
@@ -1461,75 +1633,75 @@ SubClassOf(:HLF213PSQIQuestionnaireActivity :E7Activity)
 AnnotationAssertion(rdfs:comment :HLF213PSQIRecommendation "PSQI recommendation")
 SubClassOf(:HLF213PSQIRecommendation :HLF201HealthRecommendation)
 
-# Class: :HLF214PSQIScoreDim (:HLF214PSQIScoreDim)
+# Class: :HLF214PSQIScoreDimension (:HLF214PSQIScoreDimension)
 
-AnnotationAssertion(rdfs:comment :HLF214PSQIScoreDim "THe final score of the PSQI questionnaire.")
-SubClassOf(:HLF214PSQIScoreDim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF214PSQIScoreDimension "THe final score of the PSQI questionnaire.")
+SubClassOf(:HLF214PSQIScoreDimension :E54Dimension)
 
-# Class: :HLF215PSQIScoreMeas (:HLF215PSQIScoreMeas)
+# Class: :HLF215PSQIScoreMeasurement (:HLF215PSQIScoreMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF215PSQIScoreMeas "PSQI score measurement")
-SubClassOf(:HLF215PSQIScoreMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF215PSQIScoreMeasurement "PSQI score measurement")
+SubClassOf(:HLF215PSQIScoreMeasurement :E16Measurement)
 
 # Class: :HLF216PHQQuestionnaireActivity (:HLF216PHQQuestionnaireActivity)
 
 AnnotationAssertion(rdfs:comment :HLF216PHQQuestionnaireActivity "The activity of filling PHQ questionnaire")
 SubClassOf(:HLF216PHQQuestionnaireActivity :E7Activity)
 
-# Class: :HLF217PHQScoreDIm (:HLF217PHQScoreDIm)
+# Class: :HLF217PHQScoreDimension (:HLF217PHQScoreDimension)
 
-AnnotationAssertion(rdfs:comment :HLF217PHQScoreDIm "The final score of the PHQ questionnaire.")
-SubClassOf(:HLF217PHQScoreDIm :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF217PHQScoreDimension "The final score of the PHQ questionnaire.")
+SubClassOf(:HLF217PHQScoreDimension :E54Dimension)
 
-# Class: :HLF218PHQScoreMeas (:HLF218PHQScoreMeas)
+# Class: :HLF218PHQScoreMeasurement (:HLF218PHQScoreMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF218PHQScoreMeas "PHQ score measurement")
-SubClassOf(:HLF218PHQScoreMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF218PHQScoreMeasurement "PHQ score measurement")
+SubClassOf(:HLF218PHQScoreMeasurement :E16Measurement)
 
-# Class: :HLF219PHQFrequencyRate1Meas (:HLF219PHQFrequencyRate1Meas)
+# Class: :HLF219PHQFrequencyRate1Measurement (:HLF219PHQFrequencyRate1Measurement)
 
-AnnotationAssertion(rdfs:comment :HLF219PHQFrequencyRate1Meas "PHQ frequency rate 1 measurement")
-SubClassOf(:HLF219PHQFrequencyRate1Meas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF219PHQFrequencyRate1Measurement "PHQ frequency rate 1 measurement")
+SubClassOf(:HLF219PHQFrequencyRate1Measurement :E16Measurement)
 
-# Class: :HLF21IntakeEnergyDim (:HLF21IntakeEnergyDim)
+# Class: :HLF21IntakeEnergyDimension (:HLF21IntakeEnergyDimension)
 
-AnnotationAssertion(rdfs:comment :HLF21IntakeEnergyDim "Energy intake is defined as the caloric or energy content of food as provided by the major sources of dietary energy.")
-SubClassOf(:HLF21IntakeEnergyDim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF21IntakeEnergyDimension "Energy intake is defined as the caloric or energy content of food as provided by the major sources of dietary energy.")
+SubClassOf(:HLF21IntakeEnergyDimension :E54Dimension)
 
-# Class: :HLF220PHQFrequencyRate2Meas (:HLF220PHQFrequencyRate2Meas)
+# Class: :HLF220PHQFrequencyRate2Measurement (:HLF220PHQFrequencyRate2Measurement)
 
-AnnotationAssertion(rdfs:comment :HLF220PHQFrequencyRate2Meas "PHQ Frequency Rate 2 measurement")
-SubClassOf(:HLF220PHQFrequencyRate2Meas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF220PHQFrequencyRate2Measurement "PHQ Frequency Rate 2 measurement")
+SubClassOf(:HLF220PHQFrequencyRate2Measurement :E16Measurement)
 
-# Class: :HLF221PHQFrequencyRate3Meas (:HLF221PHQFrequencyRate3Meas)
+# Class: :HLF221PHQFrequencyRate3Measurement (:HLF221PHQFrequencyRate3Measurement)
 
-AnnotationAssertion(rdfs:comment :HLF221PHQFrequencyRate3Meas "Fequency Rate 3 Measurement")
-SubClassOf(:HLF221PHQFrequencyRate3Meas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF221PHQFrequencyRate3Measurement "Fequency Rate 3 Measurement")
+SubClassOf(:HLF221PHQFrequencyRate3Measurement :E16Measurement)
 
 # Class: :HLF222PHQRateItem9Meas (:HLF222PHQRateItem9Meas)
 
 AnnotationAssertion(rdfs:comment :HLF222PHQRateItem9Meas "PHQ Rate item 9 measurement")
 SubClassOf(:HLF222PHQRateItem9Meas :E16Measurement)
 
-# Class: :HLF223PHQFrequencyRate1Dim (:HLF223PHQFrequencyRate1Dim)
+# Class: :HLF223PHQFrequencyRate1Dimension (:HLF223PHQFrequencyRate1Dimension)
 
-AnnotationAssertion(rdfs:comment :HLF223PHQFrequencyRate1Dim "How many questions were rated 1 in the PHQ questionnaire.")
-SubClassOf(:HLF223PHQFrequencyRate1Dim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF223PHQFrequencyRate1Dimension "How many questions were rated 1 in the PHQ questionnaire.")
+SubClassOf(:HLF223PHQFrequencyRate1Dimension :E54Dimension)
 
-# Class: :HLF224PHQFrequencyRate2Dim (:HLF224PHQFrequencyRate2Dim)
+# Class: :HLF224PHQFrequencyRate2Dimension (:HLF224PHQFrequencyRate2Dimension)
 
-AnnotationAssertion(rdfs:comment :HLF224PHQFrequencyRate2Dim "How many questions were rated 2 in the PHQ questionnaire.")
-SubClassOf(:HLF224PHQFrequencyRate2Dim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF224PHQFrequencyRate2Dimension "How many questions were rated 2 in the PHQ questionnaire.")
+SubClassOf(:HLF224PHQFrequencyRate2Dimension :E54Dimension)
 
-# Class: :HLF225PHQFrequencyRate3Dim (:HLF225PHQFrequencyRate3Dim)
+# Class: :HLF225PHQFrequencyRate3Dimension (:HLF225PHQFrequencyRate3Dimension)
 
-AnnotationAssertion(rdfs:comment :HLF225PHQFrequencyRate3Dim "How many questions were rated 3 in the PHQ questionnaire.")
-SubClassOf(:HLF225PHQFrequencyRate3Dim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF225PHQFrequencyRate3Dimension "How many questions were rated 3 in the PHQ questionnaire.")
+SubClassOf(:HLF225PHQFrequencyRate3Dimension :E54Dimension)
 
-# Class: :HLF226PHQRateItem9Dim (:HLF226PHQRateItem9Dim)
+# Class: :HLF226PHQRateItem9Dimension (:HLF226PHQRateItem9Dimension)
 
-AnnotationAssertion(rdfs:comment :HLF226PHQRateItem9Dim "The rate given to the item 9. It can be 0, 1, 2 or 3.")
-SubClassOf(:HLF226PHQRateItem9Dim :E54Dimension)
+AnnotationAssertion(rdfs:comment :HLF226PHQRateItem9Dimension "The rate given to the item 9. It can be 0, 1, 2 or 3.")
+SubClassOf(:HLF226PHQRateItem9Dimension :E54Dimension)
 
 # Class: :HLF227PHQRecommendation (:HLF227PHQRecommendation)
 
@@ -1541,20 +1713,20 @@ SubClassOf(:HLF227PHQRecommendation :HLF201HealthRecommendation)
 AnnotationAssertion(rdfs:comment :HLF228PHQRecommendationCode "PHQ recommendation code")
 SubClassOf(:HLF228PHQRecommendationCode :E41Appellation)
 
-# Class: :HLF229PregnancyAss (:HLF229PregnancyAss)
+# Class: :HLF229PregnancyAssignment (:HLF229PregnancyAssignment)
 
-AnnotationAssertion(rdfs:comment :HLF229PregnancyAss "Pregnancy assignment")
-SubClassOf(:HLF229PregnancyAss :E13AttributeAssignment)
+AnnotationAssertion(rdfs:comment :HLF229PregnancyAssignment "Pregnancy assignment")
+SubClassOf(:HLF229PregnancyAssignment :E13AttributeAssignment)
 
 # Class: :HLF22WaistToHeightRatioDimension (:HLF22WaistToHeightRatioDimension)
 
 AnnotationAssertion(rdfs:comment :HLF22WaistToHeightRatioDimension "It is calculated as waist circumference divided by their height, both measured in the same units.")
 SubClassOf(:HLF22WaistToHeightRatioDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF230PregnancyMeas (:HLF230PregnancyMeas)
+# Class: :HLF230PregnancyMeasurement (:HLF230PregnancyMeasurement)
 
-AnnotationAssertion(rdfs:comment :HLF230PregnancyMeas "Pregnancy measurement")
-SubClassOf(:HLF230PregnancyMeas :E16Measurement)
+AnnotationAssertion(rdfs:comment :HLF230PregnancyMeasurement "Pregnancy measurement")
+SubClassOf(:HLF230PregnancyMeasurement :E16Measurement)
 
 # Class: :HLF231PregnancyDimension (:HLF231PregnancyDimension)
 
@@ -1596,6 +1768,11 @@ SubClassOf(:HLF237VitalSignsMeasurement :E16Measurement)
 AnnotationAssertion(rdfs:comment :HLF23KneeHeightDimension "It is defined as the distance from the sole of the foot to the most anterior surface of the femoral condyles of the thigh (medial being more anterior), with the ankle and knee each flexed to a 90 angle.")
 SubClassOf(:HLF23KneeHeightDimension :HLF232AnthropometricDimension)
 
+# Class: :HLF240MealActivity (HLF240MealActivity)
+
+AnnotationAssertion(rdfs:label :HLF240MealActivity "HLF240MealActivity")
+SubClassOf(:HLF240MealActivity :E7Activity)
+
 # Class: :HLF24METDimension (:HLF24METDimension)
 
 AnnotationAssertion(rdfs:comment :HLF24METDimension "Metabolic equivalent of task")
@@ -1635,13 +1812,17 @@ SubClassOf(:HLF274SleepStageType :E55Type)
 
 SubClassOf(:HLF274TotalProteinDimension :E54Dimension)
 
-# Class: :HLF275ExerciceType (:HLF275ExerciceType)
+# Class: :HLF275ExerciceIdentifier (:HLF275ExerciceIdentifier)
 
-SubClassOf(:HLF275ExerciceType :E55Type)
+SubClassOf(:HLF275ExerciceIdentifier :E42Identifier)
 
 # Class: :HLF276ExerciseRevolutionType (:HLF276ExerciseRevolutionType)
 
 SubClassOf(:HLF276ExerciseRevolutionType :E55Type)
+
+# Class: :HLF277MealType (:HLF277MealType)
+
+SubClassOf(:HLF277MealType :E55Type)
 
 # Class: :HLF27OxygenSaturationDimension (:HLF27OxygenSaturationDimension)
 
@@ -1667,18 +1848,21 @@ SubClassOf(:HLF29StressLevelDimension :E54Dimension)
 AnnotationAssertion(rdfs:comment :HLF2FrequencyDimension "the rate at which something occurs over a particular period of time or in a given sample.")
 SubClassOf(:HLF2FrequencyDimension :E54Dimension)
 
-# Class: :HLF2Process (:HLF2Process)
+# Class: :HLF2Process (HLF2Process)
 
 AnnotationAssertion(rdfs:comment :HLF2Process "natural cycles of activity where the cycles are relevant to register, in contrast to the Event which only register the begins and ends. See also BFO: process")
+AnnotationAssertion(rdfs:label :HLF2Process "HLF2Process")
 SubClassOf(:HLF2Process :E2TemporalEntity)
 
-# Class: :HLF300GlycosylatedHemoglobinMeasurement (:HLF300GlycosylatedHemoglobinMeasurement)
+# Class: :HLF300GlycosylatedHemoglobinMeasurement (HLF300GlycosylatedHemoglobinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF300GlycosylatedHemoglobinMeasurement "HLF300GlycosylatedHemoglobinMeasurement")
 SubClassOf(:HLF300GlycosylatedHemoglobinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF300GlycosylatedHemoglobinMeasurement :E16Measurement)
 
-# Class: :HLF301TotalCholesterolMeasurement (:HLF301TotalCholesterolMeasurement)
+# Class: :HLF301TotalCholesterolMeasurement (HLF301TotalCholesterolMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF301TotalCholesterolMeasurement "HLF301TotalCholesterolMeasurement")
 SubClassOf(:HLF301TotalCholesterolMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF301TotalCholesterolMeasurement :E16Measurement)
 
@@ -1686,13 +1870,15 @@ SubClassOf(:HLF301TotalCholesterolMeasurement :E16Measurement)
 
 SubClassOf(:HLF302HighDensityLipoproteinMeasurement :E16Measurement)
 
-# Class: :HLF303LowDensityLipoproteinMeasurement (:HLF303LowDensityLipoproteinMeasurement)
+# Class: :HLF303LowDensityLipoproteinMeasurement (HLF303LowDensityLipoproteinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF303LowDensityLipoproteinMeasurement "HLF303LowDensityLipoproteinMeasurement")
 SubClassOf(:HLF303LowDensityLipoproteinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF303LowDensityLipoproteinMeasurement :E16Measurement)
 
-# Class: :HLF304TriglyceridesMeasurement (:HLF304TriglyceridesMeasurement)
+# Class: :HLF304TriglyceridesMeasurement (HLF304TriglyceridesMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF304TriglyceridesMeasurement "HLF304TriglyceridesMeasurement")
 SubClassOf(:HLF304TriglyceridesMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF304TriglyceridesMeasurement :E16Measurement)
 
@@ -1704,8 +1890,9 @@ SubClassOf(:HLF305SerumCreatinineMeasurement :E16Measurement)
 
 SubClassOf(:HLF306AlbuminuriaCreatininuriaRatioMeasurement :E16Measurement)
 
-# Class: :HLF307AlkalinePhosphataseALPMeasurement (:HLF307AlkalinePhosphataseALPMeasurement)
+# Class: :HLF307AlkalinePhosphataseALPMeasurement (HLF307AlkalinePhosphataseALPMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF307AlkalinePhosphataseALPMeasurement "HLF307AlkalinePhosphataseALPMeasurement")
 SubClassOf(:HLF307AlkalinePhosphataseALPMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF307AlkalinePhosphataseALPMeasurement :E16Measurement)
 
@@ -1745,13 +1932,15 @@ SubClassOf(:HLF310NitritesMeasurement :E16Measurement)
 
 SubClassOf(:HLF311HepaticSteatosisMeasurement :E16Measurement)
 
-# Class: :HLF313AlanineAminotransferaseALTMeasurement (:HLF313AlanineAminotransferaseALTMeasurement)
+# Class: :HLF313AlanineAminotransferaseALTMeasurement (HLF313AlanineAminotransferaseALTMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF313AlanineAminotransferaseALTMeasurement "HLF313AlanineAminotransferaseALTMeasurement")
 SubClassOf(:HLF313AlanineAminotransferaseALTMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF313AlanineAminotransferaseALTMeasurement :E16Measurement)
 
-# Class: :HLF314AspartateAminotransferaseASTMeasurement (:HLF314AspartateAminotransferaseASTMeasurement)
+# Class: :HLF314AspartateAminotransferaseASTMeasurement (HLF314AspartateAminotransferaseASTMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF314AspartateAminotransferaseASTMeasurement "HLF314AspartateAminotransferaseASTMeasurement")
 SubClassOf(:HLF314AspartateAminotransferaseASTMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF314AspartateAminotransferaseASTMeasurement :E16Measurement)
 
@@ -1763,9 +1952,10 @@ SubClassOf(:HLF315YGlutamyltransferaseGGTMeasurement :E16Measurement)
 
 SubClassOf(:HLF316AlbuminMeasurement :E16Measurement)
 
-# Class: :HLF317IoTStream (:HLF317IoTStream)
+# Class: :HLF317IoTStream (HLF317IoTStream)
 
 AnnotationAssertion(rdfs:comment :HLF317IoTStream "from sosa ontology.")
+AnnotationAssertion(rdfs:label :HLF317IoTStream "HLF317IoTStream")
 SubClassOf(:HLF317IoTStream :D9DataObject)
 
 # Class: :HLF318TotalDailyBurnedCaloriesDimension (:HLF318TotalDailyBurnedCaloriesDimension)
@@ -1785,17 +1975,20 @@ SubClassOf(:HLF31SuprailiacSkinfoldDimension :HLF232AnthropometricDimension)
 
 SubClassOf(:HLF320DailyAverageSpeedDimension :E54Dimension)
 
-# Class: :HLF321StreamObservation (:HLF321StreamObservation)
+# Class: :HLF321StreamObservation (HLF321StreamObservation)
 
+AnnotationAssertion(rdfs:label :HLF321StreamObservation "HLF321StreamObservation")
 SubClassOf(:HLF321StreamObservation :D7DigitalMachineEvent)
 
-# Class: :HLF322AmylaseMeasurement (:HLF322AmylaseMeasurement)
+# Class: :HLF322AmylaseMeasurement (HLF322AmylaseMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF322AmylaseMeasurement "HLF322AmylaseMeasurement")
 SubClassOf(:HLF322AmylaseMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF322AmylaseMeasurement :E16Measurement)
 
-# Class: :HLF323BodyFatMeasurement (:HLF323BodyFatMeasurement)
+# Class: :HLF323BodyFatMeasurement (HLF323BodyFatMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF323BodyFatMeasurement "HLF323BodyFatMeasurement")
 SubClassOf(:HLF323BodyFatMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF323BodyFatMeasurement :E16Measurement)
 
@@ -1803,8 +1996,9 @@ SubClassOf(:HLF323BodyFatMeasurement :E16Measurement)
 
 SubClassOf(:HLF324BodyMucleMeasurement :E16Measurement)
 
-# Class: :HLF324BodyTemperatureMeasurement (:HLF324BodyTemperatureMeasurement)
+# Class: :HLF324BodyTemperatureMeasurement (HLF324BodyTemperatureMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF324BodyTemperatureMeasurement "HLF324BodyTemperatureMeasurement")
 SubClassOf(:HLF324BodyTemperatureMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF324BodyTemperatureMeasurement :E16Measurement)
 
@@ -1820,13 +2014,15 @@ SubClassOf(:HLF326CaffeineIntakeMeasurement :E16Measurement)
 
 SubClassOf(:HLF327CreatinePhosphokinaseMeasurement :E16Measurement)
 
-# Class: :HLF328SerumCreatinineMeasurement (:HLF328SerumCreatinineMeasurement)
+# Class: :HLF328SerumCreatinineMeasurement (HLF328SerumCreatinineMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF328SerumCreatinineMeasurement "HLF328SerumCreatinineMeasurement")
 SubClassOf(:HLF328SerumCreatinineMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF328SerumCreatinineMeasurement :E16Measurement)
 
-# Class: :HLF329DirectBilirubinMeasurement (:HLF329DirectBilirubinMeasurement)
+# Class: :HLF329DirectBilirubinMeasurement (HLF329DirectBilirubinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF329DirectBilirubinMeasurement "HLF329DirectBilirubinMeasurement")
 SubClassOf(:HLF329DirectBilirubinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF329DirectBilirubinMeasurement :E16Measurement)
 
@@ -1839,8 +2035,9 @@ SubClassOf(:HLF32SystolicPressureDimension :HLF233VitalSignDimension)
 
 SubClassOf(:HLF330ForcedExpiratoryVolumeMeasurement :E16Measurement)
 
-# Class: :HLF331FloorsClimbedMeasurement (:HLF331FloorsClimbedMeasurement)
+# Class: :HLF331FloorsClimbedMeasurement (HLF331FloorsClimbedMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF331FloorsClimbedMeasurement "HLF331FloorsClimbedMeasurement")
 SubClassOf(:HLF331FloorsClimbedMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF331FloorsClimbedMeasurement :E16Measurement)
 
@@ -1848,42 +2045,50 @@ SubClassOf(:HLF331FloorsClimbedMeasurement :E16Measurement)
 
 SubClassOf(:HLF332ForcedVitalCapacityMeasurement :E16Measurement)
 
-# Class: :HLF333GlobulinMeasurement (:HLF333GlobulinMeasurement)
+# Class: :HLF333GlobulinMeasurement (HLF333GlobulinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF333GlobulinMeasurement "HLF333GlobulinMeasurement")
 SubClassOf(:HLF333GlobulinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF333GlobulinMeasurement :E16Measurement)
 
-# Class: :HLF334HeartRateStreamObservation (:HLF334HeartRateStreamObservation)
+# Class: :HLF334HeartRateStreamObservation (HLF334HeartRateStreamObservation)
 
+AnnotationAssertion(rdfs:label :HLF334HeartRateStreamObservation "HLF334HeartRateStreamObservation")
 SubClassOf(:HLF334HeartRateStreamObservation :HLF536StreamObservation)
 
-# Class: :HLF335HipCircumferenceMeasurement (:HLF335HipCircumferenceMeasurement)
+# Class: :HLF335HipCircumferenceMeasurement (HLF335HipCircumferenceMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF335HipCircumferenceMeasurement "HLF335HipCircumferenceMeasurement")
 SubClassOf(:HLF335HipCircumferenceMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF335HipCircumferenceMeasurement :HLF236AnthropometricMeasurement)
 
-# Class: :HLF336HomocysteineMeasurement (:HLF336HomocysteineMeasurement)
+# Class: :HLF336HomocysteineMeasurement (HLF336HomocysteineMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF336HomocysteineMeasurement "HLF336HomocysteineMeasurement")
 SubClassOf(:HLF336HomocysteineMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF336HomocysteineMeasurement :E16Measurement)
 
-# Class: :HLF337LactateDehydrogenaseMeasurement (:HLF337LactateDehydrogenaseMeasurement)
+# Class: :HLF337LactateDehydrogenaseMeasurement (HLF337LactateDehydrogenaseMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF337LactateDehydrogenaseMeasurement "HLF337LactateDehydrogenaseMeasurement")
 SubClassOf(:HLF337LactateDehydrogenaseMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF337LactateDehydrogenaseMeasurement :E16Measurement)
 
-# Class: :HLF338SleepingActivityMeasurement (:HLF338SleepingActivityMeasurement)
+# Class: :HLF338SleepingActivityMeasurement (HLF338SleepingActivityMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF338SleepingActivityMeasurement "HLF338SleepingActivityMeasurement")
 SubClassOf(:HLF338SleepingActivityMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF338SleepingActivityMeasurement :E16Measurement)
 
-# Class: :HLF338TotalBilirubinMeasurement (:HLF338TotalBilirubinMeasurement)
+# Class: :HLF338TotalBilirubinMeasurement (HLF338TotalBilirubinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF338TotalBilirubinMeasurement "HLF338TotalBilirubinMeasurement")
 SubClassOf(:HLF338TotalBilirubinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF338TotalBilirubinMeasurement :E16Measurement)
 
-# Class: :HLF339TotalProteinMeasurement (:HLF339TotalProteinMeasurement)
+# Class: :HLF339TotalProteinMeasurement (HLF339TotalProteinMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF339TotalProteinMeasurement "HLF339TotalProteinMeasurement")
 SubClassOf(:HLF339TotalProteinMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF339TotalProteinMeasurement :E16Measurement)
 
@@ -1892,18 +2097,21 @@ SubClassOf(:HLF339TotalProteinMeasurement :E16Measurement)
 AnnotationAssertion(rdfs:comment :HLF33ThighSkinfoldDimension "Thickness of the thigh.")
 SubClassOf(:HLF33ThighSkinfoldDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF340UrinePHMeasurement (:HLF340UrinePHMeasurement)
+# Class: :HLF340UrinePHMeasurement (HLF340UrinePHMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF340UrinePHMeasurement "HLF340UrinePHMeasurement")
 SubClassOf(:HLF340UrinePHMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF340UrinePHMeasurement :E16Measurement)
 
-# Class: :HLF341UrineSpecificGravityMeasurement (:HLF341UrineSpecificGravityMeasurement)
+# Class: :HLF341UrineSpecificGravityMeasurement (HLF341UrineSpecificGravityMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF341UrineSpecificGravityMeasurement "HLF341UrineSpecificGravityMeasurement")
 SubClassOf(:HLF341UrineSpecificGravityMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF341UrineSpecificGravityMeasurement :E16Measurement)
 
-# Class: :HLF342UvExposureMeasurement (:HLF342UvExposureMeasurement)
+# Class: :HLF342UvExposureMeasurement (HLF342UvExposureMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF342UvExposureMeasurement "HLF342UvExposureMeasurement")
 SubClassOf(:HLF342UvExposureMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF342UvExposureMeasurement :E16Measurement)
 
@@ -1914,10 +2122,6 @@ SubClassOf(:HLF344WaterIntakeMeasurement :E16Measurement)
 # Class: :HLF345WaistCircumferenceMeasurement (:HLF345WaistCircumferenceMeasurement)
 
 SubClassOf(:HLF345WaistCircumferenceMeasurement :E16Measurement)
-
-# Class: :HLF346AltitudeLossMeasurement (:HLF346AltitudeLossMeasurement)
-
-SubClassOf(:HLF346AltitudeLossMeasurement :E16Measurement)
 
 # Class: :HLF346BurnedCaloriesMeasurement (:HLF346BurnedCaloriesMeasurement)
 
@@ -1931,15 +2135,95 @@ SubClassOf(:HLF347AltitudeGainMeasurement :E16Measurement)
 
 SubClassOf(:HLF348ExerciseRevolutionMeasurement :E16Measurement)
 
+# Class: :HLF349MealMeasurement (:HLF349MealMeasurement)
+
+SubClassOf(:HLF349MealMeasurement :E16Measurement)
+
 # Class: :HLF34TricepsSkinfoldDimension (:HLF34TricepsSkinfoldDimension)
 
 AnnotationAssertion(rdfs:comment :HLF34TricepsSkinfoldDimension "Thickness of the triceps.")
 SubClassOf(:HLF34TricepsSkinfoldDimension :HLF232AnthropometricDimension)
 
+# Class: :HLF350AltitudeLossMeasurement (:HLF350AltitudeLossMeasurement)
+
+SubClassOf(:HLF350AltitudeLossMeasurement :E16Measurement)
+
+# Class: :HLF351MeanSpeedMeasurement (:HLF351MeanSpeedMeasurement)
+
+SubClassOf(:HLF351MeanSpeedMeasurement :E16Measurement)
+
+# Class: :HLF352MaxSpeedMeasurement (:HLF352MaxSpeedMeasurement)
+
+SubClassOf(:HLF352MaxSpeedMeasurement :E16Measurement)
+
+# Class: :HLF353MaxCadenceMeasurement (:HLF353MaxCadenceMeasurement)
+
+SubClassOf(:HLF353MaxCadenceMeasurement :E16Measurement)
+
+# Class: :HLF354MinCadenceMeasurement (:HLF354MinCadenceMeasurement)
+
+SubClassOf(:HLF354MinCadenceMeasurement :E16Measurement)
+
+# Class: :HLF355MaxHeartRateMeasurement (:HLF355MaxHeartRateMeasurement)
+
+SubClassOf(:HLF355MaxHeartRateMeasurement :E16Measurement)
+
+# Class: :HLF356MeanHeartRateMeasurement (:HLF356MeanHeartRateMeasurement)
+
+SubClassOf(:HLF356MeanHeartRateMeasurement :E16Measurement)
+
+# Class: :HLF357MinHeartRateMeasurement (:HLF357MinHeartRateMeasurement)
+
+SubClassOf(:HLF357MinHeartRateMeasurement :E16Measurement)
+
+# Class: :HLF358MinAltitudeMeasurement (:HLF358MinAltitudeMeasurement)
+
+SubClassOf(:HLF358MinAltitudeMeasurement :E16Measurement)
+
+# Class: :HLF359MaxAltitudeMeasurement (:HLF359MaxAltitudeMeasurement)
+
+SubClassOf(:HLF359MaxAltitudeMeasurement :E16Measurement)
+
 # Class: :HLF35UpperArmLengthDimension (:HLF35UpperArmLengthDimension)
 
 AnnotationAssertion(rdfs:comment :HLF35UpperArmLengthDimension "The distance between shoulder and the elbow.")
 SubClassOf(:HLF35UpperArmLengthDimension :HLF232AnthropometricDimension)
+
+# Class: :HLF360InclineDistanceMeasurement (:HLF360InclineDistanceMeasurement)
+
+SubClassOf(:HLF360InclineDistanceMeasurement :E16Measurement)
+
+# Class: :HLF361MaxPowerMeasurement (:HLF361MaxPowerMeasurement)
+
+SubClassOf(:HLF361MaxPowerMeasurement :E16Measurement)
+
+# Class: :HLF362MinPowerMeasurement (:HLF362MinPowerMeasurement)
+
+SubClassOf(:HLF362MinPowerMeasurement :E16Measurement)
+
+# Class: :HLF363MeanPowerMeasurement (:HLF363MeanPowerMeasurement)
+
+SubClassOf(:HLF363MeanPowerMeasurement :E16Measurement)
+
+# Class: :HLF364MeanRPMMeasurement (:HLF364MeanRPMMeasurement)
+
+SubClassOf(:HLF364MeanRPMMeasurement :E16Measurement)
+
+# Class: :HLF365MaxRPMMeasurement (:HLF365MaxRPMMeasurement)
+
+SubClassOf(:HLF365MaxRPMMeasurement :E16Measurement)
+
+# Class: :HLF366DeclineDistanceMeasurement (:HLF366DeclineDistanceMeasurement)
+
+SubClassOf(:HLF366DeclineDistanceMeasurement :E16Measurement)
+
+# Class: :HLF367MaxCaloriesBurnRateMeasurement (:HLF367MaxCaloriesBurnRateMeasurement)
+
+SubClassOf(:HLF367MaxCaloriesBurnRateMeasurement :E16Measurement)
+
+# Class: :HLF368InstantaneousSpeedMeasurement (:HLF368InstantaneousSpeedMeasurement)
+
+SubClassOf(:HLF368InstantaneousSpeedMeasurement :E16Measurement)
 
 # Class: :HLF36UpperLegLengthDimension (:HLF36UpperLegLengthDimension)
 
@@ -2053,10 +2337,6 @@ SubClassOf(:HLF417AmylaseDimension :E54Dimension)
 
 SubClassOf(:HLF418BodyTemperatureDimension :E54Dimension)
 
-# Class: :HLF418_BodyFatADimension (:HLF418_BodyFatADimension)
-
-SubClassOf(:HLF418_BodyFatADimension :E54Dimension)
-
 # Class: :HLF419BodyMucleDimension (:HLF419BodyMucleDimension)
 
 SubClassOf(:HLF419BodyMucleDimension :E54Dimension)
@@ -2065,6 +2345,10 @@ SubClassOf(:HLF419BodyMucleDimension :E54Dimension)
 
 AnnotationAssertion(rdfs:comment :HLF41WeightDimension "Weight of the person in KG")
 SubClassOf(:HLF41WeightDimension :HLF232AnthropometricDimension)
+
+# Class: :HLF420BodyFatADimension (:HLF420BodyFatADimension)
+
+SubClassOf(:HLF420BodyFatADimension :E54Dimension)
 
 # Class: :HLF421BloodUreaNitrogenDimension (:HLF421BloodUreaNitrogenDimension)
 
@@ -2143,9 +2427,10 @@ SubClassOf(:HLF438UrinePHDimension :E54Dimension)
 
 SubClassOf(:HLF439UrineSpecificGravityDimension :E54Dimension)
 
-# Class: :HLF43SleepingActivity (:HLF43SleepingActivity)
+# Class: :HLF43SleepingActivity (HLF43SleepingActivity)
 
 AnnotationAssertion(rdfs:comment :HLF43SleepingActivity "The sleeping activity")
+AnnotationAssertion(rdfs:label :HLF43SleepingActivity "HLF43SleepingActivity")
 SubClassOf(:HLF43SleepingActivity :E7Activity)
 
 # Class: :HLF440UvExposureDimension (:HLF440UvExposureDimension)
@@ -2188,9 +2473,10 @@ SubClassOf(:HLF448SkeletalMuscleMassDimension :E54Dimension)
 
 SubClassOf(:HLF449TotalBodyWaterDimension :E54Dimension)
 
-# Class: :HLF44PhysicalActivity (:HLF44PhysicalActivity)
+# Class: :HLF44PhysicalActivity (HLF44PhysicalActivity)
 
 AnnotationAssertion(rdfs:comment :HLF44PhysicalActivity "WHO defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure.")
+AnnotationAssertion(rdfs:label :HLF44PhysicalActivity "HLF44PhysicalActivity")
 SubClassOf(:HLF44PhysicalActivity :E7Activity)
 
 # Class: :HLF450BurnedCaloriesDimension (:HLF450BurnedCaloriesDimension)
@@ -2209,29 +2495,126 @@ SubClassOf(:HLF452AltitudeLossDimension :E54Dimension)
 
 SubClassOf(:HLF453ExerciseRevolutionDimension :E54Dimension)
 
-# Class: :HLF45Exercice (:HLF45Exercice)
+# Class: :HLF454MaxSpeedDimension (:HLF454MaxSpeedDimension)
+
+SubClassOf(:HLF454MaxSpeedDimension :E54Dimension)
+
+# Class: :HLF455MaxCaloriesBurnRateDimension (:HLF455MaxCaloriesBurnRateDimension)
+
+SubClassOf(:HLF455MaxCaloriesBurnRateDimension :E54Dimension)
+
+# Class: :HLF456MeanSpeedDimension (:HLF456MeanSpeedDimension)
+
+SubClassOf(:HLF456MeanSpeedDimension :E54Dimension)
+
+# Class: :HLF457MaxCadenceDimension (:HLF457MaxCadenceDimension)
+
+SubClassOf(:HLF457MaxCadenceDimension :E54Dimension)
+
+# Class: :HLF458MeanCadenceDimension (:HLF458MeanCadenceDimension)
+
+SubClassOf(:HLF458MeanCadenceDimension :E54Dimension)
+
+# Class: :HLF459MaxHeartRateDimension (:HLF459MaxHeartRateDimension)
+
+SubClassOf(:HLF459MaxHeartRateDimension :E54Dimension)
+
+# Class: :HLF45Exercice (HLF45Exercice)
 
 AnnotationAssertion(rdfs:comment :HLF45Exercice "Exercise is a subset of physical activity that is planned, structured, and repetitive and has as a final or an intermediate objective the improvement or maintenance of physical fitness.")
+AnnotationAssertion(rdfs:label :HLF45Exercice "HLF45Exercice")
 SubClassOf(:HLF45Exercice :HLF44PhysicalActivity)
 
-# Class: :HLF46MountainClimbing (:HLF46MountainClimbing)
+# Class: :HLF460MeanHeartRateDimension (:HLF460MeanHeartRateDimension)
+
+SubClassOf(:HLF460MeanHeartRateDimension :E54Dimension)
+
+# Class: :HLF461DeclineDistanceDimension (:HLF461DeclineDistanceDimension)
+
+SubClassOf(:HLF461DeclineDistanceDimension :E54Dimension)
+
+# Class: :HLF462InclineDistanceDimension (:HLF462InclineDistanceDimension)
+
+SubClassOf(:HLF462InclineDistanceDimension :E54Dimension)
+
+# Class: :HLF463MaxAltitudeDimension (:HLF463MaxAltitudeDimension)
+
+SubClassOf(:HLF463MaxAltitudeDimension :E54Dimension)
+
+# Class: :HLF464MinHeartRateDimension (:HLF464MinHeartRateDimension)
+
+SubClassOf(:HLF464MinHeartRateDimension :E54Dimension)
+
+# Class: :HLF465MaxPowerDimension (:HLF465MaxPowerDimension)
+
+SubClassOf(:HLF465MaxPowerDimension :E54Dimension)
+
+# Class: :HLF465MinPowerDimension (:HLF465MinPowerDimension)
+
+SubClassOf(:HLF465MinPowerDimension :E54Dimension)
+
+# Class: :HLF466MeanRPMDimension (:HLF466MeanRPMDimension)
+
+SubClassOf(:HLF466MeanRPMDimension :E54Dimension)
+
+# Class: :HLF467MaxRPMDimension (:HLF467MaxRPMDimension)
+
+SubClassOf(:HLF467MaxRPMDimension :E54Dimension)
+
+# Class: :HLF468MinAltitudeDimension (:HLF468MinAltitudeDimension)
+
+SubClassOf(:HLF468MinAltitudeDimension :E54Dimension)
+
+# Class: :HLF469MeanPowerDimension (:HLF469MeanPowerDimension)
+
+SubClassOf(:HLF469MeanPowerDimension :E54Dimension)
+
+# Class: :HLF46MountainClimbing (HLF46MountainClimbing)
 
 AnnotationAssertion(rdfs:comment :HLF46MountainClimbing "Mountain climbing, also called mountaineering, the sport of attaining, or attempting to attain, high points in mountainous regions")
-SubClassOf(:HLF46MountainClimbing :HLF44PhysicalActivity)
+AnnotationAssertion(rdfs:label :HLF46MountainClimbing "HLF46MountainClimbing")
+SubClassOf(:HLF46MountainClimbing :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF47RockClimbing (:HLF47RockClimbing)
+# Class: :HLF470MinCadenceDimension (:HLF470MinCadenceDimension)
+
+SubClassOf(:HLF470MinCadenceDimension :E54Dimension)
+
+# Class: :HLF471InstantaneousSpeedDimension (:HLF471InstantaneousSpeedDimension)
+
+SubClassOf(:HLF471InstantaneousSpeedDimension :E54Dimension)
+
+# Class: :HLF472InstantaneousCadenceDimension (:HLF472InstantaneousCadenceDimension)
+
+SubClassOf(:HLF472InstantaneousCadenceDimension :E54Dimension)
+
+# Class: :HLF473AccumulatedStepCountDimension (:HLF473AccumulatedStepCountDimension)
+
+SubClassOf(:HLF473AccumulatedStepCountDimension :E54Dimension)
+
+# Class: :HLF474InstantaneousPowerDimension (:HLF474InstantaneousPowerDimension)
+
+SubClassOf(:HLF474InstantaneousPowerDimension :E54Dimension)
+
+# Class: :HLF475SleepingActivityDimension (:HLF475SleepingActivityDimension)
+
+SubClassOf(:HLF475SleepingActivityDimension :E54Dimension)
+
+# Class: :HLF47RockClimbing (HLF47RockClimbing)
 
 AnnotationAssertion(rdfs:comment :HLF47RockClimbing "Rock climbing is an activity where participants climb up, down or across natural rocks or artificial rock walls. The goal is to reach the summit or the endpoint of a route without falling. It is acyclic and hence not considered as an exercice.ref: https://www.climbstrong.com/education-center/third-gear-the-aerobic-energy-system/#:~:text=Climbing%20is%20an%20acyclic%20anaerobic%2Daerobic%20activity.")
-SubClassOf(:HLF47RockClimbing :HLF44PhysicalActivity)
+AnnotationAssertion(rdfs:label :HLF47RockClimbing "HLF47RockClimbing")
+SubClassOf(:HLF47RockClimbing :HLF49MuscleStrengtheningAnaerobics)
 
-# Class: :HLF48Flexibility (:HLF48Flexibility)
+# Class: :HLF48Flexibility (HLF48Flexibility)
 
 AnnotationAssertion(rdfs:comment :HLF48Flexibility "Flexibility exercises are activities that improve the ability of a joint to maintain the movement necessary for carrying out daily tasks and physical activity.")
+AnnotationAssertion(rdfs:label :HLF48Flexibility "HLF48Flexibility")
 SubClassOf(:HLF48Flexibility :HLF45Exercice)
 
-# Class: :HLF49MuscleStrengtheningAnaerobics (:HLF49MuscleStrengtheningAnaerobics)
+# Class: :HLF49MuscleStrengtheningAnaerobics (HLF49MuscleStrengtheningAnaerobics)
 
 AnnotationAssertion(rdfs:comment :HLF49MuscleStrengtheningAnaerobics "A strength exercise is any activity that makes your muscles work harder than usual. This increases your muscles' strength, size, power and endurance. The activities involve using your body weight or working against a resistance.")
+AnnotationAssertion(rdfs:label :HLF49MuscleStrengtheningAnaerobics "HLF49MuscleStrengtheningAnaerobics")
 SubClassOf(:HLF49MuscleStrengtheningAnaerobics :HLF45Exercice)
 
 # Class: :HLF4DurationDimension (:HLF4DurationDimension)
@@ -2279,13 +2662,15 @@ SubClassOf(:HLF508UricAcidAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF509EstimatedGlomerularFiltrationRateAssignment :E13AttributeAssignment)
 
-# Class: :HLF50BalanceAndCoordination (:HLF50BalanceAndCoordination)
+# Class: :HLF50BalanceAndCoordination (HLF50BalanceAndCoordination)
 
 AnnotationAssertion(rdfs:comment :HLF50BalanceAndCoordination "Balance is the ability to stay upright or stay in control of body movement, and coordination is the ability to move two or more body parts under control, smoothly and efficiently.")
+AnnotationAssertion(rdfs:label :HLF50BalanceAndCoordination "HLF50BalanceAndCoordination")
 SubClassOf(:HLF50BalanceAndCoordination :HLF45Exercice)
 
-# Class: :HLF50DiseaseCourse (:HLF50DiseaseCourse)
+# Class: :HLF50DiseaseCourse (HLF50DiseaseCourse)
 
+AnnotationAssertion(rdfs:label :HLF50DiseaseCourse "HLF50DiseaseCourse")
 SubClassOf(:HLF50DiseaseCourse :HLF2Process)
 
 # Class: :HLF50RealizableEntity (HLF50RealizableEntity)
@@ -2319,10 +2704,11 @@ SubClassOf(:HLF515YGlutamyltransferaseGGTAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF516AlbuminAssignment :E13AttributeAssignment)
 
-# Class: :HLF51CardioAerobics (:HLF51CardioAerobics)
+# Class: :HLF51CardioAerobics (HLF51CardioAerobics)
 
 AnnotationAssertion(rdfs:comment :HLF51CardioAerobics "Aerobic exercise is an exercice with a duration exceeding 1 min  (Endurance Intensive Efforts)ref: https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-015-0012-1.pdf https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5329739/")
 AnnotationAssertion(rdfs:comment :HLF51CardioAerobics "Aerobic exercise provides cardiovascular conditioning. The term aerobic actually means \"with oxygen,\" which means that breathing controls the amount of oxygen that can make it to the muscles to help them burn fuel and move.")
+AnnotationAssertion(rdfs:label :HLF51CardioAerobics "HLF51CardioAerobics")
 SubClassOf(:HLF51CardioAerobics :HLF45Exercice)
 
 # Class: :HLF51Disposition (HLF51Disposition)
@@ -2369,9 +2755,10 @@ AnnotationAssertion(rdfs:comment :HLF52Disease "x is a prolonged distortion of s
 AnnotationAssertion(rdfs:label :HLF52Disease "HLF52Disease")
 SubClassOf(:HLF52Disease :HLF51Disposition)
 
-# Class: :HLF52LegRaises (:HLF52LegRaises)
+# Class: :HLF52LegRaises (HLF52LegRaises)
 
 AnnotationAssertion(rdfs:comment :HLF52LegRaises "Any of various exercises in which one or both legs are slowly raised and lowered; frequently with modifying word specifying the position of the body, as lying, side, etc.")
+AnnotationAssertion(rdfs:label :HLF52LegRaises "HLF52LegRaises")
 SubClassOf(:HLF52LegRaises :HLF49MuscleStrengtheningAnaerobics)
 
 # Class: :HLF530DirectBilirubinAssignment (:HLF530DirectBilirubinAssignment)
@@ -2394,12 +2781,14 @@ SubClassOf(:HLF533ForcedVitalCapacityAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF534GlobulinAssignment :E13AttributeAssignment)
 
-# Class: :HLF536StreamObservation (:HLF536StreamObservation)
+# Class: :HLF536StreamObservation (HLF536StreamObservation)
 
+AnnotationAssertion(rdfs:label :HLF536StreamObservation "HLF536StreamObservation")
 SubClassOf(:HLF536StreamObservation :D11DigitalMeasurementEvent)
 
-# Class: :HLF537AmbientTemperatureObservation (:HLF537AmbientTemperatureObservation)
+# Class: :HLF537AmbientTemperatureObservation (HLF537AmbientTemperatureObservation)
 
+AnnotationAssertion(rdfs:label :HLF537AmbientTemperatureObservation "HLF537AmbientTemperatureObservation")
 SubClassOf(:HLF537AmbientTemperatureObservation :HLF536StreamObservation)
 
 # Class: :HLF538HomocysteineAssignment (:HLF538HomocysteineAssignment)
@@ -2410,9 +2799,10 @@ SubClassOf(:HLF538HomocysteineAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF539LactateDehydrogenaseAssignment :E13AttributeAssignment)
 
-# Class: :HLF53MountainBiking (:HLF53MountainBiking)
+# Class: :HLF53MountainBiking (HLF53MountainBiking)
 
 AnnotationAssertion(rdfs:comment :HLF53MountainBiking "Mountain biking is a sport of riding bicycles off-road, often over rough terrain, usually using specially designed mountain bikes")
+AnnotationAssertion(rdfs:label :HLF53MountainBiking "HLF53MountainBiking")
 SubClassOf(:HLF53MountainBiking :HLF51CardioAerobics)
 
 # Class: :HLF540TotalBilirubinAssignment (:HLF540TotalBilirubinAssignment)
@@ -2443,34 +2833,40 @@ SubClassOf(:HLF545WaistCircumferenceAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF546WaterIntakeAssignment :E13AttributeAssignment)
 
-# Class: :HLF54Orienteering (:HLF54Orienteering)
+# Class: :HLF54Orienteering (HLF54Orienteering)
 
 AnnotationAssertion(rdfs:comment :HLF54Orienteering "A competitive sport in which runners have to find their way across rough country with the aid of a map and compass.")
+AnnotationAssertion(rdfs:label :HLF54Orienteering "HLF54Orienteering")
 SubClassOf(:HLF54Orienteering :HLF51CardioAerobics)
 
-# Class: :HLF55Plank (:HLF55Plank)
+# Class: :HLF55Plank (HLF55Plank)
 
 AnnotationAssertion(rdfs:comment :HLF55Plank "The plank is an isometric core strength exercise that involves maintaining a position similar to a push-up for the maximum possible time")
+AnnotationAssertion(rdfs:label :HLF55Plank "HLF55Plank")
 SubClassOf(:HLF55Plank :HLF51CardioAerobics)
 
-# Class: :HLF56Rafting (:HLF56Rafting)
+# Class: :HLF56Rafting (HLF56Rafting)
 
 AnnotationAssertion(rdfs:comment :HLF56Rafting "Rafting is recreational outdoor activity which use an inflatable raft to navigate a river or other body of water. This is often done on whitewater or different degrees of rough water. Dealing with risk is often a part of the experience")
+AnnotationAssertion(rdfs:label :HLF56Rafting "HLF56Rafting")
 SubClassOf(:HLF56Rafting :HLF51CardioAerobics)
 
-# Class: :HLF57RollerSkating (:HLF57RollerSkating)
+# Class: :HLF57RollerSkating (HLF57RollerSkating)
 
 AnnotationAssertion(rdfs:comment :HLF57RollerSkating "The activity or sport of gliding across a hard surface on roller skates.")
+AnnotationAssertion(rdfs:label :HLF57RollerSkating "HLF57RollerSkating")
 SubClassOf(:HLF57RollerSkating :HLF51CardioAerobics)
 
-# Class: :HLF58Rowing (:HLF58Rowing)
+# Class: :HLF58Rowing (HLF58Rowing)
 
 AnnotationAssertion(rdfs:comment :HLF58Rowing "Rowing is the sport of racing boats using oars.")
+AnnotationAssertion(rdfs:label :HLF58Rowing "HLF58Rowing")
 SubClassOf(:HLF58Rowing :HLF51CardioAerobics)
 
-# Class: :HLF59Rugby (:HLF59Rugby)
+# Class: :HLF59Rugby (HLF59Rugby)
 
 AnnotationAssertion(rdfs:comment :HLF59Rugby "A team game played with an oval ball that may be kicked, carried, and passed from hand to hand. Points are scored by grounding the ball behind the opponents' goal line (thereby scoring a try) or by kicking it between the two posts and over the crossbar of the opponents' goal.")
+AnnotationAssertion(rdfs:label :HLF59Rugby "HLF59Rugby")
 SubClassOf(:HLF59Rugby :HLF51CardioAerobics)
 
 # Class: :HLF5BiacromialBreadthDimension (:HLF5BiacromialBreadthDimension)
@@ -2482,58 +2878,68 @@ SubClassOf(:HLF5BiacromialBreadthDimension :HLF232AnthropometricDimension)
 
 SubClassOf(:HLF600DiseaseAssignment :E13AttributeAssignment)
 
-# Class: :HLF60Running (:HLF60Running)
+# Class: :HLF60Running (HLF60Running)
 
 AnnotationAssertion(rdfs:comment :HLF60Running "Running is the activity of moving fast on foot")
+AnnotationAssertion(rdfs:label :HLF60Running "HLF60Running")
 SubClassOf(:HLF60Running :HLF51CardioAerobics)
 
-# Class: :HLF61ScubaDIving (:HLF61ScubaDIving)
+# Class: :HLF61ScubaDIving (HLF61ScubaDIving)
 
 AnnotationAssertion(rdfs:comment :HLF61ScubaDIving "Scuba diving is a mode of underwater diving where the diver uses an apparatus which is completely independent of surface supply to breathe underwater.")
+AnnotationAssertion(rdfs:label :HLF61ScubaDIving "HLF61ScubaDIving")
 SubClassOf(:HLF61ScubaDIving :HLF51CardioAerobics)
 
-# Class: :HLF62Skiing (:HLF62Skiing)
+# Class: :HLF62Skiing (HLF62Skiing)
 
 AnnotationAssertion(rdfs:comment :HLF62Skiing "Skiing is a means of transport using skis to glide on snow.")
+AnnotationAssertion(rdfs:label :HLF62Skiing "HLF62Skiing")
 SubClassOf(:HLF62Skiing :HLF51CardioAerobics)
 
-# Class: :HLF63Snorkeling (:HLF63Snorkeling)
+# Class: :HLF63Snorkeling (HLF63Snorkeling)
 
 AnnotationAssertion(rdfs:comment :HLF63Snorkeling "Snorkeling is the practice of swimming on or through a body of water while equipped with a diving mask, a shaped breathing tube called a snorkel, and usually swimfins.")
+AnnotationAssertion(rdfs:label :HLF63Snorkeling "HLF63Snorkeling")
 SubClassOf(:HLF63Snorkeling :HLF51CardioAerobics)
 
-# Class: :HLF64Snowshoeing (:HLF64Snowshoeing)
+# Class: :HLF64Snowshoeing (HLF64Snowshoeing)
 
 AnnotationAssertion(rdfs:comment :HLF64Snowshoeing "Walking using snowshoes")
+AnnotationAssertion(rdfs:label :HLF64Snowshoeing "HLF64Snowshoeing")
 SubClassOf(:HLF64Snowshoeing :HLF51CardioAerobics)
 
 # Class: :HLF650HeartRateDevice (:HLF650HeartRateDevice)
 
 SubClassOf(:HLF650HeartRateDevice :D8DigitalDevice)
 
-# Class: :HLF65StepsMachine (:HLF65StepsMachine)
+# Class: :HLF65StepsMachine (HLF65StepsMachine)
 
 AnnotationAssertion(rdfs:comment :HLF65StepsMachine "A type of exercise equipment consisting of a frame with two pedals that you stand on and push down with your feet so that you move in a way similar to climbing")
+AnnotationAssertion(rdfs:label :HLF65StepsMachine "HLF65StepsMachine")
 SubClassOf(:HLF65StepsMachine :HLF51CardioAerobics)
 
-# Class: :HLF66Swimming (:HLF66Swimming)
+# Class: :HLF66Swimming (HLF66Swimming)
 
 AnnotationAssertion(rdfs:comment :HLF66Swimming "Swimming is an individual or team racing sport that requires the use of one's entire body to move through water. The sport takes place in pools or open water.")
+AnnotationAssertion(rdfs:label :HLF66Swimming "HLF66Swimming")
 SubClassOf(:HLF66Swimming :HLF51CardioAerobics)
 
-# Class: :HLF67TableTennis (:HLF67TableTennis)
+# Class: :HLF67TableTennis (HLF67TableTennis)
 
 AnnotationAssertion(rdfs:comment :HLF67TableTennis "Table tennis, also known as ping-pong and whiff-whaff, is a sport in which two or four players hit a lightweight ball, also known as the ping-pong ball, back and forth across a table using small rackets. The game takes place on a hard table divided by a net.")
+AnnotationAssertion(rdfs:label :HLF67TableTennis "HLF67TableTennis")
 SubClassOf(:HLF67TableTennis :HLF51CardioAerobics)
 
-# Class: :HLF68Tennis (:HLF68Tennis)
+# Class: :HLF68Tennis (HLF68Tennis)
 
 AnnotationAssertion(rdfs:comment :HLF68Tennis "Tennis is a racket sport that can be played individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.")
+AnnotationAssertion(rdfs:label :HLF68Tennis "HLF68Tennis")
 SubClassOf(:HLF68Tennis :HLF51CardioAerobics)
 
-# Class: :HLF69AlpineSkiing (:HLF69AlpineSkiing)
+# Class: :HLF69AlpineSkiing (HLF69AlpineSkiing)
 
 AnnotationAssertion(rdfs:comment :HLF69AlpineSkiing "It is the pastime of sliding down snow-covered slopes on skis with fixed-heel bindings, unlike other types of skiing, which use skis with free-heel bindings.")
+AnnotationAssertion(rdfs:label :HLF69AlpineSkiing "HLF69AlpineSkiing")
 SubClassOf(:HLF69AlpineSkiing :HLF51CardioAerobics)
 
 # Class: :HLF6BicepsSkinfoldDimension (:HLF6BicepsSkinfoldDimension)
@@ -2561,54 +2967,64 @@ SubClassOf(:HLF704BloodGlucoseAssignment :E13AttributeAssignment)
 
 SubClassOf(:HLF705OxygenSaturationAssignment :E13AttributeAssignment)
 
-# Class: :HLF70AquaAerobics (:HLF70AquaAerobics)
+# Class: :HLF70AquaAerobics (HLF70AquaAerobics)
 
 AnnotationAssertion(rdfs:comment :HLF70AquaAerobics "It is the performance of aerobic exercise in water such as in a swimming pool. Done mostly vertically and without swimming typically in waist deep or deeper water, it is a type of resistance training. Water aerobics is a form of aerobic exercise that requires water-immersed participants.")
+AnnotationAssertion(rdfs:label :HLF70AquaAerobics "HLF70AquaAerobics")
 SubClassOf(:HLF70AquaAerobics :HLF51CardioAerobics)
 
-# Class: :HLF71Backpacking (:HLF71Backpacking)
+# Class: :HLF71Backpacking (HLF71Backpacking)
 
 AnnotationAssertion(rdfs:comment :HLF71Backpacking "Backpacking is the outdoor recreation of carrying gear on one's back, while hiking for more than a day.")
+AnnotationAssertion(rdfs:label :HLF71Backpacking "HLF71Backpacking")
 SubClassOf(:HLF71Backpacking :HLF51CardioAerobics)
 
-# Class: :HLF72Badminton (:HLF72Badminton)
+# Class: :HLF72Badminton (HLF72Badminton)
 
 AnnotationAssertion(rdfs:comment :HLF72Badminton "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are \"singles\" and \"doubles\".")
+AnnotationAssertion(rdfs:label :HLF72Badminton "HLF72Badminton")
 SubClassOf(:HLF72Badminton :HLF51CardioAerobics)
 
-# Class: :HLF73BallroomDancing (:HLF73BallroomDancing)
+# Class: :HLF73BallroomDancing (HLF73BallroomDancing)
 
 AnnotationAssertion(rdfs:comment :HLF73BallroomDancing "Ballroom dance is a set of partner dances, which are enjoyed both socially and competitively around the world, mostly because of its performance and entertainment aspects. Ballroom dancing is also widely enjoyed on stage, film, and television.")
+AnnotationAssertion(rdfs:label :HLF73BallroomDancing "HLF73BallroomDancing")
 SubClassOf(:HLF73BallroomDancing :HLF51CardioAerobics)
 
-# Class: :HLF74Baseball (:HLF74Baseball)
+# Class: :HLF74Baseball (HLF74Baseball)
 
 AnnotationAssertion(rdfs:comment :HLF74Baseball "Baseball is a bat-and-ball game played between two opposing teams that take turns batting and fielding. The game proceeds when a player on the fielding team, called the pitcher, throws a ball which a player on the batting team tries to hit with a bat.")
+AnnotationAssertion(rdfs:label :HLF74Baseball "HLF74Baseball")
 SubClassOf(:HLF74Baseball :HLF51CardioAerobics)
 
-# Class: :HLF75Basketball (:HLF75Basketball)
+# Class: :HLF75Basketball (HLF75Basketball)
 
 AnnotationAssertion(rdfs:comment :HLF75Basketball "Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball through the defender's hoop while preventing the opposing team from shooting through their own hoop.")
+AnnotationAssertion(rdfs:label :HLF75Basketball "HLF75Basketball")
 SubClassOf(:HLF75Basketball :HLF51CardioAerobics)
 
-# Class: :HLF76BeachVoleyball (:HLF76BeachVoleyball)
+# Class: :HLF76BeachVoleyball (HLF76BeachVoleyball)
 
 AnnotationAssertion(rdfs:comment :HLF76BeachVoleyball "A form of volleyball played on sand by teams of two players.")
+AnnotationAssertion(rdfs:label :HLF76BeachVoleyball "HLF76BeachVoleyball")
 SubClassOf(:HLF76BeachVoleyball :HLF51CardioAerobics)
 
-# Class: :HLF77Boxing (:HLF77Boxing)
+# Class: :HLF77Boxing (HLF77Boxing)
 
 AnnotationAssertion(rdfs:comment :HLF77Boxing "Boxing is a combat sport in which two people, usually wearing protective gloves and other protective equipment such as hand wraps and mouthguards, throw punches at each other for a predetermined amount of time in a boxing ring.")
+AnnotationAssertion(rdfs:label :HLF77Boxing "HLF77Boxing")
 SubClassOf(:HLF77Boxing :HLF51CardioAerobics)
 
-# Class: :HLF78Canoeing (:HLF78Canoeing)
+# Class: :HLF78Canoeing (HLF78Canoeing)
 
 AnnotationAssertion(rdfs:comment :HLF78Canoeing "The sport or activity of paddling a light, narrow boat.")
+AnnotationAssertion(rdfs:label :HLF78Canoeing "HLF78Canoeing")
 SubClassOf(:HLF78Canoeing :HLF51CardioAerobics)
 
-# Class: :HLF79Cricket (:HLF79Cricket)
+# Class: :HLF79Cricket (HLF79Cricket)
 
 AnnotationAssertion(rdfs:comment :HLF79Cricket "Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard pitch with a wicket at each end, each comprising two bails balanced on three stumps.")
+AnnotationAssertion(rdfs:label :HLF79Cricket "HLF79Cricket")
 SubClassOf(:HLF79Cricket :HLF51CardioAerobics)
 
 # Class: :HLF7BMIIndexDimension (:HLF7BMIIndexDimension)
@@ -2616,64 +3032,76 @@ SubClassOf(:HLF79Cricket :HLF51CardioAerobics)
 AnnotationAssertion(rdfs:comment :HLF7BMIIndexDimension "The BMI is defined as the body mass divided by the square of the body height")
 SubClassOf(:HLF7BMIIndexDimension :HLF232AnthropometricDimension)
 
-# Class: :HLF804BloodGlucoseMeasurement (:HLF804BloodGlucoseMeasurement)
+# Class: :HLF804BloodGlucoseMeasurement (HLF804BloodGlucoseMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF804BloodGlucoseMeasurement "HLF804BloodGlucoseMeasurement")
 SubClassOf(:HLF804BloodGlucoseMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF804BloodGlucoseMeasurement :E16Measurement)
 
-# Class: :HLF805OxygenSaturationMeasurement (:HLF805OxygenSaturationMeasurement)
+# Class: :HLF805OxygenSaturationMeasurement (HLF805OxygenSaturationMeasurement)
 
+AnnotationAssertion(rdfs:label :HLF805OxygenSaturationMeasurement "HLF805OxygenSaturationMeasurement")
 SubClassOf(:HLF805OxygenSaturationMeasurement :D11DigitalMeasurementEvent)
 SubClassOf(:HLF805OxygenSaturationMeasurement :E16Measurement)
 
-# Class: :HLF80CrossCountrySkiing (:HLF80CrossCountrySkiing)
+# Class: :HLF80CrossCountrySkiing (HLF80CrossCountrySkiing)
 
 AnnotationAssertion(rdfs:comment :HLF80CrossCountrySkiing "The sport of skiing across the countryside, often through woods and usually on relatively flat terrain, using narrow skis with boots that can be raised off the ski at the heel when striding.")
+AnnotationAssertion(rdfs:label :HLF80CrossCountrySkiing "HLF80CrossCountrySkiing")
 SubClassOf(:HLF80CrossCountrySkiing :HLF51CardioAerobics)
 
-# Class: :HLF81Crunches (:HLF81Crunches)
+# Class: :HLF81Crunches (HLF81Crunches)
 
 AnnotationAssertion(rdfs:comment :HLF81Crunches "A physical exercise in which the body is brought into a sitting position from one lying on the back.")
+AnnotationAssertion(rdfs:label :HLF81Crunches "HLF81Crunches")
 SubClassOf(:HLF81Crunches :HLF51CardioAerobics)
 
-# Class: :HLF82Cycling (:HLF82Cycling)
+# Class: :HLF82Cycling (HLF82Cycling)
 
 AnnotationAssertion(rdfs:comment :HLF82Cycling "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport.")
+AnnotationAssertion(rdfs:label :HLF82Cycling "HLF82Cycling")
 SubClassOf(:HLF82Cycling :HLF51CardioAerobics)
 
-# Class: :HLF83Dancing (:HLF83Dancing)
+# Class: :HLF83Dancing (HLF83Dancing)
 
 AnnotationAssertion(rdfs:comment :HLF83Dancing "Dance is a performing art form consisting of sequences of movement, either improvised or purposefully selected. This movement has aesthetic and often symbolic value. Dance can be categorized and described by its choreography, by its repertoire of movements, or by its historical period or place of origin.")
+AnnotationAssertion(rdfs:label :HLF83Dancing "HLF83Dancing")
 SubClassOf(:HLF83Dancing :HLF51CardioAerobics)
 
-# Class: :HLF84EllipticalTrainer (:HLF84EllipticalTrainer)
+# Class: :HLF84EllipticalTrainer (HLF84EllipticalTrainer)
 
 AnnotationAssertion(rdfs:comment :HLF84EllipticalTrainer "A stationary exercise device on which the user stands on two small rimmed platforms and moves them forward and back in an approximately elliptical path.")
+AnnotationAssertion(rdfs:label :HLF84EllipticalTrainer "HLF84EllipticalTrainer")
 SubClassOf(:HLF84EllipticalTrainer :HLF51CardioAerobics)
 
-# Class: :HLF85Treadmill (:HLF85Treadmill)
+# Class: :HLF85Treadmill (HLF85Treadmill)
 
 AnnotationAssertion(rdfs:comment :HLF85Treadmill "A treadmill is an exercise machine for walking or running in place.")
+AnnotationAssertion(rdfs:label :HLF85Treadmill "HLF85Treadmill")
 SubClassOf(:HLF85Treadmill :HLF51CardioAerobics)
 
-# Class: :HLF86Football (:HLF86Football)
+# Class: :HLF86Football (HLF86Football)
 
 AnnotationAssertion(rdfs:comment :HLF86Football "A game in which two opposing teams of 11 players each defend goals at opposite ends of a field having goal posts at each end, with points being scored chiefly by carrying the ball across the opponent's goal line and by place-kicking or drop-kicking the ball over the crossbar between the opponent's goal posts.")
+AnnotationAssertion(rdfs:label :HLF86Football "HLF86Football")
 SubClassOf(:HLF86Football :HLF51CardioAerobics)
 
-# Class: :HLF87Golf (:HLF87Golf)
+# Class: :HLF87Golf (HLF87Golf)
 
 AnnotationAssertion(rdfs:comment :HLF87Golf "Golf is a club-and-ball sport in which players use various clubs to hit balls into a series of holes on a course in as few strokes as possible.")
+AnnotationAssertion(rdfs:label :HLF87Golf "HLF87Golf")
 SubClassOf(:HLF87Golf :HLF51CardioAerobics)
 
-# Class: :HLF88Handball (:HLF88Handball)
+# Class: :HLF88Handball (HLF88Handball)
 
 AnnotationAssertion(rdfs:comment :HLF88Handball "Handball is a team sport in which two teams of seven players each pass a ball using their hands with the aim of throwing it into the goal of the other team. A standard match consists of two periods of 30 minutes, and the team that scores more goals wins.")
+AnnotationAssertion(rdfs:label :HLF88Handball "HLF88Handball")
 SubClassOf(:HLF88Handball :HLF51CardioAerobics)
 
-# Class: :HLF89Hiking (:HLF89Hiking)
+# Class: :HLF89Hiking (HLF89Hiking)
 
 AnnotationAssertion(rdfs:comment :HLF89Hiking "The activity of going for long walks, especially across country.")
+AnnotationAssertion(rdfs:label :HLF89Hiking "HLF89Hiking")
 SubClassOf(:HLF89Hiking :HLF51CardioAerobics)
 
 # Class: :HLF8BodyTemperatureDimension (:HLF8BodyTemperatureDimension)
@@ -2685,54 +3113,64 @@ SubClassOf(:HLF8BodyTemperatureDimension :HLF233VitalSignDimension)
 
 SubClassOf(:HLF904BloodGlucoseDimension :E54Dimension)
 
-# Class: :HLF90Hockey (:HLF90Hockey)
+# Class: :HLF90Hockey (HLF90Hockey)
 
 AnnotationAssertion(rdfs:comment :HLF90Hockey "Hockey is a sport in which two teams play against each other by trying to manoeuvre a ball or a puck into the opponent's goal using a hockey stick.")
+AnnotationAssertion(rdfs:label :HLF90Hockey "HLF90Hockey")
 SubClassOf(:HLF90Hockey :HLF51CardioAerobics)
 
-# Class: :HLF91HorsebackRiding (:HLF91HorsebackRiding)
+# Class: :HLF91HorsebackRiding (HLF91HorsebackRiding)
 
 AnnotationAssertion(rdfs:comment :HLF91HorsebackRiding "The sport or activity of riding horses.")
+AnnotationAssertion(rdfs:label :HLF91HorsebackRiding "HLF91HorsebackRiding")
 SubClassOf(:HLF91HorsebackRiding :HLF51CardioAerobics)
 
-# Class: :HLF92HulaHooping (:HLF92HulaHooping)
+# Class: :HLF92HulaHooping (HLF92HulaHooping)
 
 AnnotationAssertion(rdfs:comment :HLF92HulaHooping "Spining a hula hoop round the body by gyrating the hips.")
+AnnotationAssertion(rdfs:label :HLF92HulaHooping "HLF92HulaHooping")
 SubClassOf(:HLF92HulaHooping :HLF51CardioAerobics)
 
-# Class: :HLF93IceDancing (:HLF93IceDancing)
+# Class: :HLF93IceDancing (HLF93IceDancing)
 
 AnnotationAssertion(rdfs:comment :HLF93IceDancing "A form of choreographed figure skating influenced by ballroom dancing, typically performed by a man and a woman competing as a team.")
+AnnotationAssertion(rdfs:label :HLF93IceDancing "HLF93IceDancing")
 SubClassOf(:HLF93IceDancing :HLF51CardioAerobics)
 
-# Class: :HLF94IceHockey (:HLF94IceHockey)
+# Class: :HLF94IceHockey (HLF94IceHockey)
 
 AnnotationAssertion(rdfs:comment :HLF94IceHockey "Ice hockey is a contact winter team sport played on ice skates, usually on an rink. Two opposing teams, typically fielding six skaters each, use sticks to shoot a vulcanized rubber puck into the other team's goal; the winner is the team to score most goals.")
+AnnotationAssertion(rdfs:label :HLF94IceHockey "HLF94IceHockey")
 SubClassOf(:HLF94IceHockey :HLF51CardioAerobics)
 
-# Class: :HLF95IceSkating (:HLF95IceSkating)
+# Class: :HLF95IceSkating (HLF95IceSkating)
 
 AnnotationAssertion(rdfs:comment :HLF95IceSkating "Skating on ice as a sport or pastime")
+AnnotationAssertion(rdfs:label :HLF95IceSkating "HLF95IceSkating")
 SubClassOf(:HLF95IceSkating :HLF51CardioAerobics)
 
-# Class: :HLF96JumpingJacks (:HLF96JumpingJacks)
+# Class: :HLF96JumpingJacks (HLF96JumpingJacks)
 
 AnnotationAssertion(rdfs:comment :HLF96JumpingJacks "It is a physical jumping exercise performed by jumping to a position with the legs spread wide and the hands going overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides.")
+AnnotationAssertion(rdfs:label :HLF96JumpingJacks "HLF96JumpingJacks")
 SubClassOf(:HLF96JumpingJacks :HLF51CardioAerobics)
 
-# Class: :HLF97JumpRope (:HLF97JumpRope)
+# Class: :HLF97JumpRope (HLF97JumpRope)
 
 AnnotationAssertion(rdfs:comment :HLF97JumpRope "A skipping rope or jump rope is a tool used in the sport of skipping/jump rope where one or more participants jump over a rope swung so that it passes under their feet and over their heads.")
+AnnotationAssertion(rdfs:label :HLF97JumpRope "HLF97JumpRope")
 SubClassOf(:HLF97JumpRope :HLF51CardioAerobics)
 
-# Class: :HLF98Kayaking (:HLF98Kayaking)
+# Class: :HLF98Kayaking (HLF98Kayaking)
 
 AnnotationAssertion(rdfs:comment :HLF98Kayaking "Kayaking is the use of a kayak for moving over water.")
+AnnotationAssertion(rdfs:label :HLF98Kayaking "HLF98Kayaking")
 SubClassOf(:HLF98Kayaking :HLF51CardioAerobics)
 
-# Class: :HLF99Kitesurfing (:HLF99Kitesurfing)
+# Class: :HLF99Kitesurfing (HLF99Kitesurfing)
 
 AnnotationAssertion(rdfs:comment :HLF99Kitesurfing "Kiteboarding or kitesurfing is an extreme sport where the kiter uses the wind power with a large power kite to be pulled on a water, land or snow surface.")
+AnnotationAssertion(rdfs:label :HLF99Kitesurfing "HLF99Kitesurfing")
 SubClassOf(:HLF99Kitesurfing :HLF51CardioAerobics)
 
 # Class: :HLF9CalfSkinfoldDimension (:HLF9CalfSkinfoldDimension)
@@ -2804,6 +3242,30 @@ ClassAssertion(:HLF270BloodGlucoseSampleType :MEASUREMENT_TYPE_SERUM)
 # Individual: :MEASUREMENT_TYPE_WHOLE_BLOOD (:MEASUREMENT_TYPE_WHOLE_BLOOD)
 
 ClassAssertion(:HLF270BloodGlucoseSampleType :MEASUREMENT_TYPE_WHOLE_BLOOD)
+
+# Individual: :Meal_Type_Afternoon_Snack (:Meal_Type_Afternoon_Snack)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Afternoon_Snack)
+
+# Individual: :Meal_Type_Breakfast (:Meal_Type_Breakfast)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Breakfast)
+
+# Individual: :Meal_Type_Dinner (:Meal_Type_Dinner)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Dinner)
+
+# Individual: :Meal_Type_Evening_Snack (:Meal_Type_Evening_Snack)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Evening_Snack)
+
+# Individual: :Meal_Type_Lunch (:Meal_Type_Lunch)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Lunch)
+
+# Individual: :Meal_Type_Morning_Snack (:Meal_Type_Morning_Snack)
+
+ClassAssertion(:HLF277MealType :Meal_Type_Morning_Snack)
 
 # Individual: :SAMPLE_SOURCE_TYPE_CAPILLARY (:SAMPLE_SOURCE_TYPE_CAPILLARY)
 
@@ -2965,6 +3427,317 @@ ClassAssertion(:HLF207PhysicalBehaviorType :vigorousbehavior)
 
 ClassAssertion(:HLF30SleepStageType :wakefulness)
 
+# Individual: <https://opensource.samsung.com/projects/helifit/10001> (<https://opensource.samsung.com/projects/helifit/10001>)
 
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10001> "Stretching")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10002> (<https://opensource.samsung.com/projects/helifit/10002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10002> "Jump rope, moderate pace (100~120 skips/min), 2 foot skip")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10003> (<https://opensource.samsung.com/projects/helifit/10003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10003> "Hula-hooping")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10004> (<https://opensource.samsung.com/projects/helifit/10004>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10004> "Push-ups (Press-ups)")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10004>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10005> (<https://opensource.samsung.com/projects/helifit/10005>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10005> "Pull-ups (Chin-up)")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10005>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10006> (<https://opensource.samsung.com/projects/helifit/10006>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10006> "Sit-ups")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10006>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10007> (<https://opensource.samsung.com/projects/helifit/10007>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10007> "Circuit training, moderate effort")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10007>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10008> (<https://opensource.samsung.com/projects/helifit/10008>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10008> "Mountain climbers")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10008>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10009> (<https://opensource.samsung.com/projects/helifit/10009>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10009> "Jumping Jacks")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10009>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/1001> (<https://opensource.samsung.com/projects/helifit/1001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/1001> "Walking")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/1001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10010> (<https://opensource.samsung.com/projects/helifit/10010>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10010> "Burpee")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10010>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10011> (<https://opensource.samsung.com/projects/helifit/10011>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10011> "Bench press")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10011>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10012> (<https://opensource.samsung.com/projects/helifit/10012>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10012> "Squats")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10012>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10013> (<https://opensource.samsung.com/projects/helifit/10013>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10013> "Lunges")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10013>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10014> (<https://opensource.samsung.com/projects/helifit/10014>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10014> "Leg presses")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10014>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10015> (<https://opensource.samsung.com/projects/helifit/10015>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10015> "Leg extensions")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10015>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10016> (<https://opensource.samsung.com/projects/helifit/10016>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10016> "Leg curls")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10016>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10017> (<https://opensource.samsung.com/projects/helifit/10017>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10017> "Back extensions")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10017>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10018> (<https://opensource.samsung.com/projects/helifit/10018>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10018> "Lat pull-downs")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10018>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10019> (<https://opensource.samsung.com/projects/helifit/10019>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10019> "Deadlifts")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10019>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/1002> (<https://opensource.samsung.com/projects/helifit/1002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/1002> "Running")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/1002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10020> (<https://opensource.samsung.com/projects/helifit/10020>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10020> "Shoulder presses")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10020>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10021> (<https://opensource.samsung.com/projects/helifit/10021>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10021> "Front raises")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10021>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10022> (<https://opensource.samsung.com/projects/helifit/10022>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10022> "Lateral raises")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10022>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10023> (<https://opensource.samsung.com/projects/helifit/10023>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10023> "Crunches")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10023>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10024> (<https://opensource.samsung.com/projects/helifit/10024>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10024> "Leg raises")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10024>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10025> (<https://opensource.samsung.com/projects/helifit/10025>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10025> "Plank")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10025>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10026> (<https://opensource.samsung.com/projects/helifit/10026>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10026> "Arm curls")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10026>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/10027> (<https://opensource.samsung.com/projects/helifit/10027>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/10027> "Arm extensions")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/10027>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11001> (<https://opensource.samsung.com/projects/helifit/11001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11001> "Inline skating, moderate pace")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11002> (<https://opensource.samsung.com/projects/helifit/11002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11002> "Hang gliding")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11003> (<https://opensource.samsung.com/projects/helifit/11003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11003> "Pistol shooting")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11004> (<https://opensource.samsung.com/projects/helifit/11004>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11004> "Archery, non-hunting")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11004>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11005> (<https://opensource.samsung.com/projects/helifit/11005>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11005> "Horseback riding, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11005>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11007> (<https://opensource.samsung.com/projects/helifit/11007>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11007> "Cycling")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11007>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/11008> (<https://opensource.samsung.com/projects/helifit/11008>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/11008> "Flying disc, general, playing")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/11008>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/2001> (<https://opensource.samsung.com/projects/helifit/2001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/2001> "Baseball, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/2001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/2002> (<https://opensource.samsung.com/projects/helifit/2002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/2002> "Softball, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/2002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/2003> (<https://opensource.samsung.com/projects/helifit/2003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/2003> "Cricket")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/2003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/3001> (<https://opensource.samsung.com/projects/helifit/3001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/3001> "Golf, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/3001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/3002> (<https://opensource.samsung.com/projects/helifit/3002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/3002> "Billiards")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/3002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/3003> (<https://opensource.samsung.com/projects/helifit/3003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/3003> "Bowling, alley")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/3003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4001> (<https://opensource.samsung.com/projects/helifit/4001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4001> "Hockey")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4002> (<https://opensource.samsung.com/projects/helifit/4002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4002> "Rugby, touch, non-competitive")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4003> (<https://opensource.samsung.com/projects/helifit/4003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4003> "Basketball, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4004> (<https://opensource.samsung.com/projects/helifit/4004>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4004> "Football, general (Soccer)")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4004>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4005> (<https://opensource.samsung.com/projects/helifit/4005>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4005> "Handball, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4005>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/4006> (<https://opensource.samsung.com/projects/helifit/4006>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/4006> "American football, general, touch")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/4006>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/5001> (<https://opensource.samsung.com/projects/helifit/5001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/5001> "Volleyball, general, 6~9 member team, non-competitive")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/5001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/5002> (<https://opensource.samsung.com/projects/helifit/5002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/5002> "Beach volleyball")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/5002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/6001> (<https://opensource.samsung.com/projects/helifit/6001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/6001> "Squash, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/6001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/6002> (<https://opensource.samsung.com/projects/helifit/6002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/6002> "Tennis, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/6002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/6003> (<https://opensource.samsung.com/projects/helifit/6003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/6003> "Badminton, competitive")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/6003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/6004> (<https://opensource.samsung.com/projects/helifit/6004>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/6004> "Table tennis")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/6004>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/6005> (<https://opensource.samsung.com/projects/helifit/6005>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/6005> "Racquetball, general")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/6005>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/7002> (<https://opensource.samsung.com/projects/helifit/7002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/7002> "Boxing, in ring")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/7002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/7003> (<https://opensource.samsung.com/projects/helifit/7003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/7003> "Martial arts, moderate pace (Judo, Jujitsu, Karate, Taekwondo)")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/7003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/8001> (<https://opensource.samsung.com/projects/helifit/8001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/8001> "Ballet, general, rehearsal or class")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/8001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/8002> (<https://opensource.samsung.com/projects/helifit/8002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/8002> "Dancing, general (Fork, Irish step, Polka)")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/8002>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/8003> (<https://opensource.samsung.com/projects/helifit/8003>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/8003> "Ballroom dancing, fast")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/8003>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/9001> (<https://opensource.samsung.com/projects/helifit/9001>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/9001> "Pilates")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/9001>)
+
+# Individual: <https://opensource.samsung.com/projects/helifit/9002> (<https://opensource.samsung.com/projects/helifit/9002>)
+
+AnnotationAssertion(rdfs:comment <https://opensource.samsung.com/projects/helifit/9002> "Yoga")
+ClassAssertion(:HLF275ExerciceIdentifier <https://opensource.samsung.com/projects/helifit/9002>)
+
+
+DisjointClasses(:E13AttributeAssignment :HLF207ESSIQuestionnaireActivity :HLF213PSQIQuestionnaireActivity :HLF216PHQQuestionnaireActivity :HLF240MealActivity :HLF43SleepingActivity :HLF44PhysicalActivity)
 DisjointClasses(:HLF168HeartRateMeasurement :HLF179RestingRespirationRateMeasurement :HLF197BloodPressureMeasurement :HLF701BodyTemperatureMeasurement)
 )
