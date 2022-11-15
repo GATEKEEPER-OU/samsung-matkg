@@ -2,7 +2,6 @@ package org.samsung.healthinnovation.structuredkgconstruction;
 
 import org.apache.commons.io.FileUtils;
 import org.commons.OutputUtils;
-import org.ou.gatekeeper.RDFizer;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
@@ -39,7 +38,7 @@ public class PHRKGConstruction {
     FHIRAdapter converter = PHRAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
-    RDFizer.trasform(datasets, converter, mapping, outputDir, outputExt);
+//    RDFizer.trasform(datasets, converter, mapping, outputDir, outputExt); // TODO fix
   }
 
 }
