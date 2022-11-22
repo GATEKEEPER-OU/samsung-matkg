@@ -26,7 +26,6 @@ public class PHRCompetencyQueries {
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
   public static void main(String[] args) {
-//    File rdfOutputFile = new File(OUTPUT_MAPPING_DIR, "output-user73.nt");
     File rdfOutputFile = new File(OUTPUT_MAPPING_DIR);
     File queryOutputDir = new File(RESULT_DIR);
     queryOutputDir.mkdir();
