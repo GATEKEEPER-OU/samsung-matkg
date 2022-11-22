@@ -1,6 +1,7 @@
 package org.samsung.healthinnovation.structuredkgconstruction;
 
 import org.apache.commons.io.FileUtils;
+import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.ou.gatekeeper.RDFizer;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
@@ -39,7 +40,14 @@ public class PHRKGConstruction {
     FHIRAdapter converter = PHRAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
-    RDFizer.trasform(datasets, converter, mapping, outputDir, outputExt);
+    while (datasets.hasNext()) {
+      File dataset = datasets.next();
+      String trimmedDatasetName = FilenameUtils.trim2LvlExtension(dataset.getName());
+      String outputFilename = "output-" + FilenameUtils
+        .changeExtension(trimmedDatasetName, outputExt);
+      File output = new File(outputDir, outputFilename);
+      RDFizer.trasform(dataset, converter, mapping, output);
+    }
   }
 
 }
