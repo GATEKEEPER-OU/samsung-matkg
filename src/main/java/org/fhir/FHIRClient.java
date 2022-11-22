@@ -30,7 +30,7 @@ public class FHIRClient implements AutoCloseable {
    * */
   @SuppressWarnings("java:S2095")
   public static FHIRClient connect(Properties config) throws IOException {
-    String host = config.getProperty("fhir_host");
+    String host = config.getProperty("host");
     FHIRClient instance = new FHIRClient(host);
     instance.authenticate(config);
     return instance;
@@ -53,7 +53,13 @@ public class FHIRClient implements AutoCloseable {
     httpGet.addHeader("Authorization", "JWT " + session.getString("token"));
     JSONArray results;
     try (CloseableHttpResponse httpResponse = HTTP_CLIENT.execute(httpGet)) {
+      int statusCode = httpResponse.getStatusLine().getStatusCode();
+//      System.out.println("HTTP Status: " + statusCode); // DEBUG
+      if (statusCode != 200) {
+        // TODO throw exception.. pageNotFound?
+      }
       String response = EntityUtils.toString(httpResponse.getEntity());
+//      System.out.println(response); // DEBUG
       results = new JSONArray(response);
     }
     return results;
@@ -93,15 +99,16 @@ public class FHIRClient implements AutoCloseable {
   protected FHIRClient(String host) {
     BASEURL_TEMPLATE = "https://" + host;
     AUTHURL_TEMPLATE = BASEURL_TEMPLATE + "/api/auth";
-    GETURL_TEMPLATE  = BASEURL_TEMPLATE + "/api/__SESSID__/shealth/fhir";
+    GETURL_TEMPLATE  = BASEURL_TEMPLATE + "/api/__UID__/shealth/fhir";
     HTTP_CLIENT = HttpClients.createDefault();
   }
 
   /**
    * @todo description
    * */
-  protected String getSessionId() {
+  protected String getSessionUid() {
     // @todo check session ?
+//    System.out.println(session); // DEBUG
     return session
       .getJSONObject("user")
       .getString("_id");
@@ -117,7 +124,7 @@ public class FHIRClient implements AutoCloseable {
     if (to != null )
       params.add(new BasicNameValuePair("to", to));
 
-    String urlByUser = GETURL_TEMPLATE.replace("__SESSID__", getSessionId());
+    String urlByUser = GETURL_TEMPLATE.replace("__UID__", getSessionUid());
     StringBuilder url = new StringBuilder(urlByUser);
     if (!params.isEmpty()) {
       String encodedParams = URLEncodedUtils.format(params, StandardCharsets.UTF_8);
@@ -131,12 +138,13 @@ public class FHIRClient implements AutoCloseable {
    * */
   protected void authenticate(Properties config) throws IOException {
     List<NameValuePair> params = new ArrayList<>(2);
-    params.add(new BasicNameValuePair("email", config.getProperty("fhir_email")));
-    params.add(new BasicNameValuePair("password", config.getProperty("fhir_password")));
+    params.add(new BasicNameValuePair("email", config.getProperty("email")));
+    params.add(new BasicNameValuePair("password", config.getProperty("password")));
 
     HttpPost httpPost = new HttpPost(AUTHURL_TEMPLATE);
     httpPost.setEntity(new UrlEncodedFormEntity(params));
 
+//    System.out.println(" httpPost >>> " + httpPost); // DEBUG
     try (CloseableHttpResponse httpResponse = HTTP_CLIENT.execute(httpPost)) {
       String response = EntityUtils.toString(httpResponse.getEntity());
       session = new JSONObject(response);

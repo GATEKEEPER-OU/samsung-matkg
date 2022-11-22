@@ -1,5 +1,8 @@
 package org.commons;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -13,22 +16,37 @@ public class PropertiesUtils {
   /**
    * @todo description
    */
-  public static Properties loadConfiguration(String path) {
-    Properties config = new Properties();
-    try {
-      InputStream configStream = ResourceUtils.getResourceAsStream(path);
-      config.load(configStream);
-
-    } catch (IOException e) {
-      // @todo improve message and use LOGGER
-      System.out.println(" >>>> " + path + " not set");
-      System.out.println(e);
+  public static Properties loadConfiguration(String path) throws IOException {
+    InputStream configStream = ResourceUtils.getResourceAsStream(path);
+    if (configStream == null) {
+      String exceptionMessage = String.format("The file '%s' not exists. Please copy and rename the '-dist' file into resources folder.", path);
+      throw new FileNotFoundException(exceptionMessage);
     }
+    Properties config = new Properties();
+    config.load(configStream);
     return config;
   }
+  public static Properties getSubset(Properties props, String subsetPath) {
+    Properties subset = new Properties();
+    props.forEach((k, v) -> {
+      String completeKey = k.toString();
+      if (completeKey.startsWith(subsetPath)) {
+        String key = StringUtils.difference(subsetPath, completeKey);
+        subset.setProperty(
+          StringUtils.stripStart(key, "."),
+          v.toString()
+        );
+      }
+    });
+    return subset;
+  }
+
+  //--------------------------------------------------------------------------//
+  // Class definition
+  //--------------------------------------------------------------------------//
 
   /**
-   * @todo description
+   * This class is not instantiable
    */
   private PropertiesUtils() {
   }
