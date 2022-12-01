@@ -15,9 +15,9 @@ import java.util.List;
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class EMRCompetencyQueries {
+public class SHCompetencyQueries {
 
-  static final String OUTPUT_MAPPING_DIR = "output/kg-emr";
+  static final String OUTPUT_MAPPING_DIR = "output/kg-sh";
   static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";

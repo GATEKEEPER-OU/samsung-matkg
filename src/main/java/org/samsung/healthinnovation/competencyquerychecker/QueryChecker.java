@@ -16,7 +16,7 @@ import java.util.List;
 public class QueryChecker {
 
   static final String DATASTORE_NAME = "GK-DataStore";
-  static final String ONTOLOGY_NAME = "ontologies/HeLiFit-OWL-Functional-Syntax.owl";
+  static final String ONTOLOGY = "ontologies/HeLiFit-OWL-Functional-Syntax.owl";
   static final String[] QUERY_FILE_EXTS = { "txt" };
 
   static final Logger LOGGER = LoggerFactory.getLogger(QueryChecker.class);
@@ -32,7 +32,7 @@ public class QueryChecker {
       try (DataStoreConnection dataStoreConnection = serverConnection.newDataStoreConnection(DATASTORE_NAME)) {
         // upload RDF graph into rdfox
         RDFoxUtils.importData(dataStoreConnection, sourceDir);
-        RDFoxUtils.importOntology(dataStoreConnection, ONTOLOGY_NAME);
+        RDFoxUtils.importOntology(dataStoreConnection, ONTOLOGY);
 
         // run competency queries
         List<File> queries = RDFoxUtils.listOfQueries(queryDirPath, QUERY_FILE_EXTS);

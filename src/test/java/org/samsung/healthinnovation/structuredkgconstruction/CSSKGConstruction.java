@@ -4,7 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.EMRAdapter;
+import org.ou.gatekeeper.fhir.adapters.CSSAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
@@ -19,15 +19,15 @@ import java.util.Iterator;
  * @todo
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class EMRKGConstruction {
+public class CSSKGConstruction {
 
-  static final String DATASETS_DIR = "datasets/data-emr";
-  static final String OUTPUT_DIR = "output/kg-emr";
+  static final String DATASETS_DIR = "datasets/data-css";
+  static final String OUTPUT_DIR = "output/kg-css";
 
-  static final Logger LOGGER = LoggerFactory.getLogger(EMRKGConstruction.class);
+  static final Logger LOGGER = LoggerFactory.getLogger(CSSKGConstruction.class);
 
   public static void main(String[] args) {
-    // @todo NoSuchFileException: datasets/data-emr dataset missing
+    // @todo NoSuchFileException: datasets/data-css dataset missing
     File datasetsDir = new File(DATASETS_DIR);
     File outputDir = new File(OUTPUT_DIR);
     outputDir.mkdir();
@@ -37,7 +37,7 @@ public class EMRKGConstruction {
     String[] exts = {"json"};
     Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
 
-    FHIRAdapter converter = EMRAdapter.create();
+    FHIRAdapter converter = CSSAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
     while (datasets.hasNext()) {

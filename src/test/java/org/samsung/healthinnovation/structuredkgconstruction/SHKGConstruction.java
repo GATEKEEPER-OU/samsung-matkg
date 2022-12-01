@@ -5,7 +5,7 @@ import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.ou.gatekeeper.RDFizer;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
+import org.ou.gatekeeper.fhir.adapters.SHAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
@@ -19,12 +19,12 @@ import java.util.Iterator;
  * @todo
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class PHRKGConstruction {
+public class SHKGConstruction {
 
   static final String DATASETS_DIR = "datasets/data-phr";
   static final String OUTPUT_DIR = "output/kg-phr";
 
-  static final Logger LOGGER = LoggerFactory.getLogger(PHRKGConstruction.class);
+  static final Logger LOGGER = LoggerFactory.getLogger(SHKGConstruction.class);
 
   public static void main(String[] args) {
     // @todo NoSuchFileException: datasets/data-phr dataset missing
@@ -37,7 +37,7 @@ public class PHRKGConstruction {
     String[] exts = {"json"};
     Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
 
-    FHIRAdapter converter = PHRAdapter.create();
+    FHIRAdapter converter = SHAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
     while (datasets.hasNext()) {

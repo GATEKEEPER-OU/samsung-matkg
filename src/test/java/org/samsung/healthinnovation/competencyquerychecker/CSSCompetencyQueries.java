@@ -15,9 +15,9 @@ import java.util.List;
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class PHRCompetencyQueries {
+public class CSSCompetencyQueries {
 
-  static final String OUTPUT_MAPPING_DIR = "output/kg-phr";
+  static final String OUTPUT_MAPPING_DIR = "output/kg-css";
   static final String RESULT_DIR = "output/queries";
 
   static final String DATASTORE_NAME = "GK-Puglia-DataStore";

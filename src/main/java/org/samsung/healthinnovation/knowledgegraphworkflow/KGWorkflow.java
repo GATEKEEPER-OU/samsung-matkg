@@ -2,9 +2,9 @@ package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
-import org.ou.gatekeeper.fhir.adapters.EMRAdapter;
+import org.ou.gatekeeper.fhir.adapters.CSSAdapter;
+import org.ou.gatekeeper.fhir.adapters.SHAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.PHRAdapter;
 import org.samsung.healthinnovation.competencyquerychecker.QueryChecker;
 import org.samsung.healthinnovation.fetcher.DataDownloader;
 import org.samsung.healthinnovation.structuredkgconstruction.KGConstruction;
@@ -34,47 +34,47 @@ public class KGWorkflow {
     boolean competencyQueriesEnabled = Boolean.parseBoolean(competencyQueriesEnabledProp);
 
     //
-    // PHR stages
+    // Samsung Health stages
     //
-    String phrEnabledProp = config.getProperty("phr.enable");
-    boolean phrEnabled = Boolean.parseBoolean(phrEnabledProp);
-    if (phrEnabled) {
-      Properties phrConfig = PropertiesUtils.getSubset(config, "phr");
-      fetchStage(phrConfig);
-      constructStage(phrConfig, PHRAdapter.create());
+    String shEnabledProp = config.getProperty("sh.enable");
+    boolean shEnabled = Boolean.parseBoolean(shEnabledProp);
+    if (shEnabled) {
+      Properties shConfig = PropertiesUtils.getSubset(config, "sh");
+      fetchStage(shConfig);
+      constructStage(shConfig, SHAdapter.create());
 
       if (triplestoreEnabled) {
-        String phrKgDirPath = config.getProperty("phr.kg.destdir");
-        File phrKgDir = new File(phrKgDirPath);
-        storeStage(config, phrKgDir);
+        String shKgDirPath = config.getProperty("sh.kg.destdir");
+        File shKgDir = new File(shKgDirPath);
+        storeStage(config, shKgDir);
       }
 
       if (competencyQueriesEnabled) {
-        queryCheckStage(phrConfig);
+        queryCheckStage(shConfig);
       }
     }
 
     //
-    // EMR stages
+    // CSS stages
     //
-    String emrEnabledProp = config.getProperty("emr.enable");
-    boolean emrEnabled = Boolean.parseBoolean(emrEnabledProp);
-    if (emrEnabled) {
-      Properties emrConfig = PropertiesUtils.getSubset(config, "emr");
-//      fetchStage(phrConfig); // TODO wait for the EMR endpoint implementation
+    String cssEnabledProp = config.getProperty("css.enable");
+    boolean cssEnabled = Boolean.parseBoolean(cssEnabledProp);
+    if (cssEnabled) {
+      Properties cssConfig = PropertiesUtils.getSubset(config, "css");
+//      fetchStage(shConfig); // TODO wait for the EMR endpoint implementation
       // Temporary implementation reading from local files
-      emrConfig.setProperty("fetch.destdir", "datasets/data-emr"); // WORKAROUND
+      cssConfig.setProperty("fetch.destdir", "datasets/data-css"); // WORKAROUND
       // -------------------------------------------------
-      constructStage(emrConfig, EMRAdapter.create());
+      constructStage(cssConfig, CSSAdapter.create());
 
       if (triplestoreEnabled) {
-        String emrKgDirPath = config.getProperty("emr.kg.destdir");
-        File emrKgDir = new File(emrKgDirPath);
-        storeStage(config, emrKgDir);
+        String cssKgDirPath = config.getProperty("css.kg.destdir");
+        File cssKgDir = new File(cssKgDirPath);
+        storeStage(config, cssKgDir);
       }
 
       if (competencyQueriesEnabled) {
-        queryCheckStage(emrConfig);
+        queryCheckStage(cssConfig);
       }
     }
   }

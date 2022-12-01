@@ -16,10 +16,10 @@ import java.util.Properties;
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class PHRDownloader {
+public class SHDownloader {
 
   static final String KGWORKFLOW_CONFIG = "kgworkflow.properties";
-  static final Logger LOGGER = LoggerFactory.getLogger(PHRDownloader.class); // TODO
+  static final Logger LOGGER = LoggerFactory.getLogger(SHDownloader.class); // TODO
 
   public static void main(String[] args) throws IOException {
     Properties config = PropertiesUtils.loadConfiguration(KGWORKFLOW_CONFIG);

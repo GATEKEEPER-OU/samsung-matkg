@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class EMRDownloader {
+public class CSSDownloader {
 
   static final String KGWORKFLOW_CONFIG = "kgworkflow.properties";
   static final String OUTPUT_DIR = "datasets/data-emr";

@@ -26,7 +26,7 @@ public class TriplestoreUploader {
    * TODO
    * */
   public static void store(File sourceDir, String[] exts, Properties triplestoreConfig) throws IOException {
-    String endpoint = triplestoreConfig.getProperty("triplestore_host");
+    String endpoint = triplestoreConfig.getProperty("host");
     String postUrl = TRIPLESTORE_URL_TEMPLATE.replace("__ENDPOINT__", endpoint);
     try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
       Iterator<File> datasets = FileUtils.iterateFiles(sourceDir, exts, false);

@@ -23,7 +23,7 @@ public class TriplestoreUploaderTest {
 
   static final String TRIPLESTORE_URL_TEMPLATE = "http://__ENDPOINT__/blazegraph/sparql";
 
-  static final String TRIPLESTORE_DIR = "output/kg-phr";
+  static final String TRIPLESTORE_DIR = "output/kg-sh";
 
   static final Logger LOGGER = LoggerFactory.getLogger(TriplestoreUploaderTest.class);
 

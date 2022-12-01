@@ -1,27 +1,27 @@
 
 #
 #
-phr.enable=true
-phr.fetch.endpoint.host=__CHANGE_ME__
-phr.fetch.endpoint.email=__CHANGE_ME__
-phr.fetch.endpoint.password=__CHANGE_ME__
-phr.fetch.range.start=__CHANGE_ME__
-phr.fetch.range.end=__CHANGE_ME__
-phr.fetch.destdir=output/data-phr
-phr.kg.destdir=output/kg-phr
-phr.competencyqueries.destdir=output/queries-phr
+sh.enable=true
+sh.fetch.endpoint.host=__CHANGE_ME__
+sh.fetch.endpoint.email=__CHANGE_ME__
+sh.fetch.endpoint.password=__CHANGE_ME__
+sh.fetch.range.start=__CHANGE_ME__
+sh.fetch.range.end=__CHANGE_ME__
+sh.fetch.destdir=output/data-sh
+sh.kg.destdir=output/kg-sh
+sh.competencyqueries.destdir=output/queries-sh
 
 #
 #
-emr.enable=false
-emr.fetch.endpoint.host=__CHANGE_ME__
-emr.fetch.endpoint.email=__CHANGE_ME__
-emr.fetch.endpoint.password=__CHANGE_ME__
-emr.fetch.range.start=__CHANGE_ME__
-emr.fetch.range.end=__CHANGE_ME__
-emr.fetch.destdir=output/data-emr
-emr.kg.destdir=output/kg-emr
-emr.competencyqueries.destdir=output/queries-emr
+css.enable=false
+css.fetch.endpoint.host=__CHANGE_ME__
+css.fetch.endpoint.email=__CHANGE_ME__
+css.fetch.endpoint.password=__CHANGE_ME__
+css.fetch.range.start=__CHANGE_ME__
+css.fetch.range.end=__CHANGE_ME__
+css.fetch.destdir=output/data-css
+css.kg.destdir=output/kg-css
+css.competencyqueries.destdir=output/queries-css
 
 #
 #
