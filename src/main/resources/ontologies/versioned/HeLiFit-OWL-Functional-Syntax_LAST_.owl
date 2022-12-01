@@ -52,7 +52,7 @@ Declaration(Class(hlf:E73InformationObject))
 Declaration(Class(hlf:E77PersistenItem))
 Declaration(Class(hlf:E7Activity))
 Declaration(Class(hlf:E90SymbolicObject))
-Declaration(Class(hlf:HLF100Volleyball))
+Declaration(Class(hlf:HLF100Voleyball))
 Declaration(Class(hlf:HLF101Walking))
 Declaration(Class(hlf:HLF102Sailing))
 Declaration(Class(hlf:HLF103Squash))
@@ -1073,11 +1073,11 @@ AnnotationAssertion(rdfs:comment hlf:E90SymbolicObject "This class comprises ide
 AnnotationAssertion(rdfs:label hlf:E90SymbolicObject "E90SymbolicObject")
 SubClassOf(hlf:E90SymbolicObject hlf:E28ConceptualObject)
 
-# Class: hlf:HLF100Volleyball (HLF100Volleyball)
+# Class: hlf:HLF100Voleyball (HLF100Voleyball)
 
-AnnotationAssertion(rdfs:comment hlf:HLF100Volleyball "Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules.")
-AnnotationAssertion(rdfs:label hlf:HLF100Volleyball "HLF100Volleyball")
-SubClassOf(hlf:HLF100Volleyball hlf:HLF51CardioAerobics)
+AnnotationAssertion(rdfs:comment hlf:HLF100Voleyball "Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules.")
+AnnotationAssertion(rdfs:label hlf:HLF100Voleyball "HLF100Voleyball")
+SubClassOf(hlf:HLF100Voleyball hlf:HLF51CardioAerobics)
 
 # Class: hlf:HLF101Walking (HLF101Walking)
 
