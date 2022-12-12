@@ -2,8 +2,8 @@ package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
-import org.ou.gatekeeper.fhir.adapters.CSSAdapter;
-import org.ou.gatekeeper.fhir.adapters.SHAdapter;
+import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
+import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.samsung.healthinnovation.competencyquerychecker.QueryChecker;
 import org.samsung.healthinnovation.fetcher.DataDownloader;

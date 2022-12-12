@@ -4,7 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.CSSAdapter;
+import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;

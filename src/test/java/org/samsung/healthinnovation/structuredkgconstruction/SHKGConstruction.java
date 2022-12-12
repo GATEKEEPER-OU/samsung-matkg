@@ -27,7 +27,7 @@ public class SHKGConstruction {
   static final Logger LOGGER = LoggerFactory.getLogger(SHKGConstruction.class);
 
   public static void main(String[] args) {
-    // @todo NoSuchFileException: datasets/data-phr dataset missing
+    // @todo NoSuchFileException: datasets/data-sh.. dataset missing
     File datasetsDir = new File(DATASETS_DIR);
     File outputDir = new File(OUTPUT_DIR);
     outputDir.mkdir();
