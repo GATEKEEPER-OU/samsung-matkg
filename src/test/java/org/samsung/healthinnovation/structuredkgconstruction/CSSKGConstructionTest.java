@@ -9,6 +9,7 @@ import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
+import org.samsung.healthinnovation.CSSKGConstruction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +20,7 @@ import java.util.Iterator;
  * @todo
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class CSSKGConstruction {
+public class CSSKGConstructionTest {
 
   static final String DATASETS_DIR = "datasets/data-css";
   static final String OUTPUT_DIR = "output/kg-css";

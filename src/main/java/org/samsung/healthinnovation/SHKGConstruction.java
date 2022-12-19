@@ -1,4 +1,4 @@
-package org.samsung.healthinnovation.structuredkgconstruction;
+package org.samsung.healthinnovation;
 
 import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
@@ -42,8 +42,10 @@ public class SHKGConstruction {
 
     while (datasets.hasNext()) {
       File dataset = datasets.next();
+      LOGGER.info(">>> " + dataset.getAbsolutePath());
       String trimmedDatasetName = FilenameUtils.trim2LvlExtension(dataset.getName());
-      String outputFilename = "output-" + FilenameUtils
+      Long timestamp = System.nanoTime();
+      String outputFilename = "output-" + timestamp + "-" + FilenameUtils
         .changeExtension(trimmedDatasetName, outputExt);
       File output = new File(outputDir, outputFilename);
       RDFizer.trasform(dataset, converter, mapping, output);
