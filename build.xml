@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="matkg"  basedir=".">
+
+  <property name="src" value="src/main/java" />
+  <property name="src_resources" value="src/main/resources" />
+
+  <property name="target_classes" value="target/classes" />
+  <property name="lib_dir" value="lib" />
+  <property name="artifacts_dir" value="out/artifacts" />
+  <dirname property="deploy_dir" file="../matkg-demo/bin" />
+
+  <target name="clean">
+    <delete dir="target" />
+    <delete dir="out" />
+  </target>
+
+  <target name="clean-artifacts">
+    <delete dir="out/artifacts" />
+  </target>
+
+  <target name="deploy">
+    <delete dir="${deploy_dir}" failonerror="false"/>
+    <mkdir dir="${deploy_dir}" />
+    <copy todir="${deploy_dir}">
+      <fileset dir="${lib_dir}/rdfizer" includes="**" />
+      <fileset dir="${lib_dir}/rdfox-v6.0" includes="**" />
+      <fileset dir="${artifacts_dir}/matkg_jar" includes="**" />
+    </copy>
+  </target>
+
+</project>
