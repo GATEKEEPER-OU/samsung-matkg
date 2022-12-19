@@ -44,8 +44,8 @@ public class ALLCompetencyQueries {
       serverConnection.createDataStore(DATASTORE_NAME, Collections.emptyMap());
       try (DataStoreConnection dataStoreConnection = serverConnection.newDataStoreConnection(DATASTORE_NAME)) {
         // upload RDF graph into rdfox
-        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile1); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run SHKGConstruction.main first
-        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile2); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run SHKGConstruction.main first
+        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile1); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run SHKGConstructionTest.main first
+        RDFoxUtils.importData(dataStoreConnection, rdfOutputFile2); // @todo FileNotFoundException output/kg-phr (No such file or directory) you should run SHKGConstructionTest.main first
         RDFoxUtils.importOntology(dataStoreConnection, ONTOLOGY_NAME);
 
         // run competency queries
