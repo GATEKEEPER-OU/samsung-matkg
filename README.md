@@ -39,6 +39,11 @@ The current version V1.0 of MatKG is based on:
 4. For EMR data, use matkg\src\main\java\org\samsung\healthinnovation\CSSKGConstruction.java
 5. For PHR data, use matkg\src\main\java\org\samsung\healthinnovation\SHKGConstruction.java 
 
+## Troubleshotting
+### Maven Dependencies not found
+1. File --> Settings --> "Build, Execution. Deployment" --> Build Tools --> Maven --> Repositories --> Update the hhtps://repo.maven.apache.org/maven2
+2. From the pom.xml file, right click --> Maven --> Reload Project
+
 
 ## To Review
 4.2 Add the JAR libraries: File --> Project Structure --> Libraries --> New Project Library (+ button) --> add JRDFox.jar, rdfizer-v1.0.0.jar in libs
