@@ -10,7 +10,7 @@ Prefix(terms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://opensource.samsung.com/projects/helifit/>
-<https://opensource.samsung.com/projects/helifit/1.6.4/helifit.owl>
+<https://opensource.samsung.com/projects/helifit/1.6.5/helifit.owl>
 Import(<http://purl.org/dc/elements/1.1/>)
 Import(<http://purl.org/dc/terms/>)
 Import(<http://tdwg.napier.ac.uk/ontology/resources/dublincore/terms.owl>)
@@ -20,10 +20,10 @@ Annotation(dc:description "HeLiFit (Health, Lifestyle and Fitness), a domain ont
 Annotation(dc:publisher "Health Innovation Group, Samsung Research, UK")
 Annotation(dc:rights "Copyright © Health Innovation Group, Samsung Research, UK")
 Annotation(dc:title "HeLiFit (Health, Lifestyle and Fitness) Ontology")
-Annotation(terms:issued "2022-10-25")
+Annotation(terms:issued "2023-01-18")
 Annotation(terms:license "http://creativecommons.org/licenses/by/3.0/")
 Annotation(owl:versionInfo "")
-Annotation(owl:versionInfo "1.6.4")
+Annotation(owl:versionInfo "1.6.5")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/DOID_4>))
 Declaration(Class(hlf:D11DigitalMeasurementEvent))
@@ -503,6 +503,7 @@ Declaration(Class(hlf:HLF97JumpRope))
 Declaration(Class(hlf:HLF98Kayaking))
 Declaration(Class(hlf:HLF99Kitesurfing))
 Declaration(Class(hlf:HLF9CalfSkinfoldDimension))
+Declaration(Class(hlf:HLFUnknownExercise))
 Declaration(ObjectProperty(hlf:EP11wasObtainFrom))
 Declaration(ObjectProperty(hlf:EP1isSubjectTo))
 Declaration(ObjectProperty(hlf:EP2initiates))
@@ -522,6 +523,7 @@ Declaration(ObjectProperty(hlf:P117occursDuring))
 Declaration(ObjectProperty(hlf:P11hadParticipant))
 Declaration(ObjectProperty(hlf:P11participatedIn))
 Declaration(ObjectProperty(hlf:P140assignedAttributeTo))
+Declaration(ObjectProperty(hlf:P140wasAttributedBy))
 Declaration(ObjectProperty(hlf:P141assigned))
 Declaration(ObjectProperty(hlf:P141wasAssignedBy))
 Declaration(ObjectProperty(hlf:P14carriedOutBy))
@@ -796,6 +798,7 @@ ObjectPropertyRange(hlf:P11participatedIn hlf:E5Event)
 
 # Object Property: hlf:P140assignedAttributeTo (hlf:P140assignedAttributeTo)
 
+InverseObjectProperties(hlf:P140assignedAttributeTo hlf:P140wasAttributedBy)
 ObjectPropertyDomain(hlf:P140assignedAttributeTo hlf:E13AttributeAssignment)
 ObjectPropertyRange(hlf:P140assignedAttributeTo owl:Thing)
 
@@ -3102,6 +3105,7 @@ SubClassOf(hlf:HLF804BloodGlucoseMeasurement hlf:E16Measurement)
 
 # Class: hlf:HLF805OxygenSaturationMeasurement (HLF805OxygenSaturationMeasurement)
 
+AnnotationAssertion(rdfs:comment hlf:HLF805OxygenSaturationMeasurement "SpO2 measures the oxygen level in your blood. The amount of oxygen in your blood.  It is a reflection of your general health.")
 AnnotationAssertion(rdfs:label hlf:HLF805OxygenSaturationMeasurement "HLF805OxygenSaturationMeasurement")
 SubClassOf(hlf:HLF805OxygenSaturationMeasurement hlf:D11DigitalMeasurementEvent)
 SubClassOf(hlf:HLF805OxygenSaturationMeasurement hlf:E16Measurement)
@@ -3275,6 +3279,10 @@ SubClassOf(hlf:HLF99Kitesurfing hlf:HLF51CardioAerobics)
 
 AnnotationAssertion(rdfs:comment hlf:HLF9CalfSkinfoldDimension "Thickness of the calf")
 SubClassOf(hlf:HLF9CalfSkinfoldDimension hlf:HLF232AnthropometricDimension)
+
+# Class: hlf:HLFUnknownExercise (hlf:HLFUnknownExercise)
+
+SubClassOf(hlf:HLFUnknownExercise hlf:HLF45Exercice)
 
 
 ############################
