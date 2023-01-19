@@ -21,7 +21,7 @@ import java.util.Iterator;
  * */
 public class CSSKGConstruction {
 
-  static final String DATASETS_DIR = "datasets/data-css";
+  static final String DATASETS_DIR = "datasets/emr";
   static final String OUTPUT_DIR = "output/kg-css";
 
   static final Logger LOGGER = LoggerFactory.getLogger(CSSKGConstruction.class);
@@ -30,12 +30,12 @@ public class CSSKGConstruction {
     // @todo NoSuchFileException: datasets/data-css dataset missing
     File datasetsDir = new File(DATASETS_DIR);
     File outputDir = new File(OUTPUT_DIR);
-    outputDir.mkdir();
+    outputDir.mkdirs();
     OutputUtils.clean(outputDir);
     String outputExt = "nt";
 
     String[] exts = {"json"};
-    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
+    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, true);
 
     FHIRAdapter converter = CSSAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
