@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="rdfizer">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../rdfizer/out/artifacts/rdfizer_jar/rdfizer.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
