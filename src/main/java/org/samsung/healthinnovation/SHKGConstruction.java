@@ -21,7 +21,7 @@ import java.util.Iterator;
  * */
 public class SHKGConstruction {
 
-  static final String DATASETS_DIR = "datasets/data-sh-real";
+  static final String DATASETS_DIR = "datasets/phr";
   static final String OUTPUT_DIR = "output/kg-sh-real";
 
   static final Logger LOGGER = LoggerFactory.getLogger(SHKGConstruction.class);
@@ -30,7 +30,7 @@ public class SHKGConstruction {
     // @todo NoSuchFileException: datasets/data-sh.. dataset missing
     File datasetsDir = new File(DATASETS_DIR);
     File outputDir = new File(OUTPUT_DIR);
-    outputDir.mkdir();
+    outputDir.mkdirs();
     OutputUtils.clean(outputDir);
     String outputExt = "nt";
 
