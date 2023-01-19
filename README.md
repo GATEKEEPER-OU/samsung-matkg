@@ -10,8 +10,8 @@ The current version V1.0 of MatKG is based on:
 
 # Pre-requisites
 1. JAVA - Install from [java link](https://www.java.com/en/download/). MatKG is developed using using JDK-17.0.2.
-2. RDFox - dowload from [rdfox link](https://www.oxfordsemantic.tech/downloads), make sure you have the license is installed.
-3. RDFizer - dowload rdfizer-v1.0.0.jar from [rdfizer](https://github.ecodesamsung.com/Health-Innovation/rdfizer/releases/tag/v1.0.0)
+2. RDFox 6.0 - dowload from [rdfox link](https://www.oxfordsemantic.tech/downloads), make sure you have the license is installed.
+3. RDFizer - dowload rdfizer-v1.1.1.jar from [rdfizer](https://github.ecodesamsung.com/Health-Innovation/rdfizer/releases/tag/v1.1.1)
 4. Data - download the health data from [data-emr]() & [data-phr](). Please contact us for the data.    
 
 # Steps to set-up
@@ -19,8 +19,8 @@ The current version V1.0 of MatKG is based on:
 2. with SSH, git clone git@github.ecodesamsung.com:Health-Innovation/matkg.git
 3. Open the project in your IDE. We used IDEAJ which is higly recommendate for compatibility issues and the instruction as follow.
 4. Configure IDEAJ to make the project running: 
-- Add the JAR libraries: File --> Project Structure --> Libraries --> New Project Library (+ button) --> add JRDFox.jar, rdfizer-v1.0.0.jar in libs
+- Add the JAR libraries: File --> Project Structure --> Libraries --> New Project Library (+ button) --> add JRDFox.jar, rdfizer-v1.1.1.jar in libs
 - Set Java: File --> Setting --> Build, Execution, Deployment --> Build Tool --> Maven --> Runner --> JRE
 5. Add data-emr and data-phr under the folder dataset of MatKG
-6. Build the KG by running PHRKGConstruction.java and EMRKGConstruction.java. See the result in output/kg-phr and output/kg-emr 
+6. Build the KG by running SHKGConstruction.java and CSSKGConstruction.java. See the result in output/kg-css and output/kg-sh-real 
 7. Run all the competency queries with ALLCompetencyQueries.java over kg-phr + kg-emr
