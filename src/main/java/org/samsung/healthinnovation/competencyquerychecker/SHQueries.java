@@ -37,7 +37,7 @@ public class SHQueries {
         File rdfDataDir = new File(RDF_DATA_DIR);
         File[] listOfFiles = rdfDataDir.listFiles();
         File queryOutputDir = new File(RESULT_DIR);
-        queryOutputDir.mkdir();
+        queryOutputDir.mkdirs();
         OutputUtils.clean(queryOutputDir);
         String role = "temp";
         String password = "EMPTY";

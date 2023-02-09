@@ -3,35 +3,32 @@ package org.samsung.healthinnovation.structuredkgconstruction;
 import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
-import org.json.JSONObject;
 import org.ou.gatekeeper.RDFizer;
+import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
+import org.samsung.healthinnovation.CSSKGConstruction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Iterator;
-import java.util.UUID;
 
 /**
  * @todo
  * @author Riccardo Pala (riccardo.pala@open.ac.uk)
  * */
-public class SHKGConstruction {
+public class CSSKGConstructionTest {
 
-  static final String DATASETS_DIR = "datasets/data-sh-real";
-  static final String OUTPUT_DIR = "output/kg-sh-real";
+  static final String DATASETS_DIR = "datasets/data-css";
+  static final String OUTPUT_DIR = "output/kg-css";
 
-  static final Logger LOGGER = LoggerFactory.getLogger(SHKGConstruction.class);
+  static final Logger LOGGER = LoggerFactory.getLogger(CSSKGConstruction.class);
 
   public static void main(String[] args) {
-    // @todo NoSuchFileException: datasets/data-sh.. dataset missing
+    // @todo NoSuchFileException: datasets/data-css dataset missing
     File datasetsDir = new File(DATASETS_DIR);
     File outputDir = new File(OUTPUT_DIR);
     outputDir.mkdir();
@@ -39,19 +36,20 @@ public class SHKGConstruction {
     String outputExt = "nt";
 
     String[] exts = {"json"};
-    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, true);
+    Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
 
-    FHIRAdapter converter = SHAdapter.create();
+    FHIRAdapter converter = CSSAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
     while (datasets.hasNext()) {
       File dataset = datasets.next();
-      System.out.println("___" + dataset.getAbsolutePath());
       String trimmedDatasetName = FilenameUtils.trim2LvlExtension(dataset.getName());
       String outputFilename = "output-" + FilenameUtils
         .changeExtension(trimmedDatasetName, outputExt);
       File output = new File(outputDir, outputFilename);
       RDFizer.trasform(dataset, converter, mapping, output);
     }
+
   }
+
 }
