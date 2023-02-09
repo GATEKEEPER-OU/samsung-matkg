@@ -3,6 +3,7 @@ package org.samsung.healthinnovation.structuredkgconstruction;
 import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
+import org.json.JSONObject;
 import org.ou.gatekeeper.RDFizer;
 import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
 import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
@@ -13,7 +14,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.UUID;
 
 /**
  * @todo
@@ -42,6 +46,7 @@ public class SHKGConstruction {
 
     while (datasets.hasNext()) {
       File dataset = datasets.next();
+      System.out.println("___" + dataset.getAbsolutePath());
       String trimmedDatasetName = FilenameUtils.trim2LvlExtension(dataset.getName());
       String outputFilename = "output-" + FilenameUtils
         .changeExtension(trimmedDatasetName, outputExt);
@@ -49,5 +54,4 @@ public class SHKGConstruction {
       RDFizer.trasform(dataset, converter, mapping, output);
     }
   }
-
 }
