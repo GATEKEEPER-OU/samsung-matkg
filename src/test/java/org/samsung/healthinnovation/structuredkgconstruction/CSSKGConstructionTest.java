@@ -4,8 +4,8 @@ import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
+import org.ou.gatekeeper.adapters.fhir.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
@@ -38,7 +38,7 @@ public class CSSKGConstructionTest {
     String[] exts = {"json"};
     Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, false);
 
-    FHIRAdapter converter = CSSAdapter.create();
+    DataAdapter converter = FHIRAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
     while (datasets.hasNext()) {

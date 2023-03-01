@@ -5,8 +5,8 @@ import org.commons.FilenameUtils;
 import org.commons.OutputUtils;
 import org.json.JSONObject;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
+import org.ou.gatekeeper.adapters.fhir.FHIRAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
@@ -41,7 +41,7 @@ public class SHKGConstruction {
     String[] exts = {"json"};
     Iterator<File> datasets = FileUtils.iterateFiles(datasetsDir, exts, true);
 
-    FHIRAdapter converter = SHAdapter.create();
+    DataAdapter converter = FHIRAdapter.create();
     RMLMapping mapping = HelifitMapping.create(OutputFormat.NTRIPLES);
 
     while (datasets.hasNext()) {

@@ -2,9 +2,8 @@ package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
-import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
-import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
+import org.ou.gatekeeper.adapters.fhir.FHIRAdapter;
 import org.samsung.healthinnovation.competencyquerychecker.QueryChecker;
 import org.samsung.healthinnovation.fetcher.DataDownloader;
 import org.samsung.healthinnovation.structuredkgconstruction.KGConstruction;
@@ -41,7 +40,7 @@ public class KGWorkflow {
     if (shEnabled) {
       Properties shConfig = PropertiesUtils.getSubset(config, "sh");
       fetchStage(shConfig);
-      constructStage(shConfig, SHAdapter.create());
+      constructStage(shConfig, FHIRAdapter.create());
 
       if (triplestoreEnabled) {
         String shKgDirPath = config.getProperty("sh.kg.destdir");
@@ -65,7 +64,7 @@ public class KGWorkflow {
       // Temporary implementation reading from local files
       cssConfig.setProperty("fetch.destdir", "datasets/data-css"); // WORKAROUND
       // -------------------------------------------------
-      constructStage(cssConfig, CSSAdapter.create());
+      constructStage(cssConfig, FHIRAdapter.create());
 
       if (triplestoreEnabled) {
         String cssKgDirPath = config.getProperty("css.kg.destdir");
@@ -114,7 +113,7 @@ public class KGWorkflow {
   /**
    * TODO desc
    * */
-  private static void constructStage(Properties config, FHIRAdapter adapter) throws IOException {
+  private static void constructStage(Properties config, DataAdapter adapter) throws IOException {
     String dataDirPath = config.getProperty("fetch.destdir");
     File dataDir = new File(dataDirPath);
     String kgDirPath = config.getProperty("kg.destdir");

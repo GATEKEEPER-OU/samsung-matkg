@@ -4,9 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.json.JSONObject;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
-import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
-import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
@@ -15,6 +13,10 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.UUID;
 
@@ -26,7 +28,7 @@ public class KGConstruction {
   /**
    * TODO desc
    * */
-  public static void construct(File sourceDir, File destDir, FHIRAdapter fhirAdapter) {
+  public static void construct(File sourceDir, File destDir, DataAdapter fhirAdapter) {
     String[] exts = {"json"};
     String outputExt = "nt";
     Iterator<File> datasets = FileUtils.iterateFiles(sourceDir, exts, false);
@@ -41,12 +43,16 @@ public class KGConstruction {
     }
   }
 
-  public static String construct(JSONObject rawData, String destinationFolder, FHIRAdapter fhirAdapter) throws IOException {
+  public static String construct(JSONObject rawData, String destinationFolder, DataAdapter fhirAdapter) throws IOException {
     String outputPath = "output/test-data";
     String fileName = UUID.randomUUID().toString();
+    Date date = Calendar.getInstance().getTime();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss_");
+    String dateStr = dateFormat.format(date);
+
     String finalFolderPath = outputPath + "/" + destinationFolder;
-    String filePath = finalFolderPath + "/" + fileName + ".json";
-    String outputFilename = "output-" + fileName + ".turtle";
+    String filePath = finalFolderPath + "/" + dateStr + "_" + fileName + ".json";
+    String outputFilename =  dateStr + "_" + "output-" + fileName + ".turtle";
     File output = new File(finalFolderPath + "/" + outputFilename);
 
     Files.createDirectories(Path.of(finalFolderPath));
