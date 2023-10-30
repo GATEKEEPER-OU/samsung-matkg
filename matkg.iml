@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/output" />
-      <excludeFolder url="file://$MODULE_DIR$/datasets" />
-    </content>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="c720fb9f-5f3d-4b75-bd4b-91dc3bd4a84e" />
   </component>
 </module>

@@ -21,6 +21,19 @@
   <target name="deploy">
     <delete dir="${deploy_dir}" failonerror="false"/>
     <mkdir dir="${deploy_dir}" />
+
+    <copy todir="${deploy_dir}">
+      <fileset dir="${lib_dir}/rdfizer" includes="**" />
+      <fileset dir="${lib_dir}/rdfox-v6.0" includes="**" />
+      <fileset dir="${artifacts_dir}/matkg_jar" includes="**" />
+    </copy>
+
+    <copy todir="${deploy_dir}">
+      <fileset dir="${lib_dir}/rdfizer" includes="**" />
+      <fileset dir="${lib_dir}/rdfox-v6.0" includes="**" />
+      <fileset dir="${artifacts_dir}/matkg_jar" includes="**" />
+    </copy>
+
     <copy todir="${deploy_dir}">
       <fileset dir="${lib_dir}/rdfizer" includes="**" />
       <fileset dir="${lib_dir}/rdfox-v6.0" includes="**" />
