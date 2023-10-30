@@ -1,26 +1,15 @@
 package org.samsung.healthinnovation.competencyquerychecker;
 
-import org.apache.commons.codec.binary.StringUtils;
-import org.apache.commons.io.FileUtils;
 import org.commons.OutputUtils;
 import org.commons.ResourceUtils;
 import tech.oxfordsemantic.commons.RDFoxUtils;
-import tech.oxfordsemantic.jrdfox.Prefixes;
 import tech.oxfordsemantic.jrdfox.client.ConnectionFactory;
 import tech.oxfordsemantic.jrdfox.client.DataStoreConnection;
 import tech.oxfordsemantic.jrdfox.client.ServerConnection;
-import tech.oxfordsemantic.jrdfox.client.UpdateType;
 import tech.oxfordsemantic.jrdfox.exceptions.JRDFoxException;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 

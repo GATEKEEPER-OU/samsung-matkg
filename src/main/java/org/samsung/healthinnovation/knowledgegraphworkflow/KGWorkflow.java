@@ -2,9 +2,9 @@ package org.samsung.healthinnovation.knowledgegraphworkflow;
 
 import org.commons.OutputUtils;
 import org.commons.PropertiesUtils;
-import org.ou.gatekeeper.fhir.adapters.css.CSSAdapter;
-import org.ou.gatekeeper.fhir.adapters.sh.SHAdapter;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
+import org.ou.gatekeeper.adapters.css.CSSAdapter;
+import org.ou.gatekeeper.adapters.sh.SHAdapter;
 import org.samsung.healthinnovation.competencyquerychecker.QueryChecker;
 import org.samsung.healthinnovation.fetcher.DataDownloader;
 import org.samsung.healthinnovation.structuredkgconstruction.KGConstruction;
@@ -114,7 +114,7 @@ public class KGWorkflow {
   /**
    * TODO desc
    * */
-  private static void constructStage(Properties config, FHIRAdapter adapter) throws IOException {
+  private static void constructStage(Properties config, DataAdapter adapter) throws IOException {
     String dataDirPath = config.getProperty("fetch.destdir");
     File dataDir = new File(dataDirPath);
     String kgDirPath = config.getProperty("kg.destdir");

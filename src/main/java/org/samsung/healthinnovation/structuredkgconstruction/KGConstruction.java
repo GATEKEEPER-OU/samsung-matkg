@@ -3,7 +3,7 @@ package org.samsung.healthinnovation.structuredkgconstruction;
 import org.apache.commons.io.FileUtils;
 import org.commons.FilenameUtils;
 import org.ou.gatekeeper.RDFizer;
-import org.ou.gatekeeper.fhir.adapters.FHIRAdapter;
+import org.ou.gatekeeper.adapters.DataAdapter;
 import org.ou.gatekeeper.rdf.enums.OutputFormat;
 import org.ou.gatekeeper.rdf.mappings.HelifitMapping;
 import org.ou.gatekeeper.rdf.mappings.RMLMapping;
@@ -19,7 +19,7 @@ public class KGConstruction {
   /**
    * TODO desc
    * */
-  public static void construct(File sourceDir, File destDir, FHIRAdapter fhirAdapter) {
+  public static void construct(File sourceDir, File destDir, DataAdapter fhirAdapter) {
     String[] exts = {"json"};
     String outputExt = "nt";
     Iterator<File> datasets = FileUtils.iterateFiles(sourceDir, exts, false);
@@ -30,7 +30,7 @@ public class KGConstruction {
       String outputFilename = "output-" + FilenameUtils
         .changeExtension(trimmedDatasetName, outputExt);
       File output = new File(destDir, outputFilename);
-      RDFizer.trasform(dataset, fhirAdapter, mapping, output);
+      RDFizer.transform(dataset, output, fhirAdapter, mapping);
     }
   }
 
